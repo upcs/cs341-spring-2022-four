@@ -1,0 +1,11 @@
+/*@author Gareth Rice*/
+/*rieg23@up.edu*/
+
+body{
+	/*set a gradient background*/
+	background-image:linear-gradient(to bottom, #FFC299, #FF6600);
+	/*cover the whole page*/
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}

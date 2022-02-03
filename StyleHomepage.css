@@ -3,8 +3,7 @@
 
 body{
 	/*set a gradient background*/
-	/*background-image:linear-gradient(to bottom, #FFC299, #FF6600);*/
-	background-image:linear-gradient(to bottom, #FFC299, #FFC299); 
+	background-image:linear-gradient(to bottom, #FFC299, #FFC299);
 	/*cover the whole page*/
 	background-size:cover;
 	background-repeat:no-repeat;
@@ -22,8 +21,9 @@ body{
 	height:75px;
 }
 
+/* the labels in the table have the same color and font */
 td{
-	color:#123456;
+	color:#111111;
 	font-weight:bold;
 	font-size:42px;
 }
@@ -35,9 +35,9 @@ td{
 	left:4px;
 }
 
+/* move the up letters */
 #upHeader{
 	position:relative;
 	bottom:8px;
 	right:4px;
 }
-

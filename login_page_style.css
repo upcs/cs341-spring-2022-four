@@ -1,0 +1,21 @@
+.top_bar {
+    border: 3px solid black;
+    background: lightgreen;
+    margin-bottom: 10%;
+}
+
+.form_center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+#login_form {
+    margin: auto;
+    width: 50%;
+}
+
+input, label {
+    display: block;
+}

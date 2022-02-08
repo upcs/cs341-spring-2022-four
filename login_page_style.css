@@ -4,11 +4,40 @@
     margin-bottom: 10%;
 }
 
-.form_center {
+#div_form {
     margin: auto;
-    width: 50%;
+    width: 30%;
     border: 3px solid black;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type=text] {
+    width: 100%;
+}
+
+form button {
+    background:forestgreen;
+    border: none;
+    color: white;
+    padding: 8px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: rgb(31, 187, 31);
 }
 
 #login_form {
@@ -18,4 +47,12 @@
 
 input, label {
     display: block;
+}
+
+#create_account_button {
+    color: blue;
+}
+
+#create_account_button:hover {
+    text-decoration: underline;
 }

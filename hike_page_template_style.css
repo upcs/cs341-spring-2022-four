@@ -1,5 +1,4 @@
 body {
-    background-color: rgb(241, 182, 71);
     margin: 0;
 }
 
@@ -10,11 +9,10 @@ body {
     height: 5%;
 }
 
-#real_body {
-    background: white;
+#hike_info {
+    background: peachpuff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: 2px solid purple;
-    padding-bottom: 100vh;
+    margin-bottom: 1%;
 }
 
 /*column styles so hike image can be left of everything else about the hike*/
@@ -25,33 +23,32 @@ body {
 
 .column.hike_img {
     width: 20%;
-    border: 2px solid red;
+    vertical-align: middle;
+    /*border: 2px solid red;*/
 }
 
-.column.hike_main {
+/*depending on how you want the hike info to react to changing window sizes
+this can be uncommented*/
+/*.column.hike_main {
     width: 50%;
     border: 2px solid blue;
-}
+}*/
 
 /*reverting everything after the main hike info section back to normal*/
-.hike_info:after {
+.row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-#hike_profile_pic {
+#hike_pic {
+    background: white;
+    max-width: 100%;
+    height: auto;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
     margin: 5px 10px 5px 5px;
-}
-
-#difficulty {
-    color: white;
-    background-color: rgba(53, 224, 53, 0.918);
-    padding: 4px;
-    border-radius: 4px;
 }
 
 .rating {
@@ -72,6 +69,44 @@ body {
     margin-left: 10px;
 }
 
-#fifth_star {
-    background-color: white;
+#difficulty {
+    color: white;
+    background-color: rgba(53, 224, 53, 0.918);
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.hike_qualities {
+    display: inline-block;
+    padding: 10px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.review {
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin: 10px;
+}
+.column.profile_pic {
+    width:10%;
+}
+
+.column.user {
+    width: 80%;
+}
+
+.rating.user.star {
+    background-color: yellow;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid green;
+    vertical-align: baseline;
+}
+
+.star.blank, .user.star.blank {
+    background-color: rgba(255, 255, 255, 0.459);
 }

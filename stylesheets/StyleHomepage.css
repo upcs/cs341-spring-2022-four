@@ -53,3 +53,12 @@ td{
 	width:35%;
 	height:35%;
 }
+
+#profile{
+	position:absolute;
+	left:670px;
+	top:180px;
+	opacity:100%;
+	width:13%;
+	height:26%;
+}

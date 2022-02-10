@@ -22,12 +22,15 @@
 /* source: https://www.w3schools.com/howto/howto_js_filter_dropdown.asp */
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function myFunction() {
+function filterDifficulty() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
-function filterFunction() {
-  var input, filter, ul, li, a, i;
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
+function filterMiles() {
+  document.getElementById("milesDropdown").classList.toggle("show");
+}
+
+
+function filterElevation() {
+  document.getElementById("elevationGain").classList.toggle("show");
 }

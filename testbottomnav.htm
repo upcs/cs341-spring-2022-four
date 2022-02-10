@@ -30,7 +30,7 @@
           <!-- WANT: filters drop down selection -->
           <!-- source: https://www.w3schools.com/howto/howto_js_filter_dropdown.asp -->
           <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Difficulty</button>
+            <button onclick="filterDifficulty()" class="dropbtn">Difficulty</button>
             <div id="myDropdown" class="dropdown-content">
               <!-- NEXT: implement a filter list here -->
               <!-- Source: https://www.w3schools.com/tags/att_input_type_checkbox.asp -->
@@ -40,6 +40,30 @@
               <label for="moderate">moderate</label><br>
               <input type="checkbox" id="hard" name="hard" value="hard">
               <label for="hard">hard</label><br>
+            </div>
+          </div>
+
+          <!-- filter by miles -->
+          <div class="dropdown">
+            <button onclick="filterMiles()" class="dropbtn">Miles</button>
+              <div id="milesDropdown" class="dropdown-content">
+                <!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+                <!-- Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+                <div class="slidercontainer">
+                  <input type="range" id="mileRange" name="mileRange" class="slider" min=0 max=30>
+                  <!-- <label for="mileRange">Miles</label> -->
+                </div>
+              </div>
+          </div>
+
+          <!-- filter by elevation gain -->
+          <div class="dropdown">
+            <button onclick="filterElevation()" class="dropbtn">Elevation Gain</button>
+            <div id="elevationGain" class="dropdown-content">
+              <div class="slidercontainer">
+                <input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=60000><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+                <!-- <label for="mileRange">Miles</label> -->
+              </div>
             </div>
           </div>
       <!-- </form> -->

@@ -27,7 +27,7 @@ function filterDifficulty() {
 }
 
 function filterMiles() {
-  document.getElementById("milesDropdown").classList.toggle("show");
+  document.getElementById("milesdropdown").classList.toggle("show");
 }
 
 

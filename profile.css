@@ -1,0 +1,77 @@
+/* 
+Author: Logan Machida
+Stylesheet for the static profile page.
+*/
+
+body{
+    background-color: rgb(64, 150, 24);
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border:1px solid #000;
+    margin-left:25px;
+    margin-bottom: 10px;
+
+}
+#logobox{
+    width:200px;
+    height:100px;
+    border:1px solid #000;
+}
+#logo{
+    height:200px;
+    width:200px;
+    float:left;
+    padding:5px;
+}
+#databox{
+    width:500px;
+    height:200px;
+    border:1px solid #000;
+}
+#data{
+    height:200px;
+    width:500px;
+    float:left;
+    padding:5px;
+}
+#completedbox{
+    width:710px;
+    height:500px;
+    border:1px solid #000;
+}
+#completed{
+    height:800px;
+    width:710px;
+    float:left;
+    padding:5px;
+}
+#icon{
+    height:200px;
+    width:300px;
+    float:left;
+    padding:5px;
+}
+#achievements{
+  
+    height:200px;
+    width:300px;
+    float:left;
+    padding:5px;
+}
+#hikebox{
+    width:400px;
+    height:100px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border:1px solid #000;
+}
+
+
+
+
+
+

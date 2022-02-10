@@ -1,0 +1,64 @@
+.top_bar {
+    border: 3px solid black;
+    background: lightgreen;
+    margin-bottom: 10%;
+}
+
+#div_form {
+    margin: auto;
+    width: 4in;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    font-family: Garamond, 'Times New Roman', Times, serif
+}
+
+input {
+    width: 100%;
+}
+
+form button {
+    background:forestgreen;
+    border: none;
+    color: white;
+    padding: 8px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: rgb(31, 187, 31);
+}
+
+#login_form {
+    margin: auto;
+    width: 50%;
+}
+
+input, label {
+    display: block;
+}
+
+.create_account {
+    text-align: center;
+    margin-top: 10%
+}
+
+#create_account_button {
+    color: blue;
+}
+
+#create_account_button:hover {
+    text-decoration: underline;
+}

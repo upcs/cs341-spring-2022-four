@@ -1,9 +1,12 @@
-loginHandler = function(event) {
-    location.href = "profile.html";
-}
+// loginHandler = function(event) {
+//     location.href = "profile.html";
+// }
 
 $(document).ready(function(){
     //actions for when the submit button for the form is clicked
-    $("#login_button").on("click", loginHandler);
+    // $("#login_button").on("click", loginHandler);
 
+  $("#mastHead").click(function(){
+    window.location.href="Homepage.html";
+  });
 });

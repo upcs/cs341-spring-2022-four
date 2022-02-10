@@ -3,7 +3,7 @@ $(document).ready(function(){
     window.location.href="Homepage.html";
   });
   $("#profile").click(function(){
-    let loggedIn = true;
+    let loggedIn = false;
 
     if(loggedIn){
       window.location.href="profile.html"

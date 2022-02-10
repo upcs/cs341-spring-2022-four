@@ -3,7 +3,13 @@ $(document).ready(function(){
     window.location.href="Homepage.html";
   });
   $("#profile").click(function(){
-    window.location.href="login_page.html";
+    let loggedIn = true;
+
+    if(loggedIn){
+      window.location.href="profile.html"
+    }else{
+      window.location.href="login_page.html";
+    }
   });
 
 });

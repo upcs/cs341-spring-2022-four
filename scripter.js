@@ -23,7 +23,7 @@
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function filterDifficulty() {
-  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("difficultyDrop").classList.toggle("show");
 }
 
 function filterMiles() {
@@ -34,3 +34,24 @@ function filterMiles() {
 function filterElevation() {
   document.getElementById("elevationGain").classList.toggle("show");
 }
+
+
+
+
+
+
+
+
+/* function to display hikes when user hits submit */
+function searchHikes(){
+  document.getElementById("hike1").innerHTML = "displayed hike";
+  document.getElementById("hike2").innerHTML = "displayed hike";
+  document.getElementById("hike3").innerHTML = "displayed hike";
+  document.getElementById("hike4").innerHTML = "displayed hike";
+  document.getElementById("hike5").innerHTML = "displayed hike";
+}
+
+
+
+
+///

@@ -31,7 +31,7 @@
           <!-- source: https://www.w3schools.com/howto/howto_js_filter_dropdown.asp -->
           <div class="dropdown">
             <button onclick="filterDifficulty()" class="dropbtn">Difficulty</button>
-            <div id="myDropdown" class="dropdown-content">
+            <div id="difficultyDrop" class="dropdown-content">
               <!-- NEXT: implement a filter list here -->
               <!-- Source: https://www.w3schools.com/tags/att_input_type_checkbox.asp -->
               <input type="checkbox" id="easy" name="easy" value="easy">
@@ -66,14 +66,16 @@
               </div>
             </div>
           </div>
+
+          <button type="submit" onclick=searchHikes()>submit</button>
       <!-- </form> -->
       </div>
-      <!-- WANT: sorted list of to appear in collapsible when the user has searched -->
-      <p>Hike displayed</p>
-      <p>Hike displayed</p>
-      <p>Hike displayed</p>
-      <p>Hike displayed</p>
-      <p>Hike displayed</p>
+      <!-- WANT: sorted list of hikes to appear in collapsible when the user has searched -->
+      <p id="hike1"></p>
+      <p id="hike2"></p>
+      <p id="hike3"></p>
+      <p id="hike4"></p>
+      <p id="hike5"></p>
     </div>
   </div>
 

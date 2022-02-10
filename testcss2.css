@@ -80,6 +80,7 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  padding-bottom: 50px;/* adds space below dropdown buttons so the dropdown shows up */
 }
 
 /* dropdown Content (Hidden by Default) */

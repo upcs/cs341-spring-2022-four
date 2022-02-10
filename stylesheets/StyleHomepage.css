@@ -10,6 +10,9 @@ body{
 	background-attachment:fixed;
 }
 
+/* ========================================== */
+/* TAKE THIS FOR THE MASTHEAD */
+/* ========================================== */
 /*the table for the masthead*/
 #mastHead{
 	background-color:#FF6600;
@@ -42,6 +45,10 @@ td{
 	right:4px;
 }
 
+/* ========================================== */
+/* TAKE THIS FOR THE MASTHEAD */
+/* ========================================== */
+
 /* main central compass */
 #compass{
 	display:block;
@@ -52,4 +59,13 @@ td{
 	opacity:40%;
 	width:35%;
 	height:35%;
+}
+
+#profile{
+	position:absolute;
+	left:670px;
+	top:180px;
+	opacity:100%;
+	width:13%;
+	height:26%;
 }

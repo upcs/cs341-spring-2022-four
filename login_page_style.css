@@ -62,3 +62,36 @@ input, label {
 #create_account_button:hover {
     text-decoration: underline;
 }
+
+
+/*the table for the masthead*/
+#mastHead{
+	background-color:#FF6600;
+	/* position:absolute; */
+	top:10px;
+	left:10px;
+	border-radius:25px;
+	width:150px;
+	height:75px;
+}
+
+/* the labels in the table have the same color and font */
+td{
+	color:#111111;
+	font-weight:bold;
+	font-size:42px;
+}
+
+/*trek header is inside of masthead table*/
+#trekHeader{
+	position:relative;
+	top:8px;
+	left:4px;
+}
+
+/* move the up letters */
+#upHeader{
+	position:relative;
+	bottom:8px;
+	right:4px;
+}

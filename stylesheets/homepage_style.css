@@ -3,7 +3,7 @@
 
 body{
 	/*set a gradient background*/
-	background-image:linear-gradient(to bottom, #FFC299, #FFC299);
+	background-image:linear-gradient(to bottom, #648B7F, #648B7F);
 	/*cover the whole page*/
 	background-size:cover;
 	background-repeat:no-repeat;

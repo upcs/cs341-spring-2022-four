@@ -1,11 +1,13 @@
 /**
  * dbms.js
  *
- * Modified by Brynn Harrington 
+ * Modified by Brynn Harrington on 10 Feb 2022
+ * TODO - DETERMINE WHETHER USER/PASS CORRECT - WILL HAVE ISSUES OTHERWISE
  * 
  * This file contains functions for accessing the MySQL database
  * which contains the Cheesecake order data.
  *
+ * 
  */
 
 exports.version = '0.0.1';

@@ -1,9 +1,9 @@
 $(document).ready(function(){
   $("#mastHead").click(function(){
-    window.location.href="Homepage.html";
+    window.location.href="Index.html";
   });
   $("#profile").click(function(){
-    let loggedIn = false;
+    let loggedIn = true;
 
     if(loggedIn){
       window.location.href="profile.html"

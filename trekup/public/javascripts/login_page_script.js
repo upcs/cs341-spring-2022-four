@@ -7,6 +7,6 @@ $(document).ready(function(){
     // $("#login_button").on("click", loginHandler);
 
   $("#mastHead").click(function(){
-    window.location.href="Homepage.html";
+    window.location.href="Index.html";
   });
 });

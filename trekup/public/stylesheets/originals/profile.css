@@ -1,0 +1,132 @@
+/*
+Author: Logan Machida
+Stylesheet for the static profile page.
+*/
+
+body {
+    /*set a gradient background*/
+    background-image: linear-gradient(to bottom, #648B7F, #648B7F);
+    /*cover the whole page*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+#logobox {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #000;
+}
+
+#logo {
+    height: 200px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+}
+
+#databox {
+    width: 500px;
+    height: 200px;
+    border: 1px solid #000;
+}
+
+#data {
+    height: 200px;
+    width: 500px;
+    float: left;
+    padding: 5px;
+}
+
+#completedbox {
+    width: 710px;
+    height: 500px;
+    border: 1px solid #000;
+}
+
+#completed {
+    height: 800px;
+    width: 710px;
+    float: left;
+    padding: 5px;
+}
+
+#icon {
+    height: 200px;
+    width: 300px;
+    float: left;
+    padding: 5px;
+}
+
+#achievements {
+    height: 200px;
+    width: 300px;
+    float: left;
+    padding: 5px;
+}
+
+#hikebox {
+    width: 400px;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border: 1px solid #000;
+}
+
+
+/*the table for the masthead*/
+
+#mastHead {
+    background-color: #FF6600;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 25px;
+    width: 150px;
+    height: 75px;
+}
+
+
+/* the labels in the table have the same color and font */
+
+td {
+    color: #111111;
+    font-weight: bold;
+    font-size: 42px;
+}
+
+
+/*trek header is inside of masthead table*/
+
+#trekHeader {
+    position: relative;
+    top: 8px;
+    left: 4px;
+}
+
+
+/* move the up letters */
+
+#upHeader {
+    position: relative;
+    bottom: 8px;
+    right: 4px;
+}
+
+
+/* ========================================== */
+
+
+/* TAKE THIS FOR THE MASTHEAD */
+
+
+/* ========================================== */

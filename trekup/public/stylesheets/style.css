@@ -1,0 +1,95 @@
+/*
+Authors: Gareth Rice, Francisco Nguyen, Logan Machida
+Stylesheet for the static profile page, hiking page, home
+page, and log-in page.
+*/
+
+body {
+    /*set a gradient background*/
+    background-image: linear-gradient(to bottom, #648B7F, #648B7F);
+    /*cover the whole page*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* ========================================== */
+
+
+/* TAKE THIS FOR THE MASTHEAD */
+
+
+/* ========================================== */
+
+
+/*the table for the masthead*/
+
+#mastHead {
+    background-color: #FF6600;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 25px;
+    width: 150px;
+    height: 75px;
+}
+
+
+/* the labels in the table have the same color and font */
+
+td {
+    color: #111111;
+    font-weight: bold;
+    font-size: 42px;
+}
+
+
+/*trek header is inside of masthead table*/
+
+#trekHeader {
+    position: relative;
+    top: 8px;
+    left: 4px;
+}
+
+
+/* move the up letters */
+
+#upHeader {
+    position: relative;
+    bottom: 8px;
+    right: 4px;
+}
+
+
+/* ========================================== */
+
+
+/* TAKE THIS FOR THE MASTHEAD */
+
+
+/* ========================================== */
+
+
+/* main central compass */
+
+#compass {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    opacity: 40%;
+    width: 35%;
+    height: 35%;
+}
+
+#profile {
+    position: absolute;
+    left: 670px;
+    top: 180px;
+    opacity: 100%;
+    width: 13%;
+    height: 26%;
+}

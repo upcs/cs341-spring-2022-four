@@ -1,9 +1,4 @@
-.top_bar {
-    border: 3px solid black;
-    background: lightgreen;
-    margin-bottom: 10%;
-}
-
+/*the white box in the middle of the page with the form*/
 #div_form {
     margin: auto;
     width: 4in;
@@ -20,7 +15,7 @@ body{
 
 h1 {
     text-align: center;
-    font-family: Garamond, 'Times New Roman', Times, serif
+    font-family: Garamond, 'Times New Roman', Times, serif;
 }
 
 input {

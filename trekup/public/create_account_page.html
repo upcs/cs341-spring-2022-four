@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./stylesheets/login_page_style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./javascripts/login_page_script.js"></script>
+    <script type="text/javascript" src="./javascripts/create_account_page_script.js"></script>
   </head>
 
   <body>
@@ -33,12 +33,11 @@
         <input type=password id="password"><br>
         <label for="confirm_password">Re-enter password</label>
         <input type=password id="confirm_password"><br>
-        <!--the id being login_button isn't intuitive, but this is to abuse the fact i'm using same css file as login_page.html-->
-        <button id="login_button">Create Account</button>
+        <button id="create_account_button">Create Account</button>
       </form>
       <!--text to lead to logging in to acount if user already has one-->
-      <p class="create_account">Already have an account?
-      <span class="create_account" id="create_account_button" href="#">Sign in.</span>
+      <p class="to_login">Already have an account?
+      <span class="t0_login" id="login_link">Sign in.</span>
       </p>
     </div>
   </body>

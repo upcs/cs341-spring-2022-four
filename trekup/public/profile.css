@@ -1,0 +1,135 @@
+/*
+Author: Logan Machida
+Stylesheet for the static profile page.
+*/
+
+body{
+  	/*set a gradient background*/
+	background-image:linear-gradient(to bottom, #648B7F, #648B7F);
+	/*cover the whole page*/
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border:1px solid #000;
+    margin-left:25px;
+    margin-bottom: 10px;
+    background-color: white;
+
+}
+#logobox{
+    width:200px;
+    height:100px;
+    border:1px solid #000;
+}
+#logo{
+    height:200px;
+    width:200px;
+    float:left;
+    padding:5px;
+}
+#databox{
+    width:500px;
+    height:200px;
+    border:1px solid #000; 
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
+}
+#data{
+    height:200px;
+    width:500px;
+    float:left;
+    padding:5px;
+}
+#completedbox{
+    width:710px;
+    height:600px;
+    border:1px solid #000;
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: peachpuff;
+}
+#completed{
+    height:800px;
+    width:710px;
+    float:left;
+    padding:5px;
+}
+#icon{
+    height:200px;
+    width:300px;
+    float:left;
+    padding:5px;
+}
+#achievements{
+
+    height:200px;
+    width:300px;
+    float:left;
+    padding:5px;
+}
+#hikebox{
+    width:95%;
+    height:150px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin: 10px;
+    background-color: white;
+}
+
+/*the table for the masthead*/
+#mastHead{
+	background-color:#FF6600;
+	position:absolute;
+	top:10px;
+	left:10px;
+	border-radius:25px;
+	width:150px;
+	height:75px;
+}
+
+/* the labels in the table have the same color and font */
+td{
+	color:#111111;
+	font-weight:bold;
+	font-size:42px;
+}
+
+/*trek header is inside of masthead table*/
+#trekHeader{
+	position:relative;
+	top:8px;
+	left:4px;
+}
+
+/* move the up letters */
+#upHeader{
+	position:relative;
+	bottom:8px;
+	right:4px;
+}
+.rating.user.star {
+    background-color: yellow;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid green;
+    vertical-align: baseline;
+}
+
+.star.blank, .user.star.blank {
+    background-color: rgba(255, 255, 255, 0.459);
+}
+
+/* ========================================== */
+/* TAKE THIS FOR THE MASTHEAD */
+/* ========================================== */

@@ -18,6 +18,11 @@
 
 
 
+function searchSearch(){
+  var searched =  $('text#search').val();
+}
+
+
 /* script for dropdown */
 /* source: https://www.w3schools.com/howto/howto_js_filter_dropdown.asp */
 /* When the user clicks on the button,
@@ -49,6 +54,20 @@ function searchHikes(){
   document.getElementById("hike3").innerHTML = "displayed hike";
   document.getElementById("hike4").innerHTML = "displayed hike";
   document.getElementById("hike5").innerHTML = "displayed hike";
+
+
+
+  //get checked boxes for difficulty
+  var diffEasy = document.getElementById("easy").checked;
+  var diffMod = document.getElementById("moderate").checked;
+  var diffHard = document.getElementById("hard").checked;
+
+  //get miles range
+  var miles = document.getElementById("mileRange").value;
+
+  //get elevation range
+  var elevation = document.getElementById("elevationRange").value;
+
 }
 
 

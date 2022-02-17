@@ -5,6 +5,11 @@
 	<link rel="stylesheet" href="./stylesheets/homepage_style.css"></link>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="./javascripts/homepage_script.js"></script>
+
+	<link rel="stylesheet" href="stylesheets/bottomnavstyle.css"> <!--link to CSS file for bottomnavbar-->
+	<!-- Load icon library for searchbar -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -18,6 +23,74 @@
 
 	<img id="compass" src="./images/compass1.png"></img>
 	<img id="profile" src="./images/profile.png"></img>
+
+
+	<!-- navbar -->
+  <!-- source: https://www.w3schools.com/howto/howto_css_bottom_nav.asp -->
+  <div class="navbar">
+    <!-- collapsible: https://www.w3schools.com/howto/howto_js_collapsible.asp -->
+    <button type="button" class="collapsible">Search</button>
+    <div class="content">
+      <div class="filters">
+          <div class="search-container"> <!-- source: https://www.w3schools.com/howto/howto_css_searchbar.asp -->
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+          </div>
+          <!-- WANT: filters drop down selection -->
+          <!-- source: https://www.w3schools.com/howto/howto_js_filter_dropdown.asp -->
+          <div class="dropdown">
+            <button onclick="filterDifficulty()" class="dropbtn">Difficulty</button>
+            <div id="difficultyDrop" class="dropdown-content">
+              <!-- NEXT: implement a filter list here -->
+              <!-- Source: https://www.w3schools.com/tags/att_input_type_checkbox.asp -->
+              <input type="checkbox" id="easy" name="easy" value="easy">
+              <label for="easy">easy</label><br>
+              <input type="checkbox" id="moderate" name="moderate" value="moderate">
+              <label for="moderate">moderate</label><br>
+              <input type="checkbox" id="hard" name="hard" value="hard">
+              <label for="hard">hard</label><br>
+            </div>
+          </div>
+
+
+
+          <!-- filter by miles -->
+          <div class="dropdown">
+            <button onclick="filterMiles()" class="dropbtn">Miles</button>
+              <div id="milesdropdown" class="dropdown-content">
+                <!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+                <!-- Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+                <div class="slidercontainer">
+                  <input type="range" id="mileRange" name="mileRange" class="slider" min=0 max=30>
+                  <!-- <label for="mileRange">Miles</label> -->
+                </div>
+              </div>
+          </div>
+
+          <!-- filter by elevation gain -->
+          <div class="dropdown">
+            <button onclick="filterElevation()" class="dropbtn">Elevation Gain</button>
+            <div id="elevationGain" class="dropdown-content">
+              <div class="slidercontainer">
+                <input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=60000><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+                <!-- <label for="mileRange">Miles</label> -->
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" onclick=searchHikes()>submit</button>
+      </div>
+      <!-- WANT: sorted list of hikes to appear in collapsible when the user has searched -->
+      <p id="hike1"></p>
+      <p id="hike2"></p>
+      <p id="hike3"></p>
+      <p id="hike4"></p>
+      <p id="hike5"></p>
+    </div>
+  </div>
+
+  <script src="javascripts/bottomnavjs.js"></script> <!-- js for file -->
+
 
 
 </body>

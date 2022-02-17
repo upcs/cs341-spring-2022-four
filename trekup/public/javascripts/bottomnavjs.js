@@ -19,7 +19,13 @@
 
 
 function searchSearch(){
-  var searched =  $('text#search').val();
+  var searched = document.getElementById("search").value;
+
+  document.getElementById("hike1").innerHTML = "displayed hike";
+  document.getElementById("hike2").innerHTML = "displayed hike";
+  document.getElementById("hike3").innerHTML = "displayed hike";
+  document.getElementById("hike4").innerHTML = "displayed hike";
+  document.getElementById("hike5").innerHTML = searched;
 }
 
 

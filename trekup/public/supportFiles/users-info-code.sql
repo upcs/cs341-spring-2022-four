@@ -9,14 +9,15 @@ USE USERS;
 -- PASSWORD: the user's password
 CREATE TABLE USER_INFO(
     EMAIL VARCHAR(50) NOT NULL PRIMARY KEY,
-    DIFFICULTY VARCHAR(50) NOT NULL,
+    PASSWORD VARCHAR(50) NOT NULL
 );
 
 -- Verify table successfully created (PASSED)
 DESCRIBE USER_INFO;
 
 -- Put in a test value for a user
-INSERT INTO USER_INFO VALUES (62, 'Sep', 26, 2, 'cherry', 'thanks! :-)');
+INSERT INTO USER_INFO VALUES ('KCBbutitsKGB@gmail.com', 'KCB123');
 
 --  Verify that the email was successfully created (PASSED)
-SELECT EMAIL FROM TRAIL_INFO;
+SELECT EMAIL FROM USER_INFO;
+-- NOTE: use DROP TABLE <table name> to delete table

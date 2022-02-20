@@ -1,11 +1,10 @@
 /**
- * dbms.js
+ * user_info_dbms.js
  *
- * Modified by Brynn Harrington on 10 Feb 2022
- * TODO - DETERMINE WHETHER USER/PASS CORRECT - WILL HAVE ISSUES OTHERWISE
+ * Modified by Brynn Harrington on 20 Feb 2022
  * 
- * This file contains functions for accessing the MySQL database
- * which contains the Cheesecake order data.
+ * This file contains functions for accessing the user MySQL database
+ * which contains the Cheesecake order data. 
  *
  * 
  */
@@ -17,9 +16,9 @@ var mysql = require('mysql'),
     async = require('async');
 
 // updated the host to my personal (very insecure) cheesecake database information
-var host = "35.199.147.68"; //from GCloud instance (change to match your db)
-var database = "TRAILS"; //database name
-var user = "trailsdb"; //username (change to match your db)
+var host = "34.127.115.166"; //from GCloud instance (change to match your db)
+var database = "USERS"; //database name
+var user = "root"; //username (change to match your db)
 var password = "teamFour!SQL"; //password (change to match your db, yes this is very poor practice)
 
 /**

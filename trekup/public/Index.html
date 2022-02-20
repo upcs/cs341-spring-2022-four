@@ -92,7 +92,7 @@
             <button onclick="filterElevation()" class="dropbtn">Elevation Gain</button>
             <div id="elevationGain" class="dropdown-content">
               <div class="slidercontainer">
-                <input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=60000><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+                <input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
                 <!-- <label for="mileRange">Miles</label> -->
               </div>
             </div>
@@ -101,11 +101,13 @@
           <button type="submit" onclick=searchHikes()>submit</button>
       </div>
       <!-- WANT: sorted list of hikes to appear in collapsible when the user has searched -->
+			<p id="selection"></p>
+      <p id="milesSelected"></p>
+      <p id="elevationSelected"></p>
+      <p id="difficultySelected"></p>
       <p id="hike1"></p>
       <p id="hike2"></p>
-      <p id="hike3"></p>
-      <p id="hike4"></p>
-      <p id="hike5"></p>
+			<p id="hike3"></p>
     </div>
   </div>
 

@@ -21,11 +21,19 @@
 function searchHikesName(){
   var name = document.getElementById("search").value;
 
+  if(name == "")
+  {
+    alert("No text entered in searchbar. Please enter a hike name to search");
+  }
+  else{
+    sendPostName(name);
+  }
+
   // document.getElementById("hike1").innerHTML = "displayed hike";
   // document.getElementById("hike2").innerHTML = "displayed hike";
   // document.getElementById("hike3").innerHTML = "displayed hike";
 
-  sendPostName(name);
+
 }
 
 //function to send a post to the database
@@ -37,9 +45,9 @@ function sendPostName(name){
       document.getElementById("selection").innerHTML = "Hike name searched: " + name;
 
 
-        $("#hike1").text(dummyHikes.data[0].hike1.distance + " miles, " + dummyHikes.data[0].hike1.elevation + " ft, " + dummyHikes.data[0].hike1.difficulty + ".");
-        $("#hike2").text(dummyHikes.data[1].hike2.distance + " miles, " + dummyHikes.data[1].hike2.elevation + " ft, " + dummyHikes.data[1].hike2.difficulty + ".");
-        $("#hike3").text(dummyHikes.data[2].hike3.distance + " miles, " + dummyHikes.data[2].hike3.elevation + " ft, " + dummyHikes.data[2].hike3.difficulty + ".");
+        $("#hike1").text(dummyHikes.data[0].hike1.name + ": " + dummyHikes.data[0].hike1.distance + " miles, " + dummyHikes.data[0].hike1.elevation + " ft, " + dummyHikes.data[0].hike1.difficulty + ".");
+        $("#hike2").text(dummyHikes.data[1].hike2.name + ": " + dummyHikes.data[1].hike2.distance + " miles, " + dummyHikes.data[1].hike2.elevation + " ft, " + dummyHikes.data[1].hike2.difficulty + ".");
+        $("#hike3").text(dummyHikes.data[2].hike3.name + ": " + dummyHikes.data[2].hike3.distance + " miles, " + dummyHikes.data[2].hike3.elevation + " ft, " + dummyHikes.data[2].hike3.difficulty + ".");
 
     });
 }
@@ -124,9 +132,9 @@ function sendPostFilters(miles, elevation, difficultyS){
 
       document.getElementById("selection").innerHTML = "Filters selected: Miles = " + miles + " miles, " + "Elevation = " + elevation + " ft, " + "Difficulty = " + difficultyS;
 
-        $("#hike1").text(dummyHikes.data[0].hike1.distance + " miles, " + dummyHikes.data[0].hike1.elevation + " ft, " + dummyHikes.data[0].hike1.difficulty + ".");
-        $("#hike2").text(dummyHikes.data[1].hike2.distance + " miles, " + dummyHikes.data[1].hike2.elevation + " ft, " + dummyHikes.data[1].hike2.difficulty + ".");
-        $("#hike3").text(dummyHikes.data[2].hike3.distance + " miles, " + dummyHikes.data[2].hike3.elevation + " ft, " + dummyHikes.data[2].hike3.difficulty + ".");
+      $("#hike1").text(dummyHikes.data[0].hike1.name + ": " + dummyHikes.data[0].hike1.distance + " miles, " + dummyHikes.data[0].hike1.elevation + " ft, " + dummyHikes.data[0].hike1.difficulty + ".");
+      $("#hike2").text(dummyHikes.data[1].hike2.name + ": " + dummyHikes.data[1].hike2.distance + " miles, " + dummyHikes.data[1].hike2.elevation + " ft, " + dummyHikes.data[1].hike2.difficulty + ".");
+      $("#hike3").text(dummyHikes.data[2].hike3.name + ": " + dummyHikes.data[2].hike3.distance + " miles, " + dummyHikes.data[2].hike3.elevation + " ft, " + dummyHikes.data[2].hike3.difficulty + ".");
 
     });
 }

@@ -16,5 +16,6 @@ $(document).ready(function(){
   });
 
   //populate flip cards with database information
+  $("#Hike4Name").text("Hello");
 
 });

@@ -11,5 +11,10 @@ $(document).ready(function(){
       window.location.href="login_page.html";
     }
   });
+  $(".flip-card").click(function(){
+    window.location.href="hike_page_template.html";
+  });
+
+  //populate flip cards with database information
 
 });

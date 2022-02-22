@@ -53,59 +53,6 @@ td{
 /* TAKE THIS FOR THE MASTHEAD */
 /* ========================================== */
 
-/* main central compass */
-#compass{
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:auto;
-	margin-bottom:auto;
-	opacity:100%;
-	width:50%;
-	height:50%;
-}
-
-#profile{
-	position:relative;
-	/* left:670px; */
-	/* top:180px; */
-	margin:auto;
-	opacity:100%;
-	width:13%;
-	height:26%;
-	z-index:2;
-	resize:both;
-}
-
-.compHelp{
-	position:absolute;
-	margin-left:50%;
-	justify-content:center;
-	/* background:url('../images/compass1.png'); */
-	/* background-repeat:no-repeat; */
-	/* background-position:center; */
-	opacity:100%;
-	display: block;
-	width: 100%;
-	height: 100%;
-}
-
-
-.compHelp{
-	position:relative;
-}
-
-.recCompass{
-	background:url('../images/compass1.png');
-	background-repeat:no-repeat;
-	background-position:center;
-	position:relative;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:auto;
-	margin-bottom:auto;
-	opacity:1.0;
-}
 
 .flip-card{
 	background-color: transparent;
@@ -215,32 +162,11 @@ td{
 
 	width:70%;
 	height:70%;
-	/* background-color:blue; */
 }
 
 #profPicture{
 	width:50%;
 	height:50%;
-}
-
-#hike1pic{
-	width:25%;
-	height:50%;
-}
-
-#hike2pic{
-	width:25%;
-	height:25%;
-}
-
-#hike3pic{
-	width:25%;
-	height:25%;
-}
-
-#hike4pic{
-	width:20%;
-	height:20%;
 }
 
 li{

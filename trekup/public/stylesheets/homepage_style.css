@@ -166,7 +166,8 @@ td{
 }
 
 #flip1outer{
-	margin-bottom:5%;
+	margin-bottom:30%;
+	margin-left:300%;
 }
 
 #flip2{
@@ -175,7 +176,7 @@ td{
 }
 
 #flip2outer{
-
+	margin-left:150%;
 }
 
 #flip3{
@@ -185,7 +186,7 @@ td{
 
 #flip3outer{
 	position:relative;
-	margin-right:10%;
+	margin-left:350%;
 }
 
 #flip4{
@@ -194,7 +195,8 @@ td{
 }
 
 #flip4outer{
-	margin-top:5%;
+	margin-top:30%;
+	margin-left:300%;
 }
 
 
@@ -208,7 +210,7 @@ td{
 	background:url('../images/compass1.png');
 	background-repeat:no-repeat;
 	background-position:center;
-	background-size:40%;
+	background-size:30%;
 
 	width:70%;
 	height:70%;
@@ -265,8 +267,8 @@ li{
 #profPic{
 	float:right;
 	margin-right:0.7%;
-	width:5%;
-	height:5%;
+	width:4%;
+	height:4%;
 }
 
 #profPic:hover{

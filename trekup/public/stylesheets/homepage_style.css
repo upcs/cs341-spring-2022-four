@@ -16,31 +16,35 @@ body{
 /*the table for the masthead*/
 #mastHead{
 	background-color:#FF6600;
-	position:absolute;
-	top:10px;
-	left:10px;
-	border-radius:25px;
-	width:150px;
-	height:75px;
+	position:inherit;
+	/* position:absolute; */
+	/* border-radius:25px; */
+	width:10%;
+	height:12%;
+	/* height:inherit; */
 }
 
 /* the labels in the table have the same color and font */
 td{
 	color:#111111;
 	font-weight:bold;
-	font-size:42px;
+	/* font-size:42px; */
+	font-size:300%;
 }
 
 /*trek header is inside of masthead table*/
 #trekHeader{
 	position:relative;
+	/* position:inherit; */
 	top:8px;
+	/* top:100%; */
 	left:4px;
 }
 
 /* move the up letters */
 #upHeader{
 	position:relative;
+	/* position:inherit; */
 	bottom:8px;
 	right:4px;
 }
@@ -192,4 +196,41 @@ td{
 #hike4pic{
 	width:20%;
 	height:20%;
+}
+
+li{
+	display:inline;
+}
+
+#navBar{
+	position:fixed;
+	list-style-type:none;
+	top:0;
+	width:100%;
+	margin:0;
+	margin-left:0;
+	padding:0;
+	overflow:hidden;
+	background-color:#333;
+}
+
+#homepage{
+	float:left;
+	margin-left:0;
+}
+
+
+#profPic{
+	float:right;
+	margin-right:0.7%;
+	width:5%;
+	height:5%;
+}
+
+#profPic:hover{
+	background-color:#222222;
+}
+
+#mastHead:hover{
+	background-color:#222222;
 }

@@ -15,7 +15,7 @@ body{
 /* ========================================== */
 /*the table for the masthead*/
 #mastHead{
-	background-color:#FF6600;
+	background-color:#006622;
 	position:inherit;
 	/* position:absolute; */
 	/* border-radius:25px; */
@@ -133,6 +133,7 @@ td{
 
 .flip-card:hover .flip-card-inner{
 	transform:rotateY(180deg);
+	cursor:pointer;
 }
 
 .flip-card-front, .flip-card-back{
@@ -255,7 +256,7 @@ li{
 	margin-left:0;
 	padding:0;
 	overflow:hidden;
-	background-color:#333;
+	background-color:#006622;
 }
 
 #homepage{
@@ -272,9 +273,11 @@ li{
 }
 
 #profPic:hover{
-	background-color:#222222;
+	background-color:#648B7F;
+	cursor:pointer;
 }
 
 #mastHead:hover{
-	background-color:#222222;
+	background-color:#648B7F;
+	cursor:pointer;
 }

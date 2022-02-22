@@ -2,7 +2,7 @@ $(document).ready(function(){
   $("#mastHead").click(function(){
     window.location.href="Index.html";
   });
-  $("#profile").click(function(){
+  $("#profPic").click(function(){
     let loggedIn = true;
 
     if(loggedIn){

@@ -109,8 +109,8 @@ td{
 
 .flip-card{
 	background-color: transparent;
-	width:200px;
-	height:200px;
+	width:150px;
+	height:150px;
 	/* width:30%; */
 	/* height:30%; */
 	perspective:1000px;
@@ -151,17 +151,59 @@ td{
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: #111111;
   color: white;
   transform: rotateY(180deg);
 }
+
+.flip-text{
+	font-size:30%;
+}
+
+#flip1{
+	width:100%;
+	height:100%;
+}
+
+#flip1outer{
+	margin-bottom:5%;
+}
+
+#flip2{
+	width:100%;
+	height:100%;
+}
+
+#flip2outer{
+
+}
+
+#flip3{
+	width:100%;
+	height:100%;
+}
+
+#flip3outer{
+	position:relative;
+	margin-right:10%;
+}
+
+#flip4{
+	width:100%;
+	height:100%;
+}
+
+#flip4outer{
+	margin-top:5%;
+}
+
 
 
 /* New compass implementation */
 .compassRecommend{
 	position:relative;
 	margin:auto;
-	margin-top:8%;
+	margin-top:5%;
 
 	background:url('../images/compass1.png');
 	background-repeat:no-repeat;

@@ -28,14 +28,13 @@ HTML file for static profile page.
             <div id="data">
                  <div id="databox">
                     <h2>Statistics:</h2>
-                    <p>Hikes Completed: 15 <br> Miles Walked: 2417 <br> Elevation Gain: 900,000</p>
+                    <p>Trails Completed: 15 hikes <br> Distance Walked: 2417 mi. <br> Elevation Gain: 900,000 ft.</p>
                 </div>
             </div>
             <!-- Profile picture and username -->
             <div id="icon">
-                 <div id="profilecircle"></div>
-                  <h2> <br>User </h2>
-                  <h3> @username </h3>
+                 <!-- <div id="profilecircle"></div> -->
+                 <img id="profilepic" src="./images/profile.png"></img>
             </div>
         </div>
     
@@ -49,6 +48,7 @@ HTML file for static profile page.
                     <h2>Hikes Completed:</h2>
                       <!-- A Bunch of Dummy Hikes for now -->
                     <div id="hikebox">
+                        <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
                         <h3>Hike 1</h3>
                         <table>
                             <tr>
@@ -61,8 +61,10 @@ HTML file for static profile page.
                             </tr>
                         </table>
                         <h4>Di. 370 mi. El. 352 ft.</h4>
+                       
                     </div>
                     <div id="hikebox">
+                        <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
                         <h3>Hike 2</h3>
                         <table>
                             <tr>
@@ -76,6 +78,7 @@ HTML file for static profile page.
                         <h4>Di. 370 mi. El. 352 ft.</h4>
                     </div>
                     <div id="hikebox">
+                        <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
                         <h3>Hike 3</h3>
                         <table>
                             <tr>
@@ -89,6 +92,7 @@ HTML file for static profile page.
                         <h4>Di. 370 mi. El. 352 ft.</h4>
                     </div>               
                     <div id="hikebox">
+                        <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
                         <h3>Hike 4</h3>
                         <table>
                             <tr>
@@ -102,6 +106,7 @@ HTML file for static profile page.
                         <h4>Di. 370 mi. El. 352 ft.</h4>
                     </div>    
                     <div id="hikebox">
+                        <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
                         <h3>Hike 5</h3>
                         <table>
                             <tr>
@@ -119,9 +124,14 @@ HTML file for static profile page.
         </div>
           <!-- Add slots for the user's achievements -->
         <div style="border-left: 10px;"id="achievements">
-                <h2>Achievements:</h2>
-                <div id="circle"></div>
-                <div id="circle"></div>
+            <h2 id="name"> <br>Bob the Builder </h2>
+            <h3 id="username" > @bob123 </h3>
+            <img id="trophy" src="http://clipart-library.com/image_gallery/206586.png">
+            <h3 style="margin-left: 20px;"> <i>Wilderness Explorer Badge</i> </h3>
+            <h5 style="margin-left: 20px;">Complete 5 hikes in the Portland area.</h5>
+            <img id="trophy" src="http://clipart-library.com/image_gallery/206586.png">
+            <h3 style="margin-left: 20px;"><i>Overnight Camper Badge</i> </h3>
+            <h5 style="margin-left: 20px;">Spend 3 nights with nature.</h5>
                
         </div>
     </body>

@@ -24,5 +24,14 @@ $(document).ready(function(){
 });
 
 function displayHikePostInfo(data, status){
-  $("#Hike4Name").text("Goodbye"); 
+  const recHikes = JSON.parse(data);
+
+  populateRecHikes("#Hike1Name", recHikes, 0);
+  populateRecHikes("#Hike2Name", recHikes, 1);
+  populateRecHikes("#Hike3Name", recHikes, 2);
+  populateRecHikes("#Hike4Name", recHikes, 3);
+}
+
+function populateRecHikes(hike, recHikes, hikeIdx){
+  $(hike).text(recHikes[hikeIdx].HIKE);
 }

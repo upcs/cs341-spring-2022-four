@@ -7,5 +7,11 @@ test('test recommended hikes',()=>{
 
     document.body.innerHTML = html;
     const $ = require("jquery");
-    expect($("#Hike1Name").html()).toBe("Hike 1");
+    $(document).ready(function(){
+
+      expect($("#Hike1Name").html()).toBe("Cool Hike");
+      expect($("#Hike2Name").html()).toBe("Less Cool Hike");
+      expect($("#Hike3Name").html()).toBe("The Hiker 3");
+      expect($("#Hike4Name").html()).toBe("Lake Forest Hamburger");
+    });
 });

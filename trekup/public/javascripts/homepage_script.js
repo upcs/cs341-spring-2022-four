@@ -17,5 +17,12 @@ $(document).ready(function(){
 
   //populate flip cards with database information
   $("#Hike4Name").text("Hello");
+  $.post("/popRecHikes","Tim",function(data, status){
+    displayHikePostInfo(data, status);
+  });
 
 });
+
+function displayHikePostInfo(data, status){
+  $("#Hike4Name").text("Goodbye"); 
+}

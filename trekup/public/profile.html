@@ -9,108 +9,120 @@ HTML file for static profile page.
         <link rel="stylesheet" href="./stylesheets/profile.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	    <script src="./javascripts/profile_page_script.js"></script>
-
-        <style></style>
     </head>
 
     <body>
 
-        <!--Header Region -->
-        <div id="header" style="width:1200px">
+        <!--Header Region of the page -->
+        <div id="header">
             <div id="logo">
-                 <!--
-                <div id="logobox">
-                    <h1> TrekUP </h1>
-                </div>
-                 -->
                 <!--Table housing the mastHead text-->
-            <table id="mastHead">
-                <tr>
-                    <td id="trekHeader">Trek</td>
-                    <td id="upHeader">Up</td>
-                </tr>
-            </table>
-
-
-
-                </div>
-
+                <table id="mastHead">
+                    <tr>
+                        <td id="trekHeader">Trek</td>
+                        <td id="upHeader">Up</td>
+                    </tr>
+                </table>
             </div>
-
+            <!-- Box that contains user statistics-->
             <div id="data">
                  <div id="databox">
                     <h2>Statistics:</h2>
                     <p>Hikes Completed: 15 <br> Miles Walked: 2417 <br> Elevation Gain: 900,000</p>
                 </div>
-
-
             </div>
+            <!-- Profile picture and username -->
             <div id="icon">
-                 <div id="circle"></div>
-                  <h2> User </h2>
+                 <div id="profilecircle"></div>
+                  <h2> <br>User </h2>
                   <h3> @username </h3>
             </div>
         </div>
+    
 
 
-        <!-- Lower Region -->
-            <div id="content" style="width:1500px" overflow-y:auto>
-                <div id="completed">
-                    <div id="completedbox">
-                        <h2>Hikes Completed:</h2>
-                        <div id="hikebox">
-                            <h3>Hike 1</h3>
-                            <table>
-                                <tr>
-                                <td><div class="rating user star"></div></td>
-                                <td><div class="rating user star"></div></td>
-                                <td><div class="rating user star"></div></td>
-                                <td><div class="rating user star blank"></div></td>
-                                <td><div class="rating user star blank"></div></td>
-                                </tr>
-                            </table>
-                            <h4>Di. 370 mi. El. 352 ft.</h4>
-                        </div>
-                        <div id="hikebox">
-                            <h3>Hike 2</h3>
-                            <table>
-                                <tr>
-                                <td><div class="rating user star"></div></td>
-                                <td><div class="rating user star"></div></td>
-                                <td><div class="rating user star"></div></td>
-                                <td><div class="rating user star blank"></div></td>
-                                <td><div class="rating user star blank"></div></td>
-                                </tr>
-                            </table>
-                            <h4>Di. 370 mi. El. 352 ft.</h4>
-                        </div>
-                        <div id="hikebox">
-                            <h3>Hike 3</h3>
-                            <table>
-                                <tr>
-                                <td><div class="rating user star"></div></td>
-                                <td><div class="rating user star"></div></td>
-                                <td><div class="rating user star"></div></td>
-                                <td><div class="rating user star blank"></div></td>
-                                <td><div class="rating user star blank"></div></td>
-                                </tr>
-                            </table>
-                            <h4>Di. 370 mi. El. 352 ft.</h4>
-                        </div>                  
-                </div>
+        <!-- Lower Region of the page -->
+        <div id="content" overflow-y:auto>
+              <!-- Box that contains the user's completed hikes -->
+            <div id="completed">
+                <div id="completedbox"; style="overflow:auto">
+                    <h2>Hikes Completed:</h2>
+                      <!-- A Bunch of Dummy Hikes for now -->
+                    <div id="hikebox">
+                        <h3>Hike 1</h3>
+                        <table>
+                            <tr>
+                            <!-- A Bunch of stars depending on the rating of the hike-->
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star blank"></div></td>
+                            <td><div class="rating user star blank"></div></td>
+                            </tr>
+                        </table>
+                        <h4>Di. 370 mi. El. 352 ft.</h4>
+                    </div>
+                    <div id="hikebox">
+                        <h3>Hike 2</h3>
+                        <table>
+                            <tr>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star blank"></div></td>
+                            <td><div class="rating user star blank"></div></td>
+                            </tr>
+                        </table>
+                        <h4>Di. 370 mi. El. 352 ft.</h4>
+                    </div>
+                    <div id="hikebox">
+                        <h3>Hike 3</h3>
+                        <table>
+                            <tr>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star blank"></div></td>
+                            <td><div class="rating user star blank"></div></td>
+                            </tr>
+                        </table>
+                        <h4>Di. 370 mi. El. 352 ft.</h4>
+                    </div>               
+                    <div id="hikebox">
+                        <h3>Hike 4</h3>
+                        <table>
+                            <tr>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star blank"></div></td>
+                            <td><div class="rating user star blank"></div></td>
+                            </tr>
+                        </table>
+                        <h4>Di. 370 mi. El. 352 ft.</h4>
+                    </div>    
+                    <div id="hikebox">
+                        <h3>Hike 5</h3>
+                        <table>
+                            <tr>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star"></div></td>
+                            <td><div class="rating user star blank"></div></td>
+                            <td><div class="rating user star blank"></div></td>
+                            </tr>
+                        </table>
+                        <h4>Di. 370 mi. El. 352 ft.</h4>
+                    </div>      
+                </div>                    
             </div>
-
-            <div id="achievements">
-                    <h2>Achievements:</h2>
-                    <div id="circle"></div>
-                    <div id="circle"></div>
-                    <div id="circle"></div>
-
-            </div>
-
         </div>
-
-
-
+          <!-- Add slots for the user's achievements -->
+        <div style="border-left: 10px;"id="achievements">
+                <h2>Achievements:</h2>
+                <div id="circle"></div>
+                <div id="circle"></div>
+               
+        </div>
     </body>
 </html>

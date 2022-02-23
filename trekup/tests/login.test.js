@@ -5,7 +5,7 @@
  * This unit test verifies the post is sending
  * the correct information.
  * 
- * STATUS: ?
+ * STATUS: FAILED
  * 
  * Used: https://jestjs.io/docs/mock-functions 
  * Used: https://sammeechward.com/testing-an-express-app-with-supertest-and-jest/ 

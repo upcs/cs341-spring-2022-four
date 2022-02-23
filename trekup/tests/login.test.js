@@ -27,10 +27,10 @@ test('test filterPost exists', () => {
 
 
 /***********
- * ERROR - NEVER EXITS 
+ * ERROR - cannot find the post function in the filter post file
  **************/
 // begin the test block for verifying info was passed
-test('test selectEvent', async(done) => {
+test('POST ../routes/filterPost', async(done) => {
     // test the dummy data array passed in
     const dummyHikes = {
         "data": [
@@ -47,7 +47,7 @@ test('test selectEvent', async(done) => {
     // test if sent
     let response = await request(app)
         // request the javascript
-        .post('/routes/filterPost')
+        .post('../routes/filterPost')
         // send the javascript the dummy hikes
         .send(dummyHikes);
 

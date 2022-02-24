@@ -15,32 +15,36 @@ body{
 /* ========================================== */
 /*the table for the masthead*/
 #mastHead{
-	background-color:#FF6600;
-	position:absolute;
-	top:10px;
-	left:10px;
-	border-radius:25px;
-	width:150px;
-	height:75px;
+	background-color:#006622;
+	position:inherit;
+	/* position:absolute; */
+	/* border-radius:25px; */
+	width:10%;
+	height:12%;
+	/* height:inherit; */
 }
 
 /* the labels in the table have the same color and font */
 td{
 	color:#111111;
 	font-weight:bold;
-	font-size:42px;
+	/* font-size:42px; */
+	font-size:300%;
 }
 
 /*trek header is inside of masthead table*/
 #trekHeader{
 	position:relative;
+	/* position:inherit; */
 	top:8px;
+	/* top:100%; */
 	left:4px;
 }
 
 /* move the up letters */
 #upHeader{
 	position:relative;
+	/* position:inherit; */
 	bottom:8px;
 	right:4px;
 }
@@ -49,23 +53,157 @@ td{
 /* TAKE THIS FOR THE MASTHEAD */
 /* ========================================== */
 
-/* main central compass */
-#compass{
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:auto;
-	margin-bottom:auto;
-	opacity:40%;
-	width:35%;
-	height:35%;
+
+.flip-card{
+	background-color: transparent;
+	width:150px;
+	height:150px;
+	/* width:30%; */
+	/* height:30%; */
+	perspective:1000px;
 }
 
-#profile{
+#firstCol{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.flip-card-inner{
+	position:relative;
+	width:100%;
+	height:100%;
+	text-align:center;
+	transition:transform 0.8s;
+	transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+	transform:rotateY(180deg);
+	cursor:pointer;
+}
+
+.flip-card-front, .flip-card-back{
 	position:absolute;
-	left:670px;
-	top:180px;
-	opacity:100%;
-	width:13%;
-	height:26%;
+	width:100%;
+	height:100%;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #111111;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-text{
+	font-size:30%;
+}
+
+#flip1{
+	width:100%;
+	height:100%;
+}
+
+#flip1outer{
+	margin-bottom:30%;
+	margin-left:300%;
+}
+
+#flip2{
+	width:100%;
+	height:100%;
+}
+
+#flip2outer{
+	margin-left:150%;
+}
+
+#flip3{
+	width:100%;
+	height:100%;
+}
+
+#flip3outer{
+	position:relative;
+	margin-left:350%;
+}
+
+#flip4{
+	width:100%;
+	height:100%;
+}
+
+#flip4outer{
+	margin-top:30%;
+	margin-left:300%;
+}
+
+
+
+/* New compass implementation */
+.compassRecommend{
+	position:relative;
+	margin:auto;
+	margin-top:5%;
+
+	background:url('../images/compass1.png');
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:30%;
+
+	width:70%;
+	height:70%;
+}
+
+#profPicture{
+	width:50%;
+	height:50%;
+}
+
+li{
+	display:inline;
+}
+
+#navBar{
+	position:fixed;
+	list-style-type:none;
+	top:0;
+	width:100%;
+	margin:0;
+	margin-left:0;
+	padding:0;
+	overflow:hidden;
+	background-color:#006622;
+}
+
+#homepage{
+	float:left;
+	margin-left:0;
+}
+
+
+#profPic{
+	float:right;
+	margin-right:0.7%;
+	width:4%;
+	height:4%;
+}
+
+#profPic:hover{
+	background-color:#648B7F;
+	cursor:pointer;
+}
+
+#mastHead:hover{
+	background-color:#648B7F;
+	cursor:pointer;
 }

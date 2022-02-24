@@ -1,3 +1,5 @@
+const $ = require('jquery');
+
 createAccountHandler = function(event) {
     window.location.href = "profile.html";
     event.preventDefault();

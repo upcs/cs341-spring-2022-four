@@ -58,7 +58,8 @@
                         <div class="slidercontainer">
                             <input type="range" id="mileRange" name="mileRange" class="slider" min=0 max=30>
                             <!-- <label for="mileRange">Miles</label> -->
-                        </div>
+                            <!-- Brynn - added output so able to access in javascript -->
+                            <output id="miles"></output> </div>
                     </div>
                 </div>
 
@@ -70,19 +71,21 @@
                             <input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=60000>
                             <!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
                             <!-- <label for="mileRange">Miles</label> -->
-                        </div>
+                            <!-- Brynn - added output so able to access in javascript -->
+                            <output id="elevation"></output> </div>
                     </div>
                 </div>
-
-                <button type="submit" onclick=searchHikes()>submit</button>
             </div>
-            <!-- WANT: sorted list of hikes to appear in collapsible when the user has searched -->
-            <p id="hike1"></p>
-            <p id="hike2"></p>
-            <p id="hike3"></p>
-            <p id="hike4"></p>
-            <p id="hike5"></p>
+
+            <button type="submit" onclick=searchHikes()>submit</button>
         </div>
+        <!-- WANT: sorted list of hikes to appear in collapsible when the user has searched -->
+        <p id="hike1"></p>
+        <p id="hike2"></p>
+        <p id="hike3"></p>
+        <p id="hike4"></p>
+        <p id="hike5"></p>
+    </div>
     </div>
 
     <script src="javascripts/bottomnavjs.js"></script>

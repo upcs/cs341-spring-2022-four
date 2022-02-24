@@ -26,13 +26,16 @@ search_filter_handler = function(e) {
 
     /* get the attributes of the hike being searched for */
     // trail name
-    var trail_name = $("trail_name").val();
-    // difficulty 
-    // var diff = $("#difficultyDrop").children(".current")[0];
-    var diff = $("input[name='");
+    var trail_name = $("#trail_name").val();
+    // difficulty checked
+    var diff = $("input[name='diff':checked");
+    // miles 
+    var miles = $("#miles").val();
+    //elevation gain
+    var elevation = $("#elevation").val();
 
     // verify they searched something 
-    if (trail_name == "diff") {
+    if (trail_name == "" && diff == 'easy' && miles == 0 && elevation == 0) {
         alert("Please enter a trail name or select a filter.")
     }
 

@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
   $("#mastHead").click(function(){
     window.location.href="Index.html";
@@ -16,7 +18,6 @@ $(document).ready(function(){
   });
 
   //populate flip cards with database information
-  $("#Hike4Name").text("Hello");
   $.post("/popRecHikes","Tim",function(data, status){
     displayHikePostInfo(data, status);
   });
@@ -38,7 +39,7 @@ function populateRecHikes(recHikes, hikeIdx){
   $(component).text(recHikes[hikeIdx].HIKE);
 
   //insert elevation change and mileage
-  component = "#Hike" + hikeIdx + "Metrics";
+  component = "#Hike" + (hikeIdx + 1) + "Metrics";
   $(component).text("Elevation Change: " + recHikes[hikeIdx].ELEVATION_CHANGE
       + ", Mileage: " + recHikes[hikeIdx].DISTANCE);
 }

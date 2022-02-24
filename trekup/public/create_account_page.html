@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./stylesheets/login_page_style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./javascripts/login_page_script.js"></script>
+    <script type="text/javascript" src="./javascripts/create_account_page_script.js"></script>
   </head>
 
   <body>
@@ -25,15 +25,19 @@
       <h1>TrekUp</h1>
       <!--form with username and pawword textbox input, andn login button-->
       <form id="login_form">
-        <label for="email">E-mail</label>
+        <label for="name">Name</label>
+        <input type=text id="username"><br>
+        <label for="username">E-mail</label>
         <input type=text id="email"><br>
         <label for="password">Password</label>
         <input type=password id="password"><br>
-        <button id="login_button">Log In</button>
+        <label for="confirm_password">Re-enter password</label>
+        <input type=password id="confirm_password"><br>
+        <button id="create_account_button">Create Account</button>
       </form>
-      <!--text to lead to create an account-->
-      <p class="to_create_account">Don't have an account?
-      <span class="to_create_account" id="create_account_link">Create an account</span>
+      <!--text to lead to logging in to acount if user already has one-->
+      <p class="to_login">Already have an account?
+      <span class="to_login" id="login_link">Sign in.</span>
       </p>
     </div>
   </body>

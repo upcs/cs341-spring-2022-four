@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var popRecHikesRouter = require('./public/posting/popRecHikes.js');
 var filterRouter = require('./routes/filterPost'); //for filtering
 var nameRouter = require('./routes/namePost'); //for filtering
 
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/popRecHikes', popRecHikesRouter);
 app.use('/filterPost', filterRouter); //for filtering
 app.use('/namePost', nameRouter); //for filtering
 

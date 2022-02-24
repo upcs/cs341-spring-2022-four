@@ -13,36 +13,103 @@
 </head>
 
 <body>
-	<!--Table housing the mastHead text-->
-	<table id="mastHead">
-		<tr>
-			<td id="trekHeader">Trek</td>
-			<td id="upHeader">Up</td>
-		</tr>
-	</table>
+	<!-- make a top nav bar -->
+	<ul id="navBar">
+		<li id="homepage">
 
-	<table id="recCompass">
-		<!-- <tr> -->
-			<!-- card for hike 1 -->
-			<!-- <div class="flip-card"> -->
-				<!-- <div class="flip-card-inner"> -->
-					<!-- <div class="flip-card-front"> -->
-						<!-- <img src="./images/hike1.jpg" alt="Pic" style="width:300px;height:300px;"> -->
-					<!-- </div> -->
-					<!-- <div class="flip-card-back"> -->
-						<!-- <h1>Hike 1</h1> -->
-						<!-- <p>Elevation Change: 1000, Mileage: 27</p> -->
-						<!-- <p>Rating: *****</p> -->
-					<!-- </div> -->
-				<!-- </div> -->
-			<!-- </div> -->
 
-		<!-- </tr> -->
-		<tr>
-			<img id="compass" src="./images/compass1.png"></img>
-			<img id="profile" src="./images/profile.png"></img>
-		</tr>
-	</table>
+			<!--Table housing the mastHead text-->
+			<table id="mastHead">
+				<tr>
+					<td id="trekHeader">Trek</td>
+					<td id="upHeader">Up</td>
+				</tr>
+			</table>
+		</li>
+		<li id="prof">
+			<img id="profPic" src="./images/profile.png"></img>
+		</li>
+	</ul>
+
+
+	<div class="compassRecommend">
+		<table class="compassTable">
+			<tr>
+				<td>
+					<!-- <img id="hike1pic" src="./images/hike1.jpg"> -->
+					<!-- top flip card -->
+					<div id="flip1outer" class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img id="flip1" src="./images/hike1.jpg" alt="Pic">
+							</div>
+							<div class="flip-card-back">
+								<h1 id="Hike1Name" class="flip-text">Hike 1</h1>
+								<p id="Hike1Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+								<p class="flip-text">Rating: This will be POST</p>
+							</div>
+						</div>
+					</div>
+
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<!-- middle flip card -->
+					<div id="flip2outer" class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img id="flip2" src="./images/hike2.jpg" alt="Pic">
+							</div>
+							<div class="flip-card-back">
+								<h1 id="Hike2Name" class="flip-text">Hike 2</h1>
+								<p id="Hike2Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+								<p class="flip-text">Rating: This will be POST</p>
+							</div>
+						</div>
+					</div>
+
+				</td>
+				<td>
+					<!-- middle flip card -->
+					<div id="flip3outer" class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img id="flip3" src="./images/hike3.jpg" alt="Pic">
+							</div>
+							<div class="flip-card-back">
+								<h1 id="Hike3Name" class="flip-text">Hike 3</h1>
+								<p id="Hike3Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+								<p class="flip-text">Rating: This will be POST</p>
+							</div>
+						</div>
+					</div>
+
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<!-- bottom flip card -->
+					<div id="flip4outer" class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img id="flip4" src="./images/hike4.jpg" alt="Pic">
+							</div>
+							<div class="flip-card-back">
+								<h1 id="Hike4Name" class="flip-text">Hike 4</h1>
+								<p id="Hike4Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+								<p class="flip-text">Rating: This will be POST</p>
+							</div>
+						</div>
+					</div>
+
+				</td>
+			</tr>
+
+		</table>
+	</div>
 
 
 	<!-- navbar -->

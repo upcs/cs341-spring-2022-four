@@ -39,10 +39,10 @@ test('POST ../routes/filterPost', async(done) => {
             { "hike3": { name: "hike 3", distance: "8 miles", elevation: 1200, difficulty: "moderate" } }
         ]
     };
-    // // read the orders.js file into a string
-    // var filterPost = fs.readFileSync('routes/filterPost.js', 'utf8');
+    // // read the filterPost.js file into a string
+    var filterPost = fs.readFileSync('routes/filterPost.js', 'utf8');
     // // make sure there is a file there
-    // expect(filterPost).toBe(dummyHikes);
+    expect(filterPost).toBe(dummyHikes);
 
     // test if sent
     let response = await request(app)

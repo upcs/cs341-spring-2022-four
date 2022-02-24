@@ -12,12 +12,14 @@
         "debug": "~2.6.9",
         "express": "~4.16.1",
         "http-errors": "~1.6.3",
-        "jade": "~1.11.0",
+        "jade": "^0.29.0",
         "morgan": "~1.9.1",
         "jquery": "~3.6.0",
         "mysql": "^2.18.1"
     },
     "devDependencies": {
-      "jest": "^27.4.7"
+        "asynch": "^0.5.2",
+        "jest": "^27.5.1",
+        "supertest": "^6.2.2"
     }
 }

@@ -2,24 +2,27 @@
  * user_info_dbms.js
  *
  * Modified by Brynn Harrington on 20 Feb 2022
+ * Modified by Francisco Nguyen - 3 Mar 2022
  * 
- * This file contains functions for accessing the user MySQL database
- * which contains the Cheesecake order data. 
- *
- * 
+ * This file contains functions for accessing the local user MySQL database
+ * which contains the user profiles
  */
 
 exports.version = '0.0.1';
 
 
-var mysql = require('mysql'),
+var mysql = require('mysql2'),
     async = require('async');
 
-// updated the host to my personal (very insecure) cheesecake database information
-var host = "34.127.115.166"; //from GCloud instance (change to match your db)
-var database = "USERS"; //database name
+// var host = "34.127.115.166"; //from GCloud instance (change to match your db)
+// var database = "USERS"; //database name
+// var user = "root"; //username (change to match your db)
+// var password = "teamFour!SQL"; //password (change to match your db, yes this is very poor practice)
+
+var host = "127.0.0.1"; //from GCloud instance (change to match your db)
+var database = "USERPROFILES"; //database name
 var user = "root"; //username (change to match your db)
-var password = "teamFour!SQL"; //password (change to match your db, yes this is very poor practice)
+var password = ""; //password (change to match your db, yes this is very poor practice)
 
 /**
  * dbquery

@@ -39,6 +39,7 @@ function searchHikesName(){
 //function to send a post to the database
 //  ***currently gets dummy data
 function sendPostName(name){
+  var value = $('#name').val().toUpperCase();
   $.post('/namePost', //url
     function(dummyHikes, status, json){ //callback function
 
@@ -46,8 +47,8 @@ function sendPostName(name){
 
 
         $("#hike1").text(dummyHikes.data[0].hike1.name + ": " + dummyHikes.data[0].hike1.distance + " miles, " + dummyHikes.data[0].hike1.elevation + " ft, " + dummyHikes.data[0].hike1.difficulty + ".");
-        $("#hike2").text(dummyHikes.data[1].hike2.name + ": " + dummyHikes.data[1].hike2.distance + " miles, " + dummyHikes.data[1].hike2.elevation + " ft, " + dummyHikes.data[1].hike2.difficulty + ".");
-        $("#hike3").text(dummyHikes.data[2].hike3.name + ": " + dummyHikes.data[2].hike3.distance + " miles, " + dummyHikes.data[2].hike3.elevation + " ft, " + dummyHikes.data[2].hike3.difficulty + ".");
+        //$("#hike2").text(dummyHikes.data[1].hike2.name + ": " + dummyHikes.data[1].hike2.distance + " miles, " + dummyHikes.data[1].hike2.elevation + " ft, " + dummyHikes.data[1].hike2.difficulty + ".");
+        //$("#hike3").text(dummyHikes.data[2].hike3.name + ": " + dummyHikes.data[2].hike3.distance + " miles, " + dummyHikes.data[2].hike3.elevation + " ft, " + dummyHikes.data[2].hike3.difficulty + ".");
 
     });
 }

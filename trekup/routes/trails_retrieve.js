@@ -1,6 +1,6 @@
-/* trails.js
+/* trails_retrieve.js
  * @author Brynn Harrington
- * Date Modified: 20 Feb 2022
+ * Date Modified: 13 Mar 2022
  * 
  * Create a new route to access the trail data for the 
  * requested attribute from the database and return that 
@@ -12,10 +12,10 @@ var express = require('express');
 var router = express.Router();
 
 // require the database management system
-var dbms = require('./trail_info_dbms.js');
+var dbms = require('./dbms_trail_info.js');
 
 // store the information
-// var trail_info[];
+var trail_info = [];
 
 // POST for retrieving hikes
 router.post('/', function(req, res, next) {
@@ -30,8 +30,8 @@ router.post('/', function(req, res, next) {
                 console.log(err);
                 return;
             }
-            info = result;
-            res.json(info);
+            trail_info = result;
+            res.json(trail_info);
         });
     }
 
@@ -42,8 +42,8 @@ router.post('/', function(req, res, next) {
                 console.log(err);
                 return;
             }
-            info = result;
-            res.json(info);
+            trail_info = result;
+            res.json(trail_info);
         });
     }
     // hike - name of the hike
@@ -53,8 +53,8 @@ router.post('/', function(req, res, next) {
                 console.log(err);
                 return;
             }
-            info = result;
-            res.json(info);
+            trail_info = result;
+            res.json(trail_info);
         });
     }
     // difficulty - enum difficulty (easy, moderate, difficult)
@@ -64,8 +64,8 @@ router.post('/', function(req, res, next) {
                 console.log(err);
                 return;
             }
-            info = result;
-            res.json(info);
+            trail_info = result;
+            res.json(trail_info);
         });
     }
     //// TODO - FIGURE OUT HOW TO DO THIS FOR A RANGE OF NUMBERS

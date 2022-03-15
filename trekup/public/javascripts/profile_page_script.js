@@ -7,7 +7,7 @@ $(document).ready(function(){
       window.location.href="login_page.html";
     });
 
-    $("#profilepic").click(function() {
-      $.post('/profile', {value: 1});
+    $("#profilepic").on("click", function() {
+      $.post('/profilePost', {value: 1});
     });
   });

@@ -16,6 +16,7 @@ router.post('/', function(req, res, next) {
 
   dbms.dbquery(query, function(error, results) {
     console.log(JSON.stringify(results));
+    res.json(results);
   });
 });
 

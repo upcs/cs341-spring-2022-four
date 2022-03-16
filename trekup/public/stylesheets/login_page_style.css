@@ -1,9 +1,4 @@
-.top_bar {
-    border: 3px solid black;
-    background: lightgreen;
-    margin-bottom: 10%;
-}
-
+/*the white box in the middle of the page with the form*/
 #div_form {
     margin: auto;
     width: 4in;
@@ -20,7 +15,7 @@ body{
 
 h1 {
     text-align: center;
-    font-family: Garamond, 'Times New Roman', Times, serif
+    font-family: Garamond, 'Times New Roman', Times, serif;
 }
 
 input {
@@ -55,16 +50,19 @@ input, label {
     display: block;
 }
 
-.create_account {
+/*style for the text following the form which asks users if 
+they want to create an account or sign in*/
+form + p {
     text-align: center;
     margin-top: 10%
 }
 
-#create_account_button {
+/*hyperlink to login page or create and account page*/
+span {
     color: blue;
 }
 
-#create_account_button:hover {
+span:hover {
     text-decoration: underline;
 }
 

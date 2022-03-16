@@ -10,6 +10,7 @@ var popRecHikesRouter = require('./public/posting/popRecHikes.js');
 var filterRouter = require('./routes/filterPost'); //for filtering
 var nameRouter = require('./routes/namePost'); //for filtering
 var profileRouter = require('./routes/profilePost');
+var profileHikeListRouter = require('./routes/profile_hike_list');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use('/popRecHikes', popRecHikesRouter);
 app.use('/filterPost', filterRouter); //for filtering
 app.use('/namePost', nameRouter); //for filtering
 app.use('/profilePost', profileRouter);
+app.use('/profile_hike_list', profileHikeListRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

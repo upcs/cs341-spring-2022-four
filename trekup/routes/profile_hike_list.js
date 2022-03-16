@@ -7,12 +7,13 @@ var dbms = require('./user_info_dbms');
 
 /* GET home page. */
 router.post('/', function(req, res, next) {
-    var query = "select name, trails_completed, distance_walked, elevation_gain, achievements " +
-                "from user_profiles where username='frann'";
+    var query = "select hike_name, rating,  distance, elevation " +
+                "from users_hikes_completed where username='frann'";
 
+    console.log(res.username);
     dbms.dbquery(query, function(error, results) {
-        // console.log(JSON.stringify(results));
-        res.json(results[0]);
+        console.log(JSON.stringify(results));
+        res.json(results);
     });
 });
 

@@ -1,7 +1,6 @@
 /**
  * author: Logan Machida
  * updated by: Francisco Nguyen
- * 
  */
 
 addStars = function (stars_num) {
@@ -63,7 +62,7 @@ addTrophies = function (achievements_bits) {
 }
 
 $(document).ready(function(){
-    var usrnm = 'frann';
+    var usrnm = 'f.nguyen123';
     $.post('/profilePost', {username: usrnm})
         .done(function(data) {
             $("#username").text("@" + usrnm);

@@ -8,7 +8,7 @@ var dbms = require('./user_info_dbms');
 /* GET home page. */
 router.post('/', function(req, res, next) {
     var query = "select hike_name, rating,  distance, elevation " +
-                "from users_hikes_completed where username='frann'";
+                "from users_hikes_completed where username='" + req.body.username + "'";
 
     dbms.dbquery(query, function(error, results) {
         // console.log(JSON.stringify(results));

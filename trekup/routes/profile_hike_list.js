@@ -10,9 +10,8 @@ router.post('/', function(req, res, next) {
     var query = "select hike_name, rating,  distance, elevation " +
                 "from users_hikes_completed where username='frann'";
 
-    console.log(res.username);
     dbms.dbquery(query, function(error, results) {
-        console.log(JSON.stringify(results));
+        // console.log(JSON.stringify(results));
         res.json(results);
     });
 });

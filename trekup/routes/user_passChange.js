@@ -3,7 +3,7 @@
  * @author Brynn Harrington
  * Date Modified: 13 Mar 2022
  *  
- * Gets a user to the USERS database
+ * Gets a user to the USER_PROFILES database
  * as requested by the user and allows hashed 
  * password to be change
  * 
@@ -29,7 +29,7 @@ router.post('/', function(req, res, next) {
     console.log(old_pass);
 
     // get the user
-    dbms.dbquery("SELECT * FROM USERS WHERE USERNAME = '" + username + "'", function(err, result) {
+    dbms.dbquery("SELECT * FROM USER_PROFILES WHERE USERNAME = '" + username + "'", function(err, result) {
         if (err) {
             console.log(err);
             return;
@@ -39,7 +39,7 @@ router.post('/', function(req, res, next) {
         const found = bcrypt.compareSync(old_pass, result[0].PASSWORD);
         if (found) {
             const hashed_pass = bcrypt.hashSync(new_pass, 10);
-            dbms.dbquery("UPDATE USERS SET PASSWORD = '" + hashed_pass + "' WHERE USERNAME = '" + username + "'",
+            dbms.dbquery("UPDATE USER_PROFILES SET PASSWORD = '" + hashed_pass + "' WHERE USERNAME = '" + username + "'",
                 function(error, result) {
                     if (err) {
                         console.log(err);

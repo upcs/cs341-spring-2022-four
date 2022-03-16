@@ -36,7 +36,7 @@ body{
 /* region that contains user data */
 #data{
     height:150px;
-    width:50%;
+    width:40%;
     float: left;
     /*padding:5px;*/
 }
@@ -76,7 +76,7 @@ body{
 /* region that contains completed hikes */
 #completed{
     height:100%;
-    width:70%;
+    width:60%;
     float:left;
 }
 /* region that contains our trophies and username */
@@ -84,7 +84,7 @@ body{
     height:100%;
     width:20%;
     float:left;
-    padding:5px;
+    /*padding:5px;*/
 }
 /* Box that contains all the completed hikes */
 #completedbox{
@@ -94,11 +94,36 @@ body{
     border: 1px solid black;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     background-color: peachpuff;
+    overflow-y: auto;
+}
+/* Box that contains all the achievements */
+#achievementsbox{
+    margin-left: 10px;
+    width: 100%;
+    height:550px;
+    border:1px solid #000;
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: peachpuff;
+    overflow-y: auto;
 }
 /* Box that contains a singular hike */
 #hikebox{
+    margin-left: 20px;
     width:98%;
     height:25%;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right:10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
+}
+/* Box that contains a singular trophy */
+#trophybox{
+    width:90%;
+    height:35%;
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right:10px;
@@ -122,10 +147,9 @@ body{
 }
 /* Picture of a trophy */
 #trophy {
-    width: 50%;
-    height: 70%;
-    margin-left: 20px;
-    margin-top: 30px;
+    width: 30%;
+    height: 40%;
+    margin-left:30%;
     object-fit: scale-down;
 }
 /* For our name and username */

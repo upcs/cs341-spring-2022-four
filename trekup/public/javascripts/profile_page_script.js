@@ -62,6 +62,13 @@ addTrophies = function (achievements_bits) {
 }
 
 $(document).ready(function(){
+    // $("#mastHead").click(function(){
+    //   window.location.href="Index.html";
+    // });
+    //
+    // $("#profile").click(function(){
+    //   window.location.href="login_page.html";
+    // });
     var usrnm = 'f.nguyen123';
     $.post('/profilePost', {username: usrnm})
         .done(function(data) {
@@ -81,11 +88,11 @@ $(document).ready(function(){
             }
         });
 
-    $("#mastHead").click(function(){
-      window.location.href="Index.html";
-    });
+//     $("#mastHead").click(function(){
+//       window.location.href="Index.html";
+//     });
 
-    $("#profile").click(function(){
-      window.location.href="login_page.html";
-    });
+//     $("#profile").click(function(){
+//       window.location.href="login_page.html";
+//     });
   });

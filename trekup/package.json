@@ -19,8 +19,6 @@
         "mysql2": "^2.3.3"
     },
     "devDependencies": {
-        "asynch": "^0.5.2",
-        "jest": "^27.5.1",
-        "supertest": "^6.2.2"
+        "jest": "^27.5.1"
     }
 }

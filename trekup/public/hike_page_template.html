@@ -9,16 +9,38 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Balch Canyon Loop Hike</title>
+    <title id="fullName">Balch Canyon Loop Hike</title>
     <link rel="stylesheet" href="./stylesheets/hike_page_template_style.css">
+    <link rel="stylesheet" href="./stylesheets/nav_bar_style.css">
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./javascripts/nav_bar_script.js"></script>
+    <!-- <script src="./javascripts/homepage_script.js"></script> -->
+    <script src="./javascripts/hike_page_script.js"></script>
 
   </head>
 
   <body>
     <!--masthead stand-in-->
-    <header class="top_bar">
+    <!-- <header class="top_bar">
       <img src="#" alt="TrekUp Logo">
-    </header>
+    </header> -->
+    <ul id="navBar">
+  		<li id="homepage">
+
+
+  			<!--Table housing the mastHead text-->
+  			<table id="mastHead">
+  				<tr>
+  					<td id="trekHeader">Trek</td>
+  					<td id="upHeader">Up</td>
+  				</tr>
+  			</table>
+  		</li>
+  		<li id="prof">
+  			<img id="profPic" src="./images/profile.png"></img>
+  		</li>
+  	</ul>
 
     <!--hold the info about the hike-->
     <div id="hike_info">

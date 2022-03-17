@@ -18,23 +18,23 @@
 
 
 //function for when the user clicks "search" button to search for hikes by name
-function searchHikesName(){
-  var name = document.getElementById("search").value;
-
-  if(name == "")
-  {
-    alert("No text entered in searchbar. Please enter a hike name to search");
-  }
-  else{
-    sendPostName(name);
-  }
-
-  // document.getElementById("hike1").innerHTML = "displayed hike";
-  // document.getElementById("hike2").innerHTML = "displayed hike";
-  // document.getElementById("hike3").innerHTML = "displayed hike";
-
-
-}
+// function searchHikesName(){
+//   var name = document.getElementById("search").value;
+//
+//   if(name == "")
+//   {
+//     alert("No text entered in searchbar. Please enter a hike name to search");
+//   }
+//   else{
+//     sendPostName(name);
+//   }
+//
+//   // document.getElementById("hike1").innerHTML = "displayed hike";
+//   // document.getElementById("hike2").innerHTML = "displayed hike";
+//   // document.getElementById("hike3").innerHTML = "displayed hike";
+//
+//
+// }
 
 //function to send a post to the database
 //  ***currently gets dummy data
@@ -70,58 +70,63 @@ function filterElevation() {
 
 
 /* function to display hikes when user hits submit */
-function searchHikesFilter(){
-  //get checked boxes for difficulty
-  var diffEasy = document.getElementById("easy").checked;
-  var diffMod = document.getElementById("moderate").checked;
-  var diffHard = document.getElementById("hard").checked;
-
-  //get mile range
-  var miles = document.getElementById("mileRange").value;
-
-  //get elevation range
-  var elevation = document.getElementById("elevationRange").value;
-
-  var difficultyS = "null";
-
-
-  if(diffEasy && diffMod && diffHard){
-    difficultyS = "easy-hard";
-  }
-  else if (diffEasy && diffMod) {
-    difficultyS = "easy-moderate";
-  }
-  else if (diffEasy && diffHard) {
-    difficultyS = "easy&hard";
-  }
-  else if (diffHard && diffMod) {
-    difficultyS = "moderate-hard";
-  }
-  else if (diffEasy) {
-    difficultyS = "easy";
-  }
-  else if (diffMod) {
-    difficultyS = "moderate";
-  }
-  else if (diffHard) {
-    difficultyS = "hard";
-  }
-
-
-
-  //display hikes
-  //document.getElementById("selection").innerHTML = "Filters selected: Miles = " + miles + " miles, " + "Elevation = " + elevation + " ft, " + "Difficulty = " + difficultyS;
-  // document.getElementById("milesSelected").innerHTML = "Miles: " + miles + " miles";
-  // document.getElementById("elevationSelected").innerHTML = "Elevation: " + elevation + " ft";
-  // document.getElementById("difficultySelected").innerHTML = "Difficulty: ";
-  // document.getElementById("hike4").innerHTML = "displayed hike";
-  // document.getElementById("hike5").innerHTML = "displayed hike";
-
-  //call function to send post
-  sendPostFilters(miles, elevation, difficultyS);
-
-
-}
+// function searchHikesFilter(){
+//   //get checked boxes for difficulty
+//   var diffEasy = document.getElementById("easy").checked;
+//   var diffMod = document.getElementById("moderate").checked;
+//   var diffHard = document.getElementById("hard").checked;
+//
+//   //get mile range
+//   var miles = document.getElementById("mileRange").value;
+//
+//   //get elevation range
+//   var elevation = document.getElementById("elevationRange").value;
+//
+//   var difficultyS = "null";
+//
+//   $.post("/popRecHikes",{ez: diffEasy, me: diffMod, ha: diffHard, mileR: miles, elev: elevation},function(data, status)){
+//     displayHikePostInfo(data, status, 8);
+//   }
+//
+//   if(diffEasy && diffMod && diffHard){
+//     difficultyS = "easy-hard";
+//   }
+//   else if (diffEasy && diffMod) {
+//     difficultyS = "easy-moderate";
+//   }
+//   else if (diffEasy && diffHard) {
+//     difficultyS = "easy&hard";
+//   }
+//   else if (diffHard && diffMod) {
+//     difficultyS = "moderate-hard";
+//   }
+//   else if (diffEasy) {
+//     difficultyS = "easy";
+//   }
+//   else if (diffMod) {
+//     difficultyS = "moderate";
+//   }
+//   else if (diffHard) {
+//     difficultyS = "hard";
+//   }
+//
+//
+//
+//   //display hikes
+//   //document.getElementById("selection").innerHTML = "Filters selected: Miles = " + miles + " miles, " + "Elevation = " + elevation + " ft, " + "Difficulty = " + difficultyS;
+//   // document.getElementById("milesSelected").innerHTML = "Miles: " + miles + " miles";
+//   // document.getElementById("elevationSelected").innerHTML = "Elevation: " + elevation + " ft";
+//   // document.getElementById("difficultySelected").innerHTML = "Difficulty: ";
+//   // document.getElementById("hike4").innerHTML = "displayed hike";
+//   // document.getElementById("hike5").innerHTML = "displayed hike";
+//
+//   //call function to send post
+//
+//   //I DID AN EDIT RIGHT HERE AND WANT IT TO BE EASY TO FIND!!!
+//   // sendPostFilters(miles, elevation, difficultyS);
+//
+//
+// }
 
 
 //function to send a post to the database

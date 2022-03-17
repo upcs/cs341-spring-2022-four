@@ -1,12 +1,13 @@
 /*the white box in the middle of the page with the form*/
 #div_form {
     margin: auto;
+    margin-top: 5%;
     width: 4in;
     border: 3px solid black;
     border-radius: 10px;
     padding: 50px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color:WHITE; 
+    background-color:WHITE;
 }
 
 body{
@@ -50,7 +51,7 @@ input, label {
     display: block;
 }
 
-/*style for the text following the form which asks users if 
+/*style for the text following the form which asks users if
 they want to create an account or sign in*/
 form + p {
     text-align: center;
@@ -68,33 +69,33 @@ span:hover {
 
 
 /*the table for the masthead*/
-#mastHead{
-	background-color:#FF6600;
+/* #mastHead{ */
+	/* background-color:#FF6600; */
 	/* position:absolute; */
-	top:10px;
-	left:10px;
-	border-radius:25px;
-	width:150px;
-	height:75px;
-}
+	/* top:10px; */
+	/* left:10px; */
+	/* border-radius:25px; */
+	/* width:150px; */
+	/* height:75px; */
+/* } */
 
 /* the labels in the table have the same color and font */
-td{
+/* td{
 	color:#111111;
 	font-weight:bold;
 	font-size:42px;
-}
+} */
 
 /*trek header is inside of masthead table*/
-#trekHeader{
+/* #trekHeader{
 	position:relative;
 	top:8px;
 	left:4px;
-}
+} */
 
 /* move the up letters */
-#upHeader{
+/* #upHeader{
 	position:relative;
 	bottom:8px;
 	right:4px;
-}
+} */

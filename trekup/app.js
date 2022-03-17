@@ -10,8 +10,11 @@ var popRecHikesRouter = require('./public/posting/popRecHikes.js');
 
 var popHikePageRouter = require('./public/posting/popHikePage.js');
 var popSearchHikesRouter = require('./public/posting/popSearchHikes.js');
-var filterRouter = require('./routes/filterPost'); //for filtering
-var nameRouter = require('./routes/namePost'); //for filtering
+var filterRouter = require('./routes/init/filterPost'); //for filtering
+var nameRouter = require('./routes/init/namePost'); //for filtering
+var profileRouter = require('./routes/profilePost');
+var profileHikeListRouter = require('./routes/profile_hike_list');
+var trailsRetrieveRouter = require('./routes/trails_retrieve'); // retrieve the trails from the DB
 
 // var filterRouter = require('./routes/init/filterPost'); //for filtering
 // var nameRouter = require('./routes/init/namePost'); //for filtering
@@ -35,7 +38,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/popRecHikes', popRecHikesRouter);
 app.use('/popHikePage', popHikePageRouter);
-app.use('/popSearchHikes', popSearchHikesRouter); 
+app.use('/popSearchHikes', popSearchHikesRouter);
 app.use('/filterPost', filterRouter); //for filtering
 app.use('/namePost', nameRouter); //for filtering
 app.use('/profilePost', profileRouter);

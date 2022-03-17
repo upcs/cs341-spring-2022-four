@@ -63,6 +63,22 @@ body{
 	perspective:1000px;
 }
 
+/* this isn't needed anymore since I found a lower solution but I don't want to change it back */
+.flip-card-search{
+	background-color: transparent;
+	width:150px;
+	height:150px;
+
+	/* margin-left:30%; */
+	/* margin-right:5%; */
+
+	perspective:1000px;
+}
+
+.searchHikes td{
+	padding:17px;
+}
+
 #firstCol{
 	position:relative;
 	margin-left:auto;
@@ -79,6 +95,11 @@ body{
 }
 
 .flip-card:hover .flip-card-inner{
+	transform:rotateY(180deg);
+	cursor:pointer;
+}
+
+.flip-card-search:hover .flip-card-inner{
 	transform:rotateY(180deg);
 	cursor:pointer;
 }

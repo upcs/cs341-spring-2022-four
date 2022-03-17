@@ -118,7 +118,9 @@ function searchHikesFilter(){
   // document.getElementById("hike5").innerHTML = "displayed hike";
 
   //call function to send post
-  sendPostFilters(miles, elevation, difficultyS);
+  
+  //I DID AN EDIT RIGHT HERE AND WANT IT TO BE EASY TO FIND!!!
+  // sendPostFilters(miles, elevation, difficultyS);
 
 
 }

@@ -20,7 +20,11 @@ $(document).ready(function(){
 
   //populate flip cards with database information
   $.post("/popRecHikes",{name: "'Tim'"},function(data, status){
-    displayHikePostInfo(data, status);
+    displayHikePostInfo(data, status, 4);
+  });
+
+  $.post("/popSearchHikes",{name: "'Tim'"},function(data, status){
+    displayHikePostInfo(data, status, 8);
   });
 
 });
@@ -33,22 +37,31 @@ function mrClicky(hikeNameField){
   window.location.href="hike_page_template.html";
 }
 
-function displayHikePostInfo(data, status){
+function displayHikePostInfo(data, status, numPop){
   const recHikes = JSON.parse(data);
   // alert(recHikes);
-  populateRecHikes(recHikes, 0);
-  populateRecHikes(recHikes, 1);
-  populateRecHikes(recHikes, 2);
-  populateRecHikes(recHikes, 3);
+  for(let i = 0; i < numPop; i++){
+    let helperStr = "";
+    if(numPop == 4){
+      helperStr = "Hike";
+    }else{
+      helperStr = "SearchHike";
+    }
+    populateRecHikes(recHikes, i, helperStr);
+  }
+  // populateRecHikes(recHikes, 0, "Hike");
+  // populateRecHikes(recHikes, 1, "Hike");
+  // populateRecHikes(recHikes, 2, "Hike");
+  // populateRecHikes(recHikes, 3, "Hike");
 }
 
-function populateRecHikes(recHikes, hikeIdx){
+function populateRecHikes(recHikes, hikeIdx, helperStr){
   //insert name
-  var component = "#Hike" + (hikeIdx + 1) + "Name";
+  var component = "#" + helperStr + (hikeIdx + 1) + "Name";
   $(component).text(recHikes[hikeIdx].HIKE);
 
   //insert elevation change and mileage
-  component = "#Hike" + (hikeIdx + 1) + "Metrics";
+  component = "#" + helperStr + (hikeIdx + 1) + "Metrics";
   $(component).text("Elevation Change: " + recHikes[hikeIdx].ELEVATION_CHANGE
       + ", Mileage: " + recHikes[hikeIdx].DISTANCE);
 }

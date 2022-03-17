@@ -11,6 +11,7 @@ var filterRouter = require('./routes/init/filterPost'); //for filtering
 var nameRouter = require('./routes/init/namePost'); //for filtering
 var profileRouter = require('./routes/profilePost');
 var profileHikeListRouter = require('./routes/profile_hike_list');
+var trailsRetrieveRouter = require('./routes/trails_retrieve');
 
 var app = express();
 
@@ -31,21 +32,22 @@ app.use('/filterPost', filterRouter); //for filtering
 app.use('/namePost', nameRouter); //for filtering
 app.use('/profilePost', profileRouter);
 app.use('/profile_hike_list', profileHikeListRouter)
+app.use('/trails_retrieve', trailsRetrieveRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+    next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 module.exports = app;

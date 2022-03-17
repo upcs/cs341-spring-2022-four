@@ -1,3 +1,7 @@
+//@author Jennifer Brana
+//
+//Last updated: 3/16/2022
+
 
 /* script for navbar */
 
@@ -153,7 +157,25 @@ function sendPostFilters(miles, elevation, difficultyS){
     });
 }
 
+//script for updating the slider value for elevation
+//Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp
+var eslider = document.getElementById("elevationRange");
+var eoutput = document.getElementById("elevationVal");
+eoutput.innerHTML = eslider.value; // Display the default slider value
 
+// Update the current slider value (each time you drag the slider handle)
+eslider.oninput = function() {
+  eoutput.innerHTML = this.value;
+}
+
+var mslider = document.getElementById("mileRange");
+var moutput = document.getElementById("milesVal");
+moutput.innerHTML = mslider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+mslider.oninput = function() {
+  moutput.innerHTML = this.value;
+}
 
 
 

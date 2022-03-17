@@ -9,7 +9,7 @@ router.post('/', async(req, res, next)=>{
   // const hi3 = {HIKE:"The Hiker 3",DISTANCE:7,ELEVATION_CHANGE:100};
   // const hi4 = {HIKE:"Lake Forest Hamburger",DISTANCE:98,ELEVATION_CHANGE:400};
 
-  var hi1 = JSON.stringify(await dbq.dbquery("SELECT HIKE, DISTANCE, ELEVATION-CHANGE FROM TRAIL_INFO LIMIT 4"));
+  var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO LIMIT 4"));
   // var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM ORDERS"))
 
   // var hi1 = JSON.stringify(await dbq.dbquery("SELECT HIKE DISTANCE ELEVATION_CHANGE FROM TREKUP LIMIT 1 OFFSET 2"));

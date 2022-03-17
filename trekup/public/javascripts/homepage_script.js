@@ -35,7 +35,7 @@ function mrClicky(hikeNameField){
 
 function displayHikePostInfo(data, status){
   const recHikes = JSON.parse(data);
-  alert(recHikes);
+  // alert(recHikes);
   populateRecHikes(recHikes, 0);
   populateRecHikes(recHikes, 1);
   populateRecHikes(recHikes, 2);

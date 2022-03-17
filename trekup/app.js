@@ -11,7 +11,7 @@ var filterRouter = require('./routes/init/filterPost'); //for filtering
 var nameRouter = require('./routes/init/namePost'); //for filtering
 var profileRouter = require('./routes/profilePost');
 var profileHikeListRouter = require('./routes/profile_hike_list');
-var trailsRetrieveRouter = require('./routes/trails_retrieve');
+var trailsRetrieveRouter = require('./routes/trails_retrieve'); // retrieve the trails from the DB
 
 var app = express();
 
@@ -32,7 +32,7 @@ app.use('/filterPost', filterRouter); //for filtering
 app.use('/namePost', nameRouter); //for filtering
 app.use('/profilePost', profileRouter);
 app.use('/profile_hike_list', profileHikeListRouter)
-app.use('/trails_retrieve', trailsRetrieveRouter);
+app.use('/trails_retrieve', trailsRetrieveRouter); // trails from DB
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

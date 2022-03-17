@@ -1,7 +1,7 @@
 /**
  * trail_info_dbms.js
  *
- * Modified by Brynn Harrington on 20 Feb 2022
+ * Modified by Brynn Harrington on 16 Mar 2022
  * 
  * This file contains functions for accessing the trail MySQL database
  * which contains the Cheesecake order data.
@@ -16,8 +16,8 @@ var mysql = require('mysql'),
     async = require('async');
 
 // updated the host to my personal (very insecure) cheesecake database information
-var host = "34.127.115.166"; //from GCloud instance (change to match your db)
-var database = "TRAILS"; //database name
+var host = "35.230.90.113"; //from GCloud instance (change to match your db)
+var database = "TREKUP"; //database name
 var user = "root"; //username (change to match your db)
 var password = "teamFour!SQL"; //password (change to match your db, yes this is very poor practice)
 

@@ -39,17 +39,31 @@ function searchHikesName(){
 //function to send a post to the database
 //  ***currently gets dummy data
 function sendPostName(name){
-  $.post('/namePost', //url
+  //var value = $('#name').val().toUpperCase();
+  $.post('/trails_retrieve', //url
     function(dummyHikes, status, json){ //callback function
 
-      document.getElementById("selection").innerHTML = "Hike name searched: " + name;
+
+        document.getElementById("selection").innerHTML = "Hike name searched: " + name;
 
 
         $("#hike1").text(dummyHikes.data[0].hike1.name + ": " + dummyHikes.data[0].hike1.distance + " miles, " + dummyHikes.data[0].hike1.elevation + " ft, " + dummyHikes.data[0].hike1.difficulty + ".");
-        $("#hike2").text(dummyHikes.data[1].hike2.name + ": " + dummyHikes.data[1].hike2.distance + " miles, " + dummyHikes.data[1].hike2.elevation + " ft, " + dummyHikes.data[1].hike2.difficulty + ".");
-        $("#hike3").text(dummyHikes.data[2].hike3.name + ": " + dummyHikes.data[2].hike3.distance + " miles, " + dummyHikes.data[2].hike3.elevation + " ft, " + dummyHikes.data[2].hike3.difficulty + ".");
+        //$("#hike2").text(dummyHikes.data[1].hike2.name + ": " + dummyHikes.data[1].hike2.distance + " miles, " + dummyHikes.data[1].hike2.elevation + " ft, " + dummyHikes.data[1].hike2.difficulty + ".");
+        //$("#hike3").text(dummyHikes.data[2].hike3.name + ": " + dummyHikes.data[2].hike3.distance + " miles, " + dummyHikes.data[2].hike3.elevation + " ft, " + dummyHikes.data[2].hike3.difficulty + ".");
 
     });
+  // $.post('/namePost', //url
+  //   function(dummyHikes, status, json){ //callback function
+  //
+  //
+  //       document.getElementById("selection").innerHTML = "Hike name searched: " + name;
+  //
+  //
+  //       $("#hike1").text(dummyHikes.data[0].hike1.name + ": " + dummyHikes.data[0].hike1.distance + " miles, " + dummyHikes.data[0].hike1.elevation + " ft, " + dummyHikes.data[0].hike1.difficulty + ".");
+  //       //$("#hike2").text(dummyHikes.data[1].hike2.name + ": " + dummyHikes.data[1].hike2.distance + " miles, " + dummyHikes.data[1].hike2.elevation + " ft, " + dummyHikes.data[1].hike2.difficulty + ".");
+  //       //$("#hike3").text(dummyHikes.data[2].hike3.name + ": " + dummyHikes.data[2].hike3.distance + " miles, " + dummyHikes.data[2].hike3.elevation + " ft, " + dummyHikes.data[2].hike3.difficulty + ".");
+  //
+  //   });
 }
 
 

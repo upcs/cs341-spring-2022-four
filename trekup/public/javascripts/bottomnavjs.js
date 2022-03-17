@@ -30,7 +30,7 @@ function searchHikesName(){
     alert("No text entered in searchbar. Please enter a hike name to search");
   }
   else{
-    sendPostName(name);
+    sendPostName();
   }
 
   // document.getElementById("hike1").innerHTML = "displayed hike";
@@ -42,13 +42,15 @@ function searchHikesName(){
 
 //function to send a post to the database
 //  ***currently gets dummy data
-function sendPostName(name){
-  //var value = $('#name').val().toUpperCase();
-  $.post('/trails_retrieve', //url
+function sendPostName(){
+  var value = $('#search').val().toUpperCase();
+  
+  $.post('/namePost', //url
+  {name: value},
     function(dummyHikes, status, json){ //callback function
 
 
-        document.getElementById("selection").innerHTML = "Hike name searched: " + name;
+        document.getElementById("selection").innerHTML = "Hike name searched: " + value;
 
 
         $("#hike1").text(dummyHikes.data[0].hike1.name + ": " + dummyHikes.data[0].hike1.distance + " miles, " + dummyHikes.data[0].hike1.elevation + " ft, " + dummyHikes.data[0].hike1.difficulty + ".");

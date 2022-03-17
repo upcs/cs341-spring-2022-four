@@ -13,7 +13,7 @@ $(document).ready(function(){
 
     $("#create_account_link").on("click", goToCreateAccountHandler);
 
-  $("#mastHead").click(function(){
-    window.location.href="Index.html";
-  });
+    $("#mastHead").click(function(){
+        window.location.href="Index.html";
+    });
 });

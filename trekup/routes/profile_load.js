@@ -11,6 +11,10 @@ router.post('/', function(req, res, next) {
                 "from user_profiles where username='" + req.body.username + "'";
 
     dbms.dbquery(query, function(error, results) {
+        if (error) {
+            console.log(error);
+            return;
+        }
         // console.log(JSON.stringify(results));
         res.json(results[0]);
     });

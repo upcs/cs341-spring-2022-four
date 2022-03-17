@@ -13,10 +13,10 @@ $(document).ready(function(){
   //     window.location.href="login_page.html";
   //   }
   // });
-  
-  $(".flip-card").click(function(){
-    window.location.href="hike_page_template.html";
-  });
+
+  // $(".flip-card").click(function(){
+  //   window.location.href="hike_page_template.html";
+  // });
 
   //populate flip cards with database information
   $.post("/popRecHikes","Tim",function(data, status){
@@ -24,6 +24,14 @@ $(document).ready(function(){
   });
 
 });
+
+let passName = "";
+
+function mrClicky(hikeNameField){
+  passName = $(hikeNameField).text();
+  localStorage.setItem('Name', passName); 
+  window.location.href="hike_page_template.html";
+}
 
 function displayHikePostInfo(data, status){
   const recHikes = JSON.parse(data);
@@ -44,3 +52,5 @@ function populateRecHikes(recHikes, hikeIdx){
   $(component).text("Elevation Change: " + recHikes[hikeIdx].ELEVATION_CHANGE
       + ", Mileage: " + recHikes[hikeIdx].DISTANCE);
 }
+
+// export const toPass = passName

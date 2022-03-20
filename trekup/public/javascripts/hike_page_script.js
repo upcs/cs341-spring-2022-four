@@ -1,7 +1,13 @@
+/**
+ * @hike_page_script.js
+ *
+ * sets all of the components for the specific hike page after the post
+ *
+ * Posts with file: popHikePage.js
+ */
 
 $(document).ready(function(){
   let hikeToPost = localStorage.getItem('Name');
-  // alert(localStorage.getItem('Name'));
   $.post("/popHikePage",{hName: hikeToPost}, function(data, status){
     displayHikePageInfo(data, status);
   });
@@ -9,7 +15,6 @@ $(document).ready(function(){
 
 function displayHikePageInfo(data, status){
   const theHike = JSON.parse(data);
-  // alert(theHike);
   $("#hike_name").text(theHike[0].HIKE);
   $("#notes").text(theHike[0].NOTES);
   $("#difficulty").text(theHike[0].DIFFICULTY);

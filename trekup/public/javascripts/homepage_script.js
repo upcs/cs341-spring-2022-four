@@ -1,32 +1,15 @@
-
+/**
+ * @homepage_script.js
+ *
+ * Loads in the recommended hikes on page load. Sends the post request for
+ * the 8 search hikes when the search bar is clicked on
+*/
 
 $(document).ready(function(){
-  // $("#mastHead").click(function(){
-  //   window.location.href="Index.html";
-  // });
-  // $("#profPic").click(function(){
-  //   let loggedIn = true;
-  //
-  //   if(loggedIn){
-  //     window.location.href="profile.html"
-  //   }else{
-  //     window.location.href="login_page.html";
-  //   }
-  // });
-
-  // $(".flip-card").click(function(){
-  //   window.location.href="hike_page_template.html";
-  // });
-
   //populate flip cards with database information
   $.post("/popRecHikes",{name: "'Tim'", noFilter: 1},function(data, status){
     displayHikePostInfo(data, status, 4);
   });
-
-  // $.post("/popSearchHikes",{name: "'Tim'", noFilter: 1},function(data, status){
-  //   displayHikePostInfo(data, status, 8);
-  // });
-
 });
 
 function initHikes(){
@@ -39,7 +22,12 @@ let passName = "";
 
 function mrClicky(hikeNameField){
   passName = $(hikeNameField).text();
+
+  //send the hike name to local storage, so we can pull it in the
+  //hike_page_script.js file so we can post with the hike name to fill
+  //in the data fields.
   localStorage.setItem('Name', passName);
+
   window.location.href="hike_page_template.html";
 }
 
@@ -47,18 +35,19 @@ function displayHikePostInfo(data, status, numPop){
   const recHikes = JSON.parse(data);
   // alert(recHikes);
   for(let i = 0; i < numPop; i++){
+    //this helper string is used in conjunction with the index
+    //for the population of each individual card so we can access
+    //the required card component by id.
     let helperStr = "";
+
     if(numPop == 4){
       helperStr = "Hike";
     }else{
       helperStr = "SearchHike";
     }
+
     populateRecHikes(recHikes, i, helperStr);
   }
-  // populateRecHikes(recHikes, 0, "Hike");
-  // populateRecHikes(recHikes, 1, "Hike");
-  // populateRecHikes(recHikes, 2, "Hike");
-  // populateRecHikes(recHikes, 3, "Hike");
 }
 
 function populateRecHikes(recHikes, hikeIdx, helperStr){
@@ -77,6 +66,10 @@ function searchHikesFilter(){
   // var diffEasy = document.getElementById("easy").checked;
   // var diffMod = document.getElementById("moderate").checked;
   // var diffHard = document.getElementById("hard").checked;
+
+  //there are 2 different implementations happening here. The one that is
+  //ultimately used is the var diff field which is what is actually used
+  //to post
   var diff = "Easy";
   var diffEasy = "0";
   var diffMod = "0";
@@ -90,7 +83,6 @@ function searchHikesFilter(){
     diff = "Moderate"
   }
   if ($('#hard').is(":checked")){
-  // if(document.getElementById("hard").checked){
     diffHard = "1";
     diff = "Difficult"
   }
@@ -100,13 +92,6 @@ function searchHikesFilter(){
   //get elevation range
   var elevation = document.getElementById("elevationRange").value;
 
-
-  // localStorage.setItem('Diffic', diff);
-  // localStorage.setItem('Milea', miles);
-  // localStorage.setItem('Eleva', elevation);
-  // localStorage.setItem('UseFilter', true);
-
-  // $.post("/popSearchHikes",{ez: diffEasy, me: diffMod, ha: diffHard, mileR: miles, elev: elevation, noFilter: 0},function(data, status){
   $.post("/popSearchHikes", {dif:diff, mileR: miles, elev: elevation},function(data, status){
     displayHikePostInfo(data, status, 8);
   });
@@ -126,5 +111,3 @@ function searchHikesName(){
     });
   }
 }
-
-// export const toPass = passName

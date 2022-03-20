@@ -1,4 +1,4 @@
-/* hike.page.template
+/* create.account.test
  * Brynn Harrington 
  * Date Modified: 15 Mar 2022
  *
@@ -6,5 +6,5 @@
  * is successfully created in the server
  * 
  * STATUS: ?
- *
+ * 
  */

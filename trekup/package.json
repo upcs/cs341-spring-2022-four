@@ -16,10 +16,11 @@
         "jquery": "~3.6.0",
         "morgan": "~1.9.1",
         "mysql": "^2.18.1",
-        "mysql2": "^2.3.3",
-        "supertest": "^6.2.2"
+        "mysql2": "^2.3.3"
     },
     "devDependencies": {
-        "jest": "^27.5.1"
+        "jest": "^27.5.1",
+        "supertest": "^6.2.2",
+        "window": "^4.2.7"
     }
 }

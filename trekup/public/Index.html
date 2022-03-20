@@ -149,20 +149,34 @@
               <div id="milesdropdown" class="dropdown-content">
                 <!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
                 <!-- Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
-                <div class="slidercontainer">
-                  <input type="range" id="mileRange" name="mileRange" class="slider" min=1 max=30>
-                  <!-- <label for="mileRange">Miles</label> -->
-                </div>
+								<!-- Source: https://www.sliderrevolution.com/resources/css-range-slider/ -->
+                <!-- <div class="slidercontainer"> -->
+									<section class="range-slider container">
+										<span class="outRangeUpper"></span>
+									  <span class="outRangeLower"></span>
+									  <span class="full-range"></span>
+									  <span class="incl-range"></span>
+										<div class="slidercontainer">
+											<input type="range" id="mileRange" name="mileRange" class="range-slider" min=1 max=30 value=1>
+											<input type="range" id="mileRangeLower" name="mileRangeLower" class="range-slider" min=1 max=30 value=30>
+										</div>
+										<!-- <p><span id="milesVal"></span> miles</p>
+										<p><span id="milesValLower"></span> miles</p> -->
+									</section>
+                <!-- </div> -->
               </div>
           </div>
+
+
 
           <!-- filter by elevation gain -->
           <div class="dropdown">
             <button onclick="filterElevation()" class="dropbtn">Elevation Gain</button>
             <div id="elevationGain" class="dropdown-content">
               <div class="slidercontainer">
-                <input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
-                <!-- <label for="mileRange">Miles</label> -->
+								<input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+								<p><span id="elevationVal"></span> ft</p>
+								<!-- <label for="mileRange">Miles</label> -->
               </div>
             </div>
           </div>

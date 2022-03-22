@@ -12,15 +12,10 @@ var popHikePageRouter = require('./public/posting/popHikePage.js');
 var popSearchHikesRouter = require('./public/posting/popSearchHikes.js');
 var filterRouter = require('./routes/init/filterPost'); //for filtering
 var nameRouter = require('./routes/init/namePost'); //for filtering
-var profileRouter = require('./routes/profilePost');
+var profileRouter = require('./routes/profile_load');
 var profileHikeListRouter = require('./routes/profile_hike_list');
+var userLoginRouter = require('./routes/user_login');
 var trailsRetrieveRouter = require('./routes/trails_retrieve'); // retrieve the trails from the DB
-
-// var filterRouter = require('./routes/init/filterPost'); //for filtering
-// var nameRouter = require('./routes/init/namePost'); //for filtering
-// var profileRouter = require('./routes/profilePost');
-// var profileHikeListRouter = require('./routes/profile_hike_list');
-
 
 var app = express();
 
@@ -41,8 +36,9 @@ app.use('/popHikePage', popHikePageRouter);
 app.use('/popSearchHikes', popSearchHikesRouter);
 app.use('/filterPost', filterRouter); //for filtering
 app.use('/namePost', nameRouter); //for filtering
-app.use('/profilePost', profileRouter);
+app.use('/profile_load', profileRouter);
 app.use('/profile_hike_list', profileHikeListRouter)
+app.use('/user_login', userLoginRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -2,11 +2,11 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 
-# Node.js CI (continuous integration) 
+# node.js.yml  
+# Brynn Harrington
+# CI (continuous integration) / automated testing functionality 
 #
 # Last Modified: Mar 22, 2022 
-#
-# Brynn Harrington
 
 name: Node.js CI
 

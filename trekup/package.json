@@ -8,7 +8,7 @@
     },
     "dependencies": {
         "async": "^3.2.3",
-        "bcrypt": "^5.0.1",
+        "ci": "^2.1.1",
         "cookie-parser": "~1.4.4",
         "debug": "~2.6.9",
         "express": "~4.16.1",
@@ -20,8 +20,8 @@
         "mysql2": "^2.3.3"
     },
     "devDependencies": {
-        "asynch": "^0.5.2",
         "jest": "^27.5.1",
-        "supertest": "^6.2.2"
+        "supertest": "^6.2.2",
+        "window": "^4.2.7"
     }
 }

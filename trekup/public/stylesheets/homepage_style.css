@@ -14,40 +14,40 @@ body{
 /* TAKE THIS FOR THE MASTHEAD */
 /* ========================================== */
 /*the table for the masthead*/
-#mastHead{
-	background-color:#006622;
-	position:inherit;
+/* #mastHead{ */
+	/* background-color:#006622; */
+	/* position:inherit; */
 	/* position:absolute; */
 	/* border-radius:25px; */
-	width:10%;
-	height:12%;
+	/* width:10%; */
+	/* height:12%; */
 	/* height:inherit; */
-}
+/* } */
 
 /* the labels in the table have the same color and font */
-td{
-	color:#111111;
-	font-weight:bold;
+/* td{ */
+	/* color:#111111; */
+	/* font-weight:bold; */
 	/* font-size:42px; */
-	font-size:300%;
-}
+	/* font-size:300%; */
+/* } */
 
 /*trek header is inside of masthead table*/
-#trekHeader{
-	position:relative;
+/* #trekHeader{ */
+	/* position:relative; */
 	/* position:inherit; */
-	top:8px;
+	/* top:8px; */
 	/* top:100%; */
-	left:4px;
-}
+	/* left:4px; */
+/* } */
 
 /* move the up letters */
-#upHeader{
-	position:relative;
+/* #upHeader{ */
+	/* position:relative; */
 	/* position:inherit; */
-	bottom:8px;
-	right:4px;
-}
+	/* bottom:8px; */
+	/* right:4px; */
+/* } */
 
 /* ========================================== */
 /* TAKE THIS FOR THE MASTHEAD */
@@ -61,6 +61,22 @@ td{
 	/* width:30%; */
 	/* height:30%; */
 	perspective:1000px;
+}
+
+/* this isn't needed anymore since I found a lower solution but I don't want to change it back */
+.flip-card-search{
+	background-color: transparent;
+	width:150px;
+	height:150px;
+
+	/* margin-left:30%; */
+	/* margin-right:5%; */
+
+	perspective:1000px;
+}
+
+.searchHikes td{
+	padding:17px;
 }
 
 #firstCol{
@@ -79,6 +95,11 @@ td{
 }
 
 .flip-card:hover .flip-card-inner{
+	transform:rotateY(180deg);
+	cursor:pointer;
+}
+
+.flip-card-search:hover .flip-card-inner{
 	transform:rotateY(180deg);
 	cursor:pointer;
 }
@@ -164,16 +185,16 @@ td{
 	height:70%;
 }
 
-#profPicture{
+/* #profPicture{
 	width:50%;
 	height:50%;
 }
 
 li{
 	display:inline;
-}
+} */
 
-#navBar{
+/* #navBar{
 	position:fixed;
 	list-style-type:none;
 	top:0;
@@ -206,4 +227,4 @@ li{
 #mastHead:hover{
 	background-color:#648B7F;
 	cursor:pointer;
-}
+} */

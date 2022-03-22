@@ -8,22 +8,43 @@ HTML file for static profile page.
         <!-- Add an external link to CSS File -->
         <link rel="stylesheet" href="./stylesheets/profile.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="./stylesheets/nav_bar_style.css">
 	    <script src="./javascripts/profile_page_script.js"></script>
+      <script src="./javascripts/nav_bar_script.js"></script>
     </head>
 
     <body>
 
+
+    	<!-- make a top nav bar -->
+    	<ul id="navBar">
+    		<li id="homepage">
+
+
+    			<!--Table housing the mastHead text-->
+    			<table id="mastHead">
+    				<tr>
+    					<td id="trekHeader">Trek</td>
+    					<td id="upHeader">Up</td>
+    				</tr>
+    			</table>
+    		</li>
+    		<li id="prof">
+    			<img id="profPic" src="./images/profile.png"></img>
+    		</li>
+    	</ul>
+
         <!--Header Region of the page -->
-        <div id="header">
-            <div id="logo">
+        <!-- <div id="header"> -->
+            <!-- <div id="logo"> -->
                 <!--Table housing the mastHead text-->
-                <table id="mastHead">
-                    <tr>
-                        <td id="trekHeader">Trek</td>
-                        <td id="upHeader">Up</td>
-                    </tr>
-                </table>
-            </div>
+                <!-- <table id="mastHead"> -->
+                    <!-- <tr> -->
+                        <!-- <td id="trekHeader">Trek</td> -->
+                        <!-- <td id="upHeader">Up</td> -->
+                    <!-- </tr> -->
+                <!-- </table> -->
+            <!-- </div> -->
             <!-- Box that contains user statistics-->
             <div id="data">
                  <div id="databox">
@@ -32,12 +53,12 @@ HTML file for static profile page.
                 </div>
             </div>
             <!-- Profile picture and username -->
-            <div id="icon">
+            <!-- <div id="icon"> -->
                  <!-- <div id="profilecircle"></div> -->
-                 <img id="profilepic" src="./images/profile.png"></img>
-            </div>
-        </div>
-    
+                 <!-- <img id="profilepic" src="./images/profile.png"></img> -->
+            <!-- </div> -->
+        <!-- </div> -->
+
 
 
         <!-- Lower Region of the page -->
@@ -89,7 +110,7 @@ HTML file for static profile page.
                             </tr>
                         </table>
                         <h4>Di. 370 mi. El. 352 ft.</h4>
-                    </div>               
+                    </div>
                     <div id="hikebox">
                         <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
                         <h3>Hike 4</h3>
@@ -103,7 +124,7 @@ HTML file for static profile page.
                             </tr>
                         </table>
                         <h4>Di. 370 mi. El. 352 ft.</h4>
-                    </div>    
+                    </div>
                     <div id="hikebox">
                         <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
                         <h3>Hike 5</h3>
@@ -117,8 +138,8 @@ HTML file for static profile page.
                             </tr>
                         </table>
                         <h4>Di. 370 mi. El. 352 ft.</h4>
-                    </div>      
-                </div>                    
+                    </div>
+                </div>
             </div>
              <!-- Box that contains the user's trophies -->
             <div id = achievements>
@@ -154,7 +175,15 @@ HTML file for static profile page.
             <h3 id="name"> Bob the Builder </h3> <br><br>
             <h2 id="username" > <i>@bob123</i> </h2>
 
-               
+             <!-- Add user's trophies -->
+            <img id="trophy" src="http://clipart-library.com/image_gallery/206586.png">
+            <h3 style="margin-left: 20px;"> <i>Wilderness Explorer Badge</i> </h3>
+            <h5 style="margin-left: 20px;">Complete 5 hikes in the Portland area.</h5>
+            <img id="trophy" src="http://clipart-library.com/image_gallery/206586.png">
+            <h3 style="margin-left: 20px;"><i>Overnight Camper Badge</i> </h3>
+            <h5 style="margin-left: 20px;">Spend 3 nights with nature.</h5>
+
+
         </div>
     </body>
 </html>

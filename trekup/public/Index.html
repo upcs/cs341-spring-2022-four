@@ -5,8 +5,10 @@
 	<link rel="stylesheet" href="./stylesheets/homepage_style.css"></link>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="./javascripts/homepage_script.js"></script>
+	<script src="./javascripts/nav_bar_script.js"></script>
 
 	<link rel="stylesheet" href="stylesheets/bottomnavstyle.css"> <!--link to CSS file for bottomnavbar-->
+	<link rel="stylesheet" href="stylesheets/nav_bar_style.css">
 	<!-- Load icon library for searchbar -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -38,7 +40,7 @@
 				<td>
 					<!-- <img id="hike1pic" src="./images/hike1.jpg"> -->
 					<!-- top flip card -->
-					<div id="flip1outer" class="flip-card">
+					<div id="flip1outer" class="flip-card", onClick='mrClicky("#Hike1Name")'>
 						<div class="flip-card-inner">
 							<div class="flip-card-front">
 								<img id="flip1" src="./images/hike1.jpg" alt="Pic">
@@ -57,7 +59,7 @@
 			<tr>
 				<td>
 					<!-- middle flip card -->
-					<div id="flip2outer" class="flip-card">
+					<div id="flip2outer" class="flip-card", onClick='mrClicky("#Hike2Name")'>
 						<div class="flip-card-inner">
 							<div class="flip-card-front">
 								<img id="flip2" src="./images/hike2.jpg" alt="Pic">
@@ -73,7 +75,7 @@
 				</td>
 				<td>
 					<!-- middle flip card -->
-					<div id="flip3outer" class="flip-card">
+					<div id="flip3outer" class="flip-card", onClick='mrClicky("#Hike3Name")'>
 						<div class="flip-card-inner">
 							<div class="flip-card-front">
 								<img id="flip3" src="./images/hike3.jpg" alt="Pic">
@@ -92,7 +94,7 @@
 			<tr>
 				<td>
 					<!-- bottom flip card -->
-					<div id="flip4outer" class="flip-card">
+					<div id="flip4outer" class="flip-card", onClick='mrClicky("#Hike4Name")'>
 						<div class="flip-card-inner">
 							<div class="flip-card-front">
 								<img id="flip4" src="./images/hike4.jpg" alt="Pic">
@@ -116,7 +118,7 @@
   <!-- source: https://www.w3schools.com/howto/howto_css_bottom_nav.asp -->
   <div class="navbar">
     <!-- collapsible: https://www.w3schools.com/howto/howto_js_collapsible.asp -->
-    <button type="button" class="collapsible">Search</button>
+    <button type="button" class="collapsible" onClick="initHikes()">Search</button>
     <div class="content">
       <div class="filters">
           <div class="search-container"> <!-- source: https://www.w3schools.com/howto/howto_css_searchbar.asp -->
@@ -168,13 +170,150 @@
           <button type="submit" onclick=searchHikesFilter()>submit</button>
       </div>
       <!-- WANT: sorted list of hikes to appear in collapsible when the user has searched -->
-			<p id="selection"></p>
-      <p id="milesSelected"></p>
-      <p id="elevationSelected"></p>
-      <p id="difficultySelected"></p>
-      <p id="hike1"></p>
-      <p id="hike2"></p>
-			<p id="hike3"></p>
+			<!-- <p id="selection"></p> -->
+      <!-- <p id="milesSelected"></p> -->
+      <!-- <p id="elevationSelected"></p> -->
+      <!-- <p id="difficultySelected"></p> -->
+      <!-- <p id="hike1"></p> -->
+      <!-- <p id="hike2"></p> -->
+			<!-- <p id="hike3"></p> -->
+
+			<!-- create a table for searched and filtered hikes  -->
+			<table class="searchHikes">
+				<tr>
+
+					<td>
+						<!-- first result -->
+						<div id="searchflip1outer" class="flip-card-search", onClick='mrClicky("#SearchHike1Name")'>
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
+								</div>
+								<div class="flip-card-back">
+									<h1 id="SearchHike1Name" class="flip-text">Hike 2</h1>
+									<p id="SearchHike1Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+									<p class="flip-text">Rating: This will be POST</p>
+								</div>
+							</div>
+						</div>
+
+					</td>
+
+
+					<td>
+						<!-- first result -->
+						<div id="searchflip2outer" class="flip-card-search", onClick='mrClicky("#SearchHike2Name")'>
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
+								</div>
+								<div class="flip-card-back">
+									<h1 id="SearchHike2Name" class="flip-text">Hike 2</h1>
+									<p id="SearchHike2Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+									<p class="flip-text">Rating: This will be POST</p>
+								</div>
+							</div>
+						</div>
+
+					</td>
+					<td>
+						<!-- first result -->
+						<div id="searchflip3outer" class="flip-card-search", onClick='mrClicky("#SearchHike3Name")'>
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
+								</div>
+								<div class="flip-card-back">
+									<h1 id="SearchHike3Name" class="flip-text">Hike 2</h1>
+									<p id="SearchHike3Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+									<p class="flip-text">Rating: This will be POST</p>
+								</div>
+							</div>
+						</div>
+
+					</td>
+					<td>
+						<!-- first result -->
+						<div id="searchflip4outer" class="flip-card-search", onClick='mrClicky("#SearchHike4Name")'>
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
+								</div>
+								<div class="flip-card-back">
+									<h1 id="SearchHike4Name" class="flip-text">Hike 2</h1>
+									<p id="SearchHike4Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+									<p class="flip-text">Rating: This will be POST</p>
+								</div>
+							</div>
+						</div>
+
+					</td>
+					<td>
+						<!-- first result -->
+						<div id="searchflip5outer" class="flip-card-search", onClick='mrClicky("#SearchHike5Name")'>
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
+								</div>
+								<div class="flip-card-back">
+									<h1 id="SearchHike5Name" class="flip-text">Hike 2</h1>
+									<p id="SearchHike5Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+									<p class="flip-text">Rating: This will be POST</p>
+								</div>
+							</div>
+						</div>
+
+					</td>
+					<td>
+						<!-- first result -->
+						<div id="searchflip6outer" class="flip-card-search", onClick='mrClicky("#SearchHike6Name")'>
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
+								</div>
+								<div class="flip-card-back">
+									<h1 id="SearchHike6Name" class="flip-text">Hike 2</h1>
+									<p id="SearchHike6Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+									<p class="flip-text">Rating: This will be POST</p>
+								</div>
+							</div>
+						</div>
+
+					</td>
+					<td>
+						<!-- first result -->
+						<div id="searchflip7outer" class="flip-card-search", onClick='mrClicky("#SearchHike7Name")'>
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
+								</div>
+								<div class="flip-card-back">
+									<h1 id="SearchHike7Name" class="flip-text">Hike 2</h1>
+									<p id="SearchHike7Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+									<p class="flip-text">Rating: This will be POST</p>
+								</div>
+							</div>
+						</div>
+
+					</td>
+					<td>
+						<!-- first result -->
+						<div id="searchflip8outer" class="flip-card-search", onClick='mrClicky("#SearchHike8Name")'>
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
+								</div>
+								<div class="flip-card-back">
+									<h1 id="SearchHike8Name" class="flip-text">Hike 2</h1>
+									<p id="SearchHike8Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+									<p class="flip-text">Rating: This will be POST</p>
+								</div>
+							</div>
+						</div>
+
+					</td>
+				</tr>
+
     </div>
   </div>
 

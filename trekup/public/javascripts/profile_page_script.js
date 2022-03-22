@@ -53,8 +53,9 @@ addTrophies = function (achievements_bits) {
 }
 
 $(document).ready(function(){
+    var usrnm = sessionStorage.getItem('current_user');
     // var usrnm = 'f.nguyen123';
-    var usrnm = 'notjohnwalker';
+    // var usrnm = 'notjohnwalker';
     $.post('/profile_load', {username: usrnm})
         .done(function(data) {
             $("#username").text(`@${usrnm}`);

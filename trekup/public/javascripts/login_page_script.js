@@ -1,6 +1,16 @@
 loginHandler = function(event) {
-    window.location.href = "profile.html";
-    event.preventDefault();
+    var exists = $.post('/user_login', {
+        username: $("#username").val(),
+        password: $("#password").val()
+    }).done(function(data) {
+        return data == "user exists";
+    });
+
+    if (exists) {
+        sessionStorage.setItem('current_user', $("#username").val())
+        window.location.href = "profile.html";
+        event.preventDefault();
+    }
 }
 
 goToCreateAccountHandler = function(event) {

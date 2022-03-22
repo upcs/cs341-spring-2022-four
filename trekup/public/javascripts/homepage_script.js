@@ -5,9 +5,9 @@ $(document).ready(function(){
     window.location.href="Index.html";
   });
   $("#profPic").click(function(){
-    let loggedIn = true;
+    let loggedIn = sessionStorage.getItem('current_user');
 
-    if(loggedIn){
+    if(loggedIn != null){
       window.location.href="profile.html"
     }else{
       window.location.href="login_page.html";

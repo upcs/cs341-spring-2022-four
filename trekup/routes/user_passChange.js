@@ -29,7 +29,9 @@ router.post('/', function(req, res, next) {
     console.log(old_pass);
 
     // get the user
+    ////// NEED to change table name 
     dbms.dbquery("SELECT * FROM USER_PROFILES WHERE USERNAME = '" + username + "'", function(err, result) {
+        // error checking 
         if (err) {
             console.log(err);
             return;

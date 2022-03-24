@@ -21,10 +21,11 @@ var dbms = require('./dbms_user_info.js');
 // POST request to register an account
 router.post('/', function(req, res) {
     // verify no existing users with same information
-    var added = true;
     var user_exists = false;
+    var added = true;
 
     // search for the user
+    //////// USERS change to actual TABLE name
     dbms.dbquery("SELECT * FROM USERS WHERE USERNAME='" + req.query.username + "'", function(err, result) {
         // error checking
         if (err) {
@@ -40,12 +41,14 @@ router.post('/', function(req, res) {
         }
 
         // otherwise successful
-        if (added = true) {
+        // if (added == true) {
+        if (added) {
             // hash the password
             const hashed_pass = bcrypt.hashSync(req.query.password, 10);
 
             // insert the password 
-            dbms.dbquery("INSERT INTO USERS (USERNAME, PASSWORD) VALUES ('" + req.query.username + "', " + req.query.password + "', "),
+            //////// USERS change to actual TABLE name
+            dbms.dbquery("INSERT INTO USERS (USERNAME, PASSWORD) VALUES ('" + req.query.username + "', " + hashed_pass + "', "),
                 function(error, result) {
                     if (error) {
                         console.log(error);

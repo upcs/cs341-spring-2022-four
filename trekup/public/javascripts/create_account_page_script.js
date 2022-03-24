@@ -1,4 +1,3 @@
-
 createAccountHandler = function(event) {
     window.location.href = "profile.html";
     event.preventDefault();
@@ -14,7 +13,7 @@ $(document).ready(function(){
 
     $("#login_link").on("click", goToLoginHandler);
 
-  // $("#mastHead").click(function(){
-  //   window.location.href="Index.html";
-  // });
+    $("#mastHead").click(function(){
+        window.location.href="Index.html";
+    });
 });

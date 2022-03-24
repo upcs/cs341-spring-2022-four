@@ -172,13 +172,35 @@
           <!-- filter by elevation gain -->
           <div class="dropdown">
             <button onclick="filterElevation()" class="dropbtn">Elevation Gain</button>
-            <div id="elevationGain" class="dropdown-content">
+            <!-- <div id="elevationGain" class="dropdown-content">
               <div class="slidercontainer">
-								<input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
-								<p><span id="elevationVal"></span> ft</p>
-								<!-- <label for="mileRange">Miles</label> -->
-              </div>
-            </div>
+								<input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000> Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+								<!-- <p><span id="elevationVal"></span> ft</p>
+								 <label for="mileRange">Miles</label> -->
+              <!-- </div>
+            </div> -->
+						<div id="elevationGain" class="dropdown-content">
+							<!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+							<!-- Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+							<!-- Source: https://www.sliderrevolution.com/resources/css-range-slider/ -->
+							<!-- <div class="slidercontainer"> -->
+								<section class="range-slider container">
+									<span class="outRangeUpperE"></span>
+									<span class="outRangeLowerE"></span>
+									<span class="full-rangeE"></span>
+									<span class="incl-rangeE"></span>
+									<div class="slidercontainer">
+										<input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000 value = 10000><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+										<input type="range" id="elevationRangeLower" name="elevationRangeLower" class="slider" min=0 max=10000 value=1><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+
+										<!-- <input type="range" id="mileRange" name="mileRange" class="range-slider" min=1 max=30 value=1>
+										<input type="range" id="mileRangeLower" name="mileRangeLower" class="range-slider" min=1 max=30 value=30> -->
+									</div>
+									<!-- <p><span id="milesVal"></span> miles</p>
+									<p><span id="milesValLower"></span> miles</p> -->
+								</section>
+							<!-- </div> -->
+						</div>
           </div>
 
           <button type="submit" onclick=searchHikesFilter()>submit</button>
@@ -332,7 +354,7 @@
   </div>
 
   <script src="javascripts/bottomnavjs.js"></script> <!-- js for file -->
-
+	<script src="javascripts/bottomnav_elevationjs.js"></script>
 
 
 </body>

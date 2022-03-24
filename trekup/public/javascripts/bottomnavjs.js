@@ -219,7 +219,7 @@ function filterElevation() {
 //     });
 // }
 
-// For ranges
+// For miles range
 var mileRange = document.querySelector('input[name="mileRange"]'),
     mileRangeLower = document.querySelector('input[name="mileRangeLower"]'),
     outRangeUpper = document.querySelector('.outRangeUpper'),

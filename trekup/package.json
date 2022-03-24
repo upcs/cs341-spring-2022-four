@@ -4,7 +4,10 @@
     "private": true,
     "scripts": {
         "start": "node ./bin/www",
-        "test": "jest --env=jsdom"
+        "test": "jest --env=jsdom",
+        "start-server": "npm start",
+        "ci": "start-server-and-test start-server http://localhost:3000 test"
+
     },
     "dependencies": {
         "async": "^3.2.3",

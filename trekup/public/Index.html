@@ -152,10 +152,12 @@
 								<!-- Source: https://www.sliderrevolution.com/resources/css-range-slider/ -->
                 <!-- <div class="slidercontainer"> -->
 									<section class="range-slider container">
-										<span class="outRangeUpper"></span>
-									  <span class="outRangeLower"></span>
-										<!-- <span class="output outRangeUpper"></span>
-									  <span class="output outRangeLower"></span> -->
+										<!-- for displaying the inputted filter values -->
+										<!-- <span class="outRangeUpper"></span>
+									  <span class="outRangeLower"></span> -->
+										<span class="output outRangeUpper"></span>
+									  <span class="output outRangeLower"></span>
+
 									  <span class="full-range"></span>
 									  <span class="incl-range"></span>
 										<div class="slidercontainer">
@@ -194,9 +196,9 @@
 									<span class="full-rangeE"></span>
 									<span class="incl-rangeE"></span>
 									<div class="slidercontainer">
-										<input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000 value =1>
+										<input type="range" id="elevationRange" name="elevationRange" class="range-slider" min=0 max=10000 value =1>
 										<!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
-										<input type="range" id="elevationRangeLower" name="elevationRangeLower" class="slider" min=0 max=10000 value=10000>
+										<input type="range" id="elevationRangeLower" name="elevationRangeLower" class="range-slider" min=0 max=10000 value=10000>
 										<!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
 
 										<!-- <input type="range" id="mileRange" name="mileRange" class="range-slider" min=1 max=30 value=1>
@@ -212,7 +214,8 @@
 
 
 
-
+			<button type="submit" onclick=searchHikesFilter()>submit</button>
+		  </div>
       <!-- sorted list of hikes to appear in collapsible when the user has searched -->
 			<!-- <p id="selection"></p> -->
       <!-- <p id="milesSelected"></p> -->

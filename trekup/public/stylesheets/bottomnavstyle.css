@@ -229,11 +229,11 @@ background-color: #00A4BD;
 /* output for miles */
 .output {
   position: absolute;
-  border:1px solid #999;
+  border:1px solid #000000;
   width: 40px;
   height: 30px;
   text-align: center;
-  color: #999;
+  color: #000000;
   border-radius: 4px;
   display: inline-block;
   font: bold 15px/30px Helvetica, Arial;
@@ -360,6 +360,12 @@ input[type=range]:focus {
 .incl-rangeE {
   background: gold;
 }
+
+
+
+
+
+
 
 
 /*  */

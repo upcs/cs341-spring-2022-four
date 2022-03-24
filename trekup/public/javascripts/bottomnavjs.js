@@ -220,37 +220,37 @@ function filterElevation() {
 // }
 
 // For miles range
-var mileRange = document.querySelector('input[name="mileRange"]'),
-    mileRangeLower = document.querySelector('input[name="mileRangeLower"]'),
-    outRangeUpper = document.querySelector('.outRangeUpper'),
-    outRangeLower = document.querySelector('.outRangeLower'),
-    inclRange = document.querySelector('.incl-range'),
-    updateView = function () {
-      if (this.getAttribute('name') === 'mileRange') {
-        outRangeUpper.innerHTML = this.value;
-        outRangeUpper.style.left = this.value / this.getAttribute('max') * 100 + '%';
-      } else {
-        outRangeLower.style.left = this.value / this.getAttribute('max') * 100 + '%';
-        outRangeLower.innerHTML = this.value
-      }
-      if (parseInt(mileRange.value) > parseInt(mileRangeLower.value)) {
-        inclRange.style.width = (mileRange.value - mileRangeLower.value) / this.getAttribute('max') * 100 + '%';
-        inclRange.style.left = mileRangeLower.value / this.getAttribute('max') * 100 + '%';
-      } else {
-        inclRange.style.width = (mileRangeLower.value - mileRange.value) / this.getAttribute('max') * 100 + '%';
-        inclRange.style.left = mileRange.value / this.getAttribute('max') * 100 + '%';
-      }
-    };
-
-  document.addEventListener('DOMContentLoaded', function () {
-    updateView.call(mileRange);
-    updateView.call(mileRangeLower);
-    $('input[type="range"]').on('mouseup', function() {
-      this.blur();
-    }).on('mousedown input', function () {
-      updateView.call(this);
-    });
-  });
+// var mileRange = document.querySelector('input[name="mileRange"]'),
+//     mileRangeLower = document.querySelector('input[name="mileRangeLower"]'),
+//     outRangeUpper = document.querySelector('.outRangeUpper'),
+//     outRangeLower = document.querySelector('.outRangeLower'),
+//     inclRange = document.querySelector('.incl-range'),
+//     updateView = function () {
+//       if (this.getAttribute('name') === 'mileRange') {
+//         outRangeUpper.innerHTML = this.value;
+//         outRangeUpper.style.left = this.value / this.getAttribute('max') * 100 + '%';
+//       } else {
+//         outRangeLower.style.left = this.value / this.getAttribute('max') * 100 + '%';
+//         outRangeLower.innerHTML = this.value
+//       }
+//       if (parseInt(mileRange.value) > parseInt(mileRangeLower.value)) {
+//         inclRange.style.width = (mileRange.value - mileRangeLower.value) / this.getAttribute('max') * 100 + '%';
+//         inclRange.style.left = mileRangeLower.value / this.getAttribute('max') * 100 + '%';
+//       } else {
+//         inclRange.style.width = (mileRangeLower.value - mileRange.value) / this.getAttribute('max') * 100 + '%';
+//         inclRange.style.left = mileRange.value / this.getAttribute('max') * 100 + '%';
+//       }
+//     };
+//
+//   document.addEventListener('DOMContentLoaded', function () {
+//     updateView.call(mileRange);
+//     updateView.call(mileRangeLower);
+//     $('input[type="range"]').on('mouseup', function() {
+//       this.blur();
+//     }).on('mousedown input', function () {
+//       updateView.call(this);
+//     });
+//   });
 
 
 

@@ -154,6 +154,8 @@
 									<section class="range-slider container">
 										<span class="outRangeUpper"></span>
 									  <span class="outRangeLower"></span>
+										<!-- <span class="output outRangeUpper"></span>
+									  <span class="output outRangeLower"></span> -->
 									  <span class="full-range"></span>
 									  <span class="incl-range"></span>
 										<div class="slidercontainer">
@@ -187,11 +189,15 @@
 								<section class="range-slider container">
 									<span class="outRangeUpperE"></span>
 									<span class="outRangeLowerE"></span>
+									<!-- <span class="output outRangeUpperE"></span>
+									<span class="output outRangeLowerE"></span> -->
 									<span class="full-rangeE"></span>
 									<span class="incl-rangeE"></span>
 									<div class="slidercontainer">
-										<input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000 value = 10000><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
-										<input type="range" id="elevationRangeLower" name="elevationRangeLower" class="slider" min=0 max=10000 value=1><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+										<input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000 value =1>
+										<!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+										<input type="range" id="elevationRangeLower" name="elevationRangeLower" class="slider" min=0 max=10000 value=10000>
+										<!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
 
 										<!-- <input type="range" id="mileRange" name="mileRange" class="range-slider" min=1 max=30 value=1>
 										<input type="range" id="mileRangeLower" name="mileRangeLower" class="range-slider" min=1 max=30 value=30> -->
@@ -203,9 +209,11 @@
 						</div>
           </div>
 
-          <button type="submit" onclick=searchHikesFilter()>submit</button>
-      </div>
-      <!-- WANT: sorted list of hikes to appear in collapsible when the user has searched -->
+
+
+
+
+      <!-- sorted list of hikes to appear in collapsible when the user has searched -->
 			<!-- <p id="selection"></p> -->
       <!-- <p id="milesSelected"></p> -->
       <!-- <p id="elevationSelected"></p> -->
@@ -354,7 +362,7 @@
   </div>
 
   <script src="javascripts/bottomnavjs.js"></script> <!-- js for file -->
-	<script src="javascripts/bottomnav_elevationjs.js"></script>
+	<script src="javascripts/bottomnavrangesjs.js"></script>
 
 
 </body>

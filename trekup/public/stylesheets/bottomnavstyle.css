@@ -332,6 +332,8 @@ input[type=range]:focus {
   outline: none;
 }
 
+
+
 .full-range,
 .incl-range {
   width: 100%;

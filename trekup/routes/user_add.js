@@ -16,32 +16,30 @@ var router = express.Router();
 var bcrypt = require('bcrypt');
 
 // require the database management system
-var dbms = require('./user_info_dbms.js');
+var dbms = require('./user_info_dbms_promise.js');
 
 // POST request to register an account
 router.post('/', function(req, res) {
     // verify no existing users with same information
     var user_exists = false;
     var added = true;
+    console.log("entered post");
 
     // search for the user
     //////// USERS change to actual TABLE name
     var check_query = `select * from user_profiles where username='${req.body.username}'`;
-    dbms.dbquery(check_query, function(err, results) {
-        // error checking
-        if (err) {
-            console.log(error);
-            return;
-        }
-
+    var checked_username = dbms.dbquery(check_query);
+    checked_username.then(function(results) {
+        // console.log("checked if username is taken");
+        // console.log(JSON.stringify(results));
         // user found - cannot add
         if (results.length != 0) {
             added = false;
             user_exists = true;
         }
+        // console.log("username is not taken");
 
         // otherwise successful
-        // if (added == true) {
         if (user_exists == false) {
             // hash the password
             const hashed_pass = bcrypt.hashSync(req.body.password, 10);
@@ -49,15 +47,8 @@ router.post('/', function(req, res) {
 
             //////// USERS change to actual TABLE name
             let add_query = `insert into user_profiles (name, username, email, password_hashed) 
-                            values ('${req.body.name}', '${req.body.username}', '${req.body.email}', '${hashed_pass}')`
-            dbms.dbquery(add_query, function(error, results) {
-                console.log("did add new user query");
-                if (error) {
-                    console.log(error);
-                    return;
-                }
-                res.send("successfully added");
-            });
+                            values ('${req.body.name}', '${req.body.username}', '${req.body.email}', '${hashed_pass}')`;
+            dbms.dbquery(add_query);
         }
     });
 });

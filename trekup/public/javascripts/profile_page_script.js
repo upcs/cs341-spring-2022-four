@@ -56,7 +56,7 @@ fillProfile = function (profile_data) {
     $("#name").text(profile_data["name"]);
     $("#trails_completed").text(profile_data["trails_completed"]);
     $("#distance_walked").text(profile_data["distance_walked"]);
-    $("#elevation_gain").text(profile_data["elevation_gain"]);
+    $("#elevation_gain").text(profile_data["elevation_gained"]);
 
     addTrophies(profile_data["achievements"]);
 }
@@ -91,7 +91,6 @@ $(document).ready(function(){
         for (let hike of hike_list) {
             $("#completedbox").append(addHike(hike));
         }
-        alert('subsequent times');
     }
 
 //     $("#mastHead").click(function(){

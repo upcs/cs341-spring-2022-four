@@ -12,7 +12,7 @@ router.post('/', function(req, res, next) {
                 and password_hashed='${req.body.password}'`;
 
     dbms.dbquery(query, function(error, results) {
-        if (error) {
+        if (error != false) {
             console.log(error);
             return;
         }
@@ -20,7 +20,6 @@ router.post('/', function(req, res, next) {
         if (results.length > 0) {
             res.send("user exists");
         }
-        res.json(results);
     });
 });
 

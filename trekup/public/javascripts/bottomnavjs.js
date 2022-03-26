@@ -2,7 +2,7 @@
 /* script for navbar */
 
 function searchHikesFilter(){
-  //displays results
+  //display
   document.getElementById("hikeresults").style.display = "block";
 
   //get checked boxes for difficulty
@@ -28,11 +28,11 @@ function searchHikesFilter(){
   }
   //get mile range
   var miles = document.getElementById("mileRange").value;
-  var milesLower = document.getElementById("milesRangeLower").value;
+  //var milesLower = document.getElementById("milesRangeLower").value;
 
   //get elevation range
   var elevation = document.getElementById("elevationRange").value;
-  var elevationLower = document.getElementById("elevationRangeLower").value;
+  //var elevationLower = document.getElementById("elevationRangeLower").value;
 
 
   // localStorage.setItem('Diffic', diff);

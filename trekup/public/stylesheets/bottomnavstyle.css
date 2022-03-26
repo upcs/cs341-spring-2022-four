@@ -401,6 +401,20 @@ input[type=range]:focus {
     background-color: white;
 }
 
+/* Picture of a hike */
+#hikepic{
+    border: 1% solid #ddd;
+    border-radius: 2%;
+    max-height:80%;
+    object-fit: scale-down;
+    width:20%;
+    height:80%;
+    float:right;
+    padding:5px;
+    margin-top: 1%;
+    margin-right: 1%;
+}
+
 .hikesearch{
 	font-size:90%;
 }

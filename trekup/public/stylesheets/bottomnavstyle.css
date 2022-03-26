@@ -366,6 +366,51 @@ input[type=range]:focus {
 
 
 
+/* ahhh */
+/* region for holding the hike results */
+#hikeresults{
+    display: none;
+    height:200px;
+    width:100%;
+    float:center;
+}
+/* for the hikes */
+#hikelist{
+    width: 90%;
+    height:95%;
+    border:1px solid #000;
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: peachpuff;
+    overflow-y: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Box that contains a singular hike */
+#individualhike{
+    width:98%;
+    height:100px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right:10px;
+    margin-top:10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.hikesearch{
+	font-size:90%;
+}
+
+
+
+
+
+
+
 
 
 

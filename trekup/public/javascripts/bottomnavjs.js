@@ -2,6 +2,9 @@
 /* script for navbar */
 
 function searchHikesFilter(){
+  //displays results
+  document.getElementById("hikeresults").style.display = "block";
+
   //get checked boxes for difficulty
   // var diffEasy = document.getElementById("easy").checked;
   // var diffMod = document.getElementById("moderate").checked;
@@ -25,9 +28,11 @@ function searchHikesFilter(){
   }
   //get mile range
   var miles = document.getElementById("mileRange").value;
+  var milesLower = document.getElementById("milesRangeLower").value;
 
   //get elevation range
   var elevation = document.getElementById("elevationRange").value;
+  var elevationLower = document.getElementById("elevationRangeLower").value;
 
 
   // localStorage.setItem('Diffic', diff);
@@ -46,6 +51,9 @@ function searchHikesFilter(){
 
 function searchHikesName(){
   var name = document.getElementById("search").value;
+
+  //displays results
+  document.getElementById("hikeresults").style.display = "block";
 
   if(name == ""){
     alert("No text entered in searchbar. Please enter a hike name to search");

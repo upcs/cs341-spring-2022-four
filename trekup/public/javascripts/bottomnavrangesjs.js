@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // For elevation range
   var elevationRange = document.querySelector('input[name="elevationRange"]'),
       elevationRangeLower = document.querySelector('input[name="elevationRangeLower"]'),

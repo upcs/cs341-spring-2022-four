@@ -13,10 +13,10 @@ var express = require('express');
 var router = express.Router();
 
 // require bcrypt for password encryption 
-var bcrypt = require('bcryptjs');
+var bcrypt = require('bcrypt');
 
 // require the database management system
-var dbms = require('./dbms_user_info.js');
+var dbms = require('./user_info_dbms.js');
 
 // POST request to register an account
 router.post('/', function(req, res) {
@@ -26,7 +26,8 @@ router.post('/', function(req, res) {
 
     // search for the user
     //////// USERS change to actual TABLE name
-    dbms.dbquery("SELECT * FROM USERS WHERE USERNAME='" + req.query.username + "'", function(err, result) {
+    var check_query = `select * from user_profiles where username='${req.body.username}'`;
+    dbms.dbquery(check_query, function(err, results) {
         // error checking
         if (err) {
             console.log(error);
@@ -34,28 +35,29 @@ router.post('/', function(req, res) {
         }
 
         // user found - cannot add
-        if (result.length != 0) {
+        if (results.length != 0) {
             added = false;
             user_exists = true;
-            res.send("user_exists=" + user_exists);
         }
 
         // otherwise successful
         // if (added == true) {
-        if (added) {
+        if (user_exists == false) {
             // hash the password
-            const hashed_pass = bcrypt.hashSync(req.query.password, 10);
+            const hashed_pass = bcrypt.hashSync(req.body.password, 10);
+            console.log(hashed_pass);
 
-            // insert the password 
             //////// USERS change to actual TABLE name
-            dbms.dbquery("INSERT INTO USERS (USERNAME, PASSWORD) VALUES ('" + req.query.username + "', " + hashed_pass + "', "),
-                function(error, result) {
-                    if (error) {
-                        console.log(error);
-                        return;
-                    }
-                    res.send("successfully added");
-                };
+            let add_query = `insert into user_profiles (name, username, email, password_hashed) 
+                            values ('${req.body.name}', '${req.body.username}', '${req.body.email}', '${hashed_pass}')`
+            dbms.dbquery(add_query, function(error, results) {
+                console.log("did add new user query");
+                if (error) {
+                    console.log(error);
+                    return;
+                }
+                res.send("successfully added");
+            });
         }
     });
 });

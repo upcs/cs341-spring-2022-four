@@ -1,6 +1,24 @@
 createAccountHandler = function(event) {
-    window.location.href = "profile.html";
-    event.preventDefault();
+    if ($("#password").text() != $("confirm_password").text()) {
+        alert("different passwords");
+    } else {
+        var exists = $.post('/user_add', {
+            email: $("#email").val(),
+            name: $("#name").val(),
+            username: $("#username").val(),
+            password: $("#password").val()
+        }).done(function(data) {
+            return data == "user exists";
+        });
+        
+        if (exists == true) {
+            alert("username already taken");
+        } else {
+            sessionStorage.setItem('current_user', $("#username").val())
+            window.location.href = "profile.html";
+            event.preventDefault();
+        }
+    }
 }
 
 goToLoginHandler = function(event) {

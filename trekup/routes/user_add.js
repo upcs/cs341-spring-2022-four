@@ -30,14 +30,11 @@ router.post('/', function(req, res) {
     var check_query = `select * from user_profiles where username='${req.body.username}'`;
     var checked_username = dbms.dbquery(check_query);
     checked_username.then(function(results) {
-        // console.log("checked if username is taken");
-        // console.log(JSON.stringify(results));
         // user found - cannot add
         if (results.length != 0) {
             added = false;
             user_exists = true;
         }
-        // console.log("username is not taken");
 
         // otherwise successful
         if (user_exists == false) {

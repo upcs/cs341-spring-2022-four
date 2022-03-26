@@ -79,7 +79,7 @@ $(document).ready(function(){
         //making POST to get profile's list of completed hikes
         $.post('/profile_hike_list', {username: usrnm})
             .done(function(data) {
-                sessionStorage.setItem('profile_hike_list', data);
+                sessionStorage.setItem('profile_hike_list', JSON.stringify(data));
                 for (let hike of data) {
                     $("#completedbox").append(addHike(hike));
                 }
@@ -87,7 +87,8 @@ $(document).ready(function(){
     } else {
         var data = JSON.parse(sessionStorage.getItem('profile_info'));
         fillProfile(data);
-        var hike_list = sessionStorage.getItem('profile_hike_list');
+        
+        var hike_list = JSON.parse(sessionStorage.getItem('profile_hike_list'));
         for (let hike of hike_list) {
             $("#completedbox").append(addHike(hike));
         }

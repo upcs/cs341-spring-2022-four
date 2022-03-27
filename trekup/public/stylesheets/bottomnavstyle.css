@@ -381,7 +381,7 @@ input[type=range]:focus {
     border:1px solid #000;
     border: 1px solid black;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: peachpuff;
+    background-color: #A9A9A9;
     overflow-y: auto;
     margin-left: auto;
     margin-right: auto;

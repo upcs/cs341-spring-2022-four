@@ -96,3 +96,24 @@ $(document).ready(function(){
 //       window.location.href="login_page.html";
 //     });
   });
+
+
+
+
+//
+
+function mrClicky(hikeNameField){
+  passName = $(hikeNameField).text();
+  localStorage.setItem('Name', passName);
+  window.location.href="hike_page_template.html";
+}
+
+
+
+
+
+
+
+
+
+//

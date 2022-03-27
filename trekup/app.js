@@ -16,6 +16,7 @@ var profileRouter = require('./routes/profile_load');
 var profileHikeListRouter = require('./routes/profile_hike_list');
 var userLoginRouter = require('./routes/user_login');
 var userAddRouter = require('./routes/user_add');
+var userAddCompletedHikeRouter = require('./routes/user_add_completed_hike');
 var trailsRetrieveRouter = require('./routes/trails_retrieve'); // retrieve the trails from the DB
 
 var app = express();
@@ -41,6 +42,7 @@ app.use('/profile_load', profileRouter);
 app.use('/profile_hike_list', profileHikeListRouter)
 app.use('/user_login', userLoginRouter);
 app.use('/user_add', userAddRouter);
+app.use('/user_add_completed_hike', userAddCompletedHikeRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

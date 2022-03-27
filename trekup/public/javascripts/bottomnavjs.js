@@ -9,7 +9,7 @@ function searchHikesFilter(){
   // var diffEasy = document.getElementById("easy").checked;
   // var diffMod = document.getElementById("moderate").checked;
   // var diffHard = document.getElementById("hard").checked;
-  var diff = "Easy";
+  var diff;
   var diffEasy = "0";
   var diffMod = "0";
   var diffHard = "0";

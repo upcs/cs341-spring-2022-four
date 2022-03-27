@@ -34,6 +34,10 @@ function searchHikesFilter(){
   var elevation = document.getElementById("elevationRange").value;
   //var elevationLower = document.getElementById("elevationRangeLower").value;
 
+  document.getElementById("milesSelected").innerHTML = "Miles: " + miles + " miles";
+  document.getElementById("elevationSelected").innerHTML = "Elevation: " + elevation + " ft";
+
+
 
   // localStorage.setItem('Diffic', diff);
   // localStorage.setItem('Milea', miles);

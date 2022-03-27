@@ -1,6 +1,23 @@
 
 /* script for navbar */
 
+
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+
 function searchHikesFilter(){
   //display
   document.getElementById("hikeresults").style.display = "block";
@@ -9,7 +26,7 @@ function searchHikesFilter(){
   // var diffEasy = document.getElementById("easy").checked;
   // var diffMod = document.getElementById("moderate").checked;
   // var diffHard = document.getElementById("hard").checked;
-  var diff = "Easy";
+  var diff;
   var diffEasy = "0";
   var diffMod = "0";
   var diffHard = "0";
@@ -32,7 +49,7 @@ function searchHikesFilter(){
 
   //get elevation range
   var elevation = document.getElementById("elevationRange").value;
-  //var elevationLower = document.getElementById("elevationRangeLower").value;
+  var elevationLower = document.getElementById("elevationRangeLower").value;
 
   document.getElementById("milesSelected").innerHTML = "Miles: " + miles + " miles";
   document.getElementById("elevationSelected").innerHTML = "Elevation: " + elevation + " ft";
@@ -45,7 +62,7 @@ function searchHikesFilter(){
   // localStorage.setItem('UseFilter', true);
 
   // $.post("/popSearchHikes",{ez: diffEasy, me: diffMod, ha: diffHard, mileR: miles, elev: elevation, noFilter: 0},function(data, status){
-  $.post("/popSearchHikes", {dif:diff, mileR: miles, elev: elevation},function(data, status){
+  $.post("/popSearchHikes", {dif:diff, mileR: miles, elevU: elevation, elevL: elevationLower},function(data, status){
     displayHikePostInfo(data, status, 8);
   });
 
@@ -68,7 +85,6 @@ function searchHikesName(){
   }
 }
 
-
 function displayHikePostInfo(data, status, numPop){
   const recHikes = JSON.parse(data);
   // alert(recHikes);
@@ -87,21 +103,80 @@ function displayHikePostInfo(data, status, numPop){
   // populateRecHikes(recHikes, 3, "Hike");
 }
 
+//take the hikes, filter using the filters not applied already
+// function theRealFilterHikes(recHikes, numPop){
+//   console.log("filtering searched hikes");
+//   const hikes = [];
+//   int index = 0;
+//
+//   //get miles
+//   var miles = document.getElementById("mileRange").value;
+//   var milesLower = document.getElementById("milesRangeLower").value;
+//
+//   //get elevation range
+//   var elevation = document.getElementById("elevationRange").value;
+//   var elevationLower = document.getElementById("elevationRangeLower").value;
+//
+//   for(let i = 0; i < numPop; i++){
+//     if(recHikes[i].DISTANCE >= mileRangeLower){
+//       if(recHikes[i].DISTANCE <= mileRange){ //miles upper boundary
+//         if(recHikes[i].ELEVATION_CHANGE <= elevationRange){ //elevation upper boundary
+//           if(recHikes[i].ELEVATION_CHANGE >= elevationRangeLower){ //elevation lower boundary
+//             hikes[index] = recHikes[i];
+//           }
+//         }
+//       }
+//     }
+//   }
+//
+//   index = index + 1;
+//
+//   //cap the number of displayed hikes
+//   if(index > 8){
+//     index = 8;
+//   }
+//
+//   for(let k = 0; k < index; k++){
+//     let helperStr = "";
+//     if(index == 4){
+//       helperStr = "Hike";
+//     }else{
+//       helperStr = "SearchHike";
+//     }
+//     populateRecHikes(hikes, k, helperStr);
+//   }
+// }
+//
+//
+// function displayFilterHikesPostInfo(data, status, numPop){
+//   console.log("display filtered hikes");
+//   const recHikes = JSON.parse(data);
+//   // alert(recHikes);
+//
+//   theRealFilterHikes(recHikes, numPop);
+//
+//   // for(let i = 0; i < numPop; i++){
+//   //   let helperStr = "";
+//   //   if(numPop == 4){
+//   //     helperStr = "Hike";
+//   //   }else{
+//   //     helperStr = "SearchHike";
+//   //   }
+//   //   populateRecHikes(recHikes, i, helperStr);
+//   // }
+// }
 
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
+function populateRecHikes(recHikes, hikeIdx, helperStr){
+  //insert name
+  var component = "#" + helperStr + (hikeIdx + 1) + "Name";
+  $(component).text(recHikes[hikeIdx].HIKE);
 
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  }
+  //insert elevation change and mileage
+  component = "#" + helperStr + (hikeIdx + 1) + "Metrics";
+  $(component).text("Elevation Change: " + recHikes[hikeIdx].ELEVATION_CHANGE
+      + ", Mileage: " + recHikes[hikeIdx].DISTANCE + ", Difficulty: " + recHikes[hikeIdx].DIFFICULTY);
+}
+
 
 
 //function for when the user clicks "search" button to search for hikes by name

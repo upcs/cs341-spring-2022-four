@@ -28,11 +28,11 @@ $(document).ready(function(){
 
 });
 
-function initHikes(){
-  $.post("/popSearchHikes",{name: "'Tim'", noFilter: 1},function(data, status){
-    displayHikePostInfo(data, status, 8);
-  });
-}
+// function initHikes(){
+//   $.post("/popSearchHikes",{name: "'Tim'", noFilter: 1},function(data, status){
+//     displayHikePostInfo(data, status, 8);
+//   });
+// }
 
 let passName = "";
 

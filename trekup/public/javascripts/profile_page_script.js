@@ -52,47 +52,28 @@ addTrophies = function (achievements_bits) {
         $("#achievementsbox").append(makeTrophy("Sprinter Badge", "Complete 60 miles in 24 hours."));
 }
 
-fillProfile = function (profile_data) {
-    $("#name").text(profile_data["name"]);
-    $("#trails_completed").text(profile_data["trails_completed"]);
-    $("#distance_walked").text(profile_data["distance_walked"]);
-    $("#elevation_gain").text(profile_data["elevation_gained"]);
-
-    addTrophies(profile_data["achievements"]);
-}
-
 $(document).ready(function(){
     var usrnm = sessionStorage.getItem('current_user');
-    // var usrnm = 'f.nguyen123';
-    // var usrnm = 'notjohnwalker';
-    //check if this is the first time going to the profile page.
-    //if it is, look to the database and save the info locally for later
-    if (sessionStorage.getItem('profile_info') == null) {
-        //making POST to get profile data
-        $.post('/profile_load', {username: usrnm})
-            .done(function(data) {
-                sessionStorage.setItem('profile_info', JSON.stringify(data));
-                $("#username").text(`@${usrnm}`);
-                fillProfile(data);
-            });
 
-        //making POST to get profile's list of completed hikes
-        $.post('/profile_hike_list', {username: usrnm})
-            .done(function(data) {
-                sessionStorage.setItem('profile_hike_list', JSON.stringify(data));
-                for (let hike of data) {
-                    $("#completedbox").append(addHike(hike));
-                }
-            });
-    } else {
-        var data = JSON.parse(sessionStorage.getItem('profile_info'));
-        fillProfile(data);
-        
-        var hike_list = JSON.parse(sessionStorage.getItem('profile_hike_list'));
-        for (let hike of hike_list) {
-            $("#completedbox").append(addHike(hike));
-        }
-    }
+    //making POST to get profile data
+    $.post('/profile_load', {username: usrnm})
+    .done(function(profile_data) {
+        $("#username").text(`@${usrnm}`);
+        $("#name").text(profile_data["name"]);
+        $("#trails_completed").text(profile_data["trails_completed"]);
+        $("#distance_walked").text(profile_data["distance_walked"]);
+        $("#elevation_gain").text(profile_data["elevation_gained"]);
+
+        addTrophies(profile_data["achievements"]);
+    });
+
+    //making POST to get profile's list of completed hikes
+    $.post('/profile_hike_list', {username: usrnm})
+        .done(function(data) {
+            for (let hike of data) {
+                $("#completedbox").append(addHike(hike));
+            }
+        });
 
 //     $("#mastHead").click(function(){
 //       window.location.href="Index.html";

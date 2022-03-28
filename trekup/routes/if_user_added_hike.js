@@ -6,7 +6,7 @@ var router = express.Router();
 var dbms = require('./user_info_dbms');
 
 
-/* GET home page. */
+/* POST to check if user has already completed this hike */
 router.post('/', function(req, res, next) {
     console.log("entered checking post");
     //check if the user already said they completed this hike

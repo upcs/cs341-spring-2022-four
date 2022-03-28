@@ -8,7 +8,7 @@ var dbms = require('./user_info_dbms_promise');
 // require bcrypt for password encryption 
 var bcrypt = require('bcrypt');
 
-/* GET home page. */
+/* POST for login. */
 router.post('/', function(req, res, next) {
     var get_salt_query = `select salt from user_profiles where username='${req.body.username}'`;
     var salt_result = dbms.dbquery(get_salt_query);

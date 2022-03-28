@@ -1,16 +1,21 @@
 loginHandler = function(event) {
-    var exists = $.post('/user_login', {
-        username: $("#username").val(),
-        password: $("#password").val()
-    }).done(function(data) {
-        return data == "user exists";
-    });
+        var exists = $.post('/user_login', {
+            username: $("#username").val(),
+            password: $("#password").val()
+        }).done(function(data) {
+            return data == "user exists";
+        });
 
-    if (exists) {
-        sessionStorage.setItem('current_user', $("#username").val())
-        window.location.href = "profile.html";
-        event.preventDefault();
+        if (exists) {
+            sessionStorage.setItem('current_user', $("#username").val())
+            window.location.href = "profile.html";
+            event.preventDefault();
+        }
     }
+    // gets the username from the element 
+    // Brynn Harrington 28 Mar 2022
+function getUsername() {
+    var username = document.getElementById('');
 }
 
 goToCreateAccountHandler = function(event) {

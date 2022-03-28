@@ -1,5 +1,0 @@
-To test the server, the
-start-server-and-test npm script 
-is used in the package.json file.
-
-SOURCE: https://www.npmjs.com/package/start-server-and-test-with-options 

@@ -1,0 +1,42 @@
+<!--
+Author: Logan Machida
+HTML file for update profile page.
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Add an external link to CSS File -->
+        <link rel="stylesheet" href="./stylesheets/update_profile.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <!-- Add an external link to JS file -->
+            <script src="./javascripts/update_profile_page_script.js"></script>
+    </head>
+
+    <body>
+        
+        <!--Table housing the mastHead text-->
+			<table id="mastHead">
+				<tr>
+					<td id="trekHeader">Trek</td>
+					<td id="upHeader">Up</td>
+				</tr>
+			</table>
+
+
+        <h3>Update Name:</h3>
+        <label for="newname">Enter new name:</label>
+        <input type="text" id="newname"><br><br>
+        <label for="newuser">Enter new username:</label>
+        <input type="text" id="newuser" ><br><br>
+
+        <h3>Update Password:</h3>
+        <label for="currpass">Enter current password:</label>
+        <input type="text" id="curpass" ><br><br>
+        <label for="newpass">Enter new password:</label>
+        <input type="text" id="newpass" ><br><br>
+        <label for="newpass">Confirm password:</label>
+        <input type="text" id="confirmpass" ><br><br>
+        <button type="button" id="submit">Submit</button>
+       
+    </body>
+</html>

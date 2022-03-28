@@ -23,7 +23,7 @@ router.post('/', function(req, res) {
     // verify no existing users with same information
     var user_exists = false;
     var added = true;
-    console.log("entered post");
+    console.log("entered create-an-account post");
 
     // search for the user
     //////// USERS change to actual TABLE name
@@ -46,8 +46,10 @@ router.post('/', function(req, res) {
             let add_query = `insert into user_profiles (name, username, email, password_hashed, salt) 
                             values ('${req.body.name}', '${req.body.username}', '${req.body.email}', '${hashed_pass}', '${salt}')`;
             dbms.dbquery(add_query);
+            console.log("added new user");
             res.send("added");
         } else {
+            console.log("did not add new user");
             res.send("did not add");
         }
     });

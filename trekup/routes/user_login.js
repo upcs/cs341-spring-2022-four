@@ -3,10 +3,10 @@
 var express = require('express');
 var router = express.Router();
 
-var dbms = require('./user_info_dbms');
+var dbms = require('./user_info_dbms_promise');
 
 // require bcrypt for password encryption 
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 
 /* GET home page. */
 router.post('/', function(req, res, next) {
@@ -14,13 +14,11 @@ router.post('/', function(req, res, next) {
     var query = `select * from user_profiles 
                 where username='${req.body.username}'
                 and password_hashed='${password_hashed}'`;
+    console.log(query);
 
-    dbms.dbquery(query, function(error, results) {
-        if (error != false) {
-            console.log(error);
-            return;
-        }
-        // console.log(JSON.stringify(results));
+    var account = dbms.dbquery(query);
+    account.then(function(results) {
+        console.log("results: " + JSON.stringify(results));
         if (results.length > 0) {
             res.send("user exists");
         }

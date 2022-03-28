@@ -39,13 +39,14 @@ router.post('/', function(req, res) {
         // otherwise successful
         if (user_exists == false) {
             // hash the password
-            const hashed_pass = bcrypt.hashSync(req.body.password, 10);
-            console.log(hashed_pass);
+            const salt = bcrypt.genSaltSync(10);
+            const hashed_pass = bcrypt.hashSync(req.body.password, salt);
 
             //////// USERS change to actual TABLE name
-            let add_query = `insert into user_profiles (name, username, email, password_hashed) 
-                            values ('${req.body.name}', '${req.body.username}', '${req.body.email}', '${hashed_pass}')`;
+            let add_query = `insert into user_profiles (name, username, email, password_hashed, salt) 
+                            values ('${req.body.name}', '${req.body.username}', '${req.body.email}', '${hashed_pass}', '${salt}')`;
             dbms.dbquery(add_query);
+            res.send("added");
         }
     });
 });

@@ -1,10 +1,10 @@
 createAccountHandler = function(event) {
     //check if input is empty and if passwords match
-    if ($("#email").text() == "" || 
-        $("#name").text() == "" || 
-        $("#username").text() == "" ||
-        $("#password").text() == "" ||
-        $("#password").text() != $("confirm_password").text()) {
+    if ($("#email").val().localeCompare("") == 0 || 
+        $("#name").val().localeCompare("") == 0 || 
+        $("#username").val().localeCompare("") == 0 ||
+        $("#password").val().localeCompare("") == 0 ||
+        $("#password").val().localeCompare($("#confirm_password").val()) != 0) {
         alert("invalid new account info");
     } else {
         //check if username is already taken
@@ -13,18 +13,13 @@ createAccountHandler = function(event) {
             name: $("#name").val(),
             username: $("#username").val(),
             password: $("#password").val()
-        }).done(function(data) {
-            return data == "user exists";
+        }, function(data) {
+            if (data.localeCompare("added") == 0) {
+                sessionStorage.setItem('current_user', $("#username").val())
+                window.location.href = "profile.html";
+                event.preventDefault();
+            }
         });
-        
-        //if the username wasn't taken, the account was created so they're logged in
-        if (exists == true) {
-            alert("username already taken");
-        } else {
-            sessionStorage.setItem('current_user', $("#username").val())
-            window.location.href = "profile.html";
-            event.preventDefault();
-        }
     }
 }
 

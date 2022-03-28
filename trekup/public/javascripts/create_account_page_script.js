@@ -8,7 +8,7 @@ createAccountHandler = function(event) {
         alert("invalid new account info");
     } else {
         //check if username is already taken
-        var exists = $.post('/user_add', {
+        $.post('/user_add', {
             email: $("#email").val(),
             name: $("#name").val(),
             username: $("#username").val(),
@@ -17,6 +17,9 @@ createAccountHandler = function(event) {
             if (data.localeCompare("added") == 0) {
                 sessionStorage.setItem('current_user', $("#username").val())
                 window.location.href = "profile.html";
+                event.preventDefault();
+            } else {
+                window.location.href = "create_account_page.html";
                 event.preventDefault();
             }
         });

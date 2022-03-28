@@ -1,16 +1,19 @@
 loginHandler = function(event) {
-    var exists = $.post('/user_login', {
+    $.post('/user_login', {
         username: $("#username").val(),
         password: $("#password").val()
-    }).done(function(data) {
-        return data == "user exists";
+    }, function(data) {
+        if (data.localeCompare("user exists") == 0) {
+            sessionStorage.setItem('current_user', $("#username").val());
+            window.location.href = "profile.html";
+            event.preventDefault();
+        } 
+        else {
+            window.location.href = "login_page.html";
+            event.preventDefault();
+        }
     });
-
-    if (exists) {
-        sessionStorage.setItem('current_user', $("#username").val())
-        window.location.href = "profile.html";
-        event.preventDefault();
-    }
+    event.preventDefault();
 }
 
 goToCreateAccountHandler = function(event) {

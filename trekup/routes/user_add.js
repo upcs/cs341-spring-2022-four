@@ -47,6 +47,8 @@ router.post('/', function(req, res) {
                             values ('${req.body.name}', '${req.body.username}', '${req.body.email}', '${hashed_pass}', '${salt}')`;
             dbms.dbquery(add_query);
             res.send("added");
+        } else {
+            res.send("did not add");
         }
     });
 });

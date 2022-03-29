@@ -11,7 +11,7 @@ router.post('/', function(req, res, next) {
                 from users_hikes_completed where username='${req.body.username}'`;
 
     dbms.dbquery(query, function(error, results) {
-        if (error) {
+        if (error != false) {
             console.log(error);
             return;
         }

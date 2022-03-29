@@ -4,10 +4,18 @@
     "private": true,
     "scripts": {
         "start": "node ./bin/www",
-        "test": "jest --env=jsdom"
+        "test": "jest --env=jsdom",
+        "start-server": "npm start",
+        "ci": "start-server-and-test start-server http://localhost:3000 test"
+    },
+    "jest": {
+        "resetMocks": false,
+        "setupFiles": ["jest-localstorage-mock"]
     },
     "dependencies": {
         "async": "^3.2.3",
+        "bcrypt": "^5.0.1",
+        "bcryptjs": "^2.4.3",
         "ci": "^2.1.1",
         "cookie-parser": "~1.4.4",
         "debug": "~2.6.9",
@@ -21,6 +29,7 @@
     },
     "devDependencies": {
         "jest": "^27.5.1",
+        "jest-localstorage-mock": "^2.4.19",
         "supertest": "^6.2.2",
         "window": "^4.2.7"
     }

@@ -3,6 +3,8 @@
  * updated by: Francisco Nguyen
  */
 
+
+
 addStars = function (stars_num) {
     var star_elements = "";
     for (let i = 0; i < 5; i++) {
@@ -53,6 +55,16 @@ addTrophies = function (achievements_bits) {
 }
 
 $(document).ready(function(){
+    
+    $("#logoutbutton").click(function(){
+        sessionStorage.setItem('current_user', null);
+        window.location.href="index.html";
+   });
+   $("#updatebutton").click(function(){
+    window.location.href="update_profile.html";
+});
+
+    
     var usrnm = sessionStorage.getItem('current_user');
     // var usrnm = 'f.nguyen123';
     // var usrnm = 'notjohnwalker';
@@ -73,6 +85,8 @@ $(document).ready(function(){
                 $("#completedbox").append(addHike(hike));
             }
         });
+
+        
 
 //     $("#mastHead").click(function(){
 //       window.location.href="Index.html";

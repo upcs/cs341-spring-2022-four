@@ -16,6 +16,7 @@ var profileRouter = require('./routes/profile_load');
 var profileHikeListRouter = require('./routes/profile_hike_list');
 var userLoginRouter = require('./routes/user_login');
 var trailsRetrieveRouter = require('./routes/trails_retrieve'); // retrieve the trails from the DB
+var userUpdateRouter = require('./routes/user_update');
 
 var app = express();
 
@@ -39,6 +40,7 @@ app.use('/namePost', nameRouter); //for filtering
 app.use('/profile_load', profileRouter);
 app.use('/profile_hike_list', profileHikeListRouter)
 app.use('/user_login', userLoginRouter);
+app.use('/user_update', userUpdateRouter); // update a new profile
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

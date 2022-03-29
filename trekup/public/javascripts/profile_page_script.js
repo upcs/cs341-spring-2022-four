@@ -57,6 +57,7 @@ addTrophies = function (achievements_bits) {
 $(document).ready(function(){
     
     $("#logoutbutton").click(function(){
+        sessionStorage.setItem('current_user', null);
         window.location.href="index.html";
    });
    $("#updatebutton").click(function(){

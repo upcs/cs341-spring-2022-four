@@ -17,6 +17,11 @@ body{
 /* Spans the width of the top of the page */
 #header{
     width:100%;
+    height:20%;
+}
+/* Spans the middle of the page*/
+#userinfo{
+    width:100%;
     height:40%;
 }
 /* Spans the width of the bottom of the page */
@@ -25,62 +30,54 @@ body{
     height:60%;
 }
 
-/* elements for our header section*/
-/* region that contains the logo */
-#logo{
-    height:150px;
-    width:20%;
-    float: left;
-    /*padding:5px;*/
-}
-/* region that contains user data */
-#data{
-    height:150px;
-    width:40%;
-    float: left;
-    /*padding:5px;*/
-}
-/* region that contains profile picture */
-#icon{
-    height:150px;
-    width:10%;
-    float:left;
-    padding:5px;
-}
+
+
 /* Box containing user statistics*/
-#databox{
-    width:100%;
+#databox{ 
+    width:60%;
     height:100%;
     border:1px solid #000;
     border: 1px solid black;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     background-color: white;
     object-fit: scale-down;
+    margin-top:5%;
 }
-/* Profile Icon in the corner */
-/* #profilepic{
-	position:absolute;
-    top: 10px;
-    right: 10px;
-	opacity:100%;
-	width:13%;
-	height:22%;
-    max-width: 150px;
-    max-width: 150px;
+#userbox{
+    width:15%;
+    height:100%;
+    border:1px solid #000;
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: white;
     object-fit: scale-down;
-} */
+    margin-top: 2%;
+    margin-left: 10px;
+    float:right;
+}
+/* For our name and username */
+#username{
+    margin-top: 1%;
+    /*margin-left: 90%;*/
+}
+#updatebutton, #logoutbutton{
+    margin-top: 1%;
+    /*margin-left: 90%;*/
+}
 
 
 
 /* elements for our content section */
 /* region that contains completed hikes */
 #completed{
+    margin-top: 2%;
     height:100%;
     width:60%;
     float:left;
 }
 /* region that contains our trophies and username */
 #achievements{
+    margin-top: 2%;
     height:100%;
     width:20%;
     float:left;
@@ -152,44 +149,10 @@ body{
     margin-left:30%;
     object-fit: scale-down;
 }
-/* For our name and username */
-#name, #username{
-    position:absolute;
-    right: 10px;
-    font-size:2vw;
-}
 
 
 
 /* Stuff implemented on multiple pages */
-/* The table for the masthead */
-/* #mastHead{
-	background-color:#FF6600;
-	position:absolute;
-	top:10px;
-	left:10px;
-	border-radius:25px;
-	width:150px;
-	height:75px;
-} */
-/* The labels in the table have the same color and font */
-/* td{
-	color:#111111;
-	font-weight:bold;
-	font-size:42px;
-} */
-/* trek header is inside of masthead table */
-/* #trekHeader{
-	position:relative;
-	top:8px;
-	left:4px;
-} */
-/* Move the up letters */
-/* #upHeader{
-	position:relative;
-	bottom:8px;
-	right:4px;
-} */
 /* Stars used to rate hikes */
 .rating.user.star {
     background-color: yellow;

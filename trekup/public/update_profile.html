@@ -7,36 +7,52 @@ HTML file for update profile page.
     <head>
         <!-- Add an external link to CSS File -->
         <link rel="stylesheet" href="./stylesheets/update_profile.css">
+        <link rel="stylesheet" href="./stylesheets/nav_bar_style.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	    <!-- Add an external link to JS file -->
             <script src="./javascripts/update_profile_page_script.js"></script>
     </head>
 
     <body>
+
         
-        <!--Table housing the mastHead text-->
-			<table id="mastHead">
-				<tr>
-					<td id="trekHeader">Trek</td>
-					<td id="upHeader">Up</td>
-				</tr>
-			</table>
+            <!--Header Region of the page -->
+            <div id="header">
+                <!-- make a top nav bar -->
+                <ul id="navBar">
+                    <li id="homepage">
+                        <!--Table housing the mastHead text-->
+                        <table id="mastHead">
+                            <tr>
+                                <td id="trekHeader">Trek</td>
+                                <td id="upHeader">Up</td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li id="prof">
+                        <img id="profPic" src="./images/profile.png"></img>
+                    </li>
+                </ul>
+            </div>   
 
 
-        <h3>Update Name:</h3>
-        <label for="newname">Enter new name:</label>
-        <input type="text" id="newname"><br><br>
-        <label for="newuser">Enter new username:</label>
-        <input type="text" id="newuser" ><br><br>
-
-        <h3>Update Password:</h3>
-        <label for="currpass">Enter current password:</label>
-        <input type="text" id="curpass" ><br><br>
-        <label for="newpass">Enter new password:</label>
-        <input type="text" id="newpass" ><br><br>
-        <label for="newpass">Confirm password:</label>
-        <input type="text" id="confirmpass" ><br><br>
-        <button type="button" id="submit">Submit</button>
-       
+        <div id="contentbox">
+            <h1 id="titletext">TrekUp</h1>
+            <label for="currpass">Enter current password:*</label>
+            <input type="text" id="curpass" ><br><br>
+            <h3 id="nametext">Update Name:</h3>
+            <label for="newname">Enter new name:</label>
+            <input type="text" id="newname"><br><br>
+            <!--
+            <label for="newuser">Enter new username:</label>
+            <input type="text" id="newuser" ><br><br>
+            -->
+            <h3 id="passtext">Update Password:</h3>
+            <label for="newpass">Enter new password:</label>
+            <input type="text" id="newpass" ><br><br>
+            <label for="newpass">Confirm password:</label>
+            <input type="text" id="confirmpass" ><br><br>
+            <button type="button" id="submit">Submit</button>
+        </div>
     </body>
 </html>

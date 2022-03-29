@@ -11,19 +11,6 @@ body{
 	background-attachment:fixed;
 }
 
-/* ========================================== */
-/* TAKE THIS FOR THE MASTHEAD */
-/* ========================================== */
-/*the table for the masthead*/
-#mastHead{
-	background-color:#006622;
-	position:inherit;
-	/* position:absolute; */
-	/* border-radius:25px; */
-	width:10%;
-	height:12%;
-	/* height:inherit; */
-}
 
 /* the labels in the table have the same color and font */
 td{
@@ -33,25 +20,20 @@ td{
 	font-size:300%;
 }
 
-/*trek header is inside of masthead table*/
-#trekHeader{
-	position:relative;
-	/* position:inherit; */
-	top:8px;
-	/* top:100%; */
-	left:4px;
+#contentbox{
+    margin: auto;
+    margin-top: 5%;
+    width: 4in;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color:WHITE;
 }
 
-/* move the up letters */
-#upHeader{
-	position:relative;
-	/* position:inherit; */
-	bottom:8px;
-	right:4px;
+#passtext, #nametext, #titletext{
+	text-align: center;
 }
-
-/* ========================================== */
-/* TAKE THIS FOR THE MASTHEAD */
-/* ========================================== */
-
-
+#submit{
+	margin-left: 40%;
+}

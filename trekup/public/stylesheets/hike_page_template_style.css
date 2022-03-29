@@ -111,3 +111,12 @@ this can be uncommented*/
 .star.blank, .user.star.blank {
     background-color: rgba(255, 255, 255, 0.459);
 }
+
+/*hyperlink for use to say they completed a hike*/
+.to_add_hike {
+    color: blue;
+}
+
+.to_add_hike:hover {
+    text-decoration: underline;
+}

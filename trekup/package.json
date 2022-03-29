@@ -14,6 +14,8 @@
     },
     "dependencies": {
         "async": "^3.2.3",
+        "bcrypt": "^5.0.1",
+        "bcryptjs": "^2.4.3",
         "ci": "^2.1.1",
         "cookie-parser": "~1.4.4",
         "debug": "~2.6.9",

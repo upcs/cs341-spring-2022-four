@@ -13,49 +13,44 @@ var express = require('express');
 var router = express.Router();
 
 // require bcrypt for password encryption 
-var bcrypt = require('bcryptjs');
+var bcrypt = require('bcrypt');
 
 // require the database management system
-var dbms = require('./dbms_user_info.js');
+var dbms = require('./user_info_dbms_promise.js');
 
 // POST request to register an account
 router.post('/', function(req, res) {
     // verify no existing users with same information
     var user_exists = false;
     var added = true;
+    console.log("entered create-an-account post");
 
     // search for the user
     //////// USERS change to actual TABLE name
-    dbms.dbquery("SELECT * FROM USERS WHERE USERNAME='" + req.query.username + "'", function(err, result) {
-        // error checking
-        if (err) {
-            console.log(error);
-            return;
-        }
-
+    var check_query = `select * from user_profiles where username='${req.body.username}'`;
+    var checked_username = dbms.dbquery(check_query);
+    checked_username.then(function(results) {
         // user found - cannot add
-        if (result.length != 0) {
+        if (results.length != 0) {
             added = false;
             user_exists = true;
-            res.send("user_exists=" + user_exists);
         }
 
         // otherwise successful
-        // if (added == true) {
-        if (added) {
+        if (user_exists == false) {
             // hash the password
-            const hashed_pass = bcrypt.hashSync(req.query.password, 10);
+            const salt = bcrypt.genSaltSync(10);
+            const hashed_pass = bcrypt.hashSync(req.body.password, salt);
 
-            // insert the password 
             //////// USERS change to actual TABLE name
-            dbms.dbquery("INSERT INTO USERS (USERNAME, PASSWORD) VALUES ('" + req.query.username + "', " + hashed_pass + "', "),
-                function(error, result) {
-                    if (error) {
-                        console.log(error);
-                        return;
-                    }
-                    res.send("successfully added");
-                };
+            let add_query = `insert into user_profiles (name, username, email, password_hashed, salt) 
+                            values ('${req.body.name}', '${req.body.username}', '${req.body.email}', '${hashed_pass}', '${salt}')`;
+            dbms.dbquery(add_query);
+            console.log("added new user");
+            res.send("added");
+        } else {
+            console.log("did not add new user");
+            res.send("did not add");
         }
     });
 });

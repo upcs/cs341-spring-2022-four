@@ -1,0 +1,39 @@
+/*
+Author: Logan Machida
+Stylesheet for the static profile page.
+*/
+body{
+  	/*set a gradient background*/
+	background-image:linear-gradient(to bottom, #648B7F, #648B7F);
+	/*cover the whole page*/
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+
+/* the labels in the table have the same color and font */
+td{
+	color:#111111;
+	font-weight:bold;
+	/* font-size:42px; */
+	font-size:300%;
+}
+
+#contentbox{
+    margin: auto;
+    margin-top: 5%;
+    width: 4in;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color:WHITE;
+}
+
+#passtext, #nametext, #titletext{
+	text-align: center;
+}
+#submit{
+	margin-left: 40%;
+}

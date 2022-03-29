@@ -15,9 +15,9 @@ addStars = function (stars_num) {
 
 addHike = function (hike) {
     return `
-    <div id="hikebox">
+    <div id="hikebox", onClick='mrClicky("#ProfileHike5Name")'>
       <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
-      <h3>${hike["hike_name"]}</h3>
+      <h3 id="ProfileHike5Name" class="hikeprofile">${hike["hike_name"]}</h3>
       <table>
           <tr>
             ${addStars(hike["rating"])}
@@ -54,15 +54,16 @@ addTrophies = function (achievements_bits) {
         $("#achievementsbox").append(makeTrophy("Sprinter Badge", "Complete 60 miles in 24 hours."));
 }
 
-$(document).ready(function(){
-    
+$(document).ready(function() { 
     $("#logoutbutton").click(function(){
-        sessionStorage.setItem('current_user', null);
+        // sessionStorage.setItem('current_user', null);
+        sessionStorage.clear();
         window.location.href="index.html";
    });
+
    $("#updatebutton").click(function(){
-    window.location.href="update_profile.html";
-});
+        window.location.href="update_profile.html";
+    });
 
     
     var usrnm = sessionStorage.getItem('current_user');
@@ -86,16 +87,7 @@ $(document).ready(function(){
                 $("#completedbox").append(addHike(hike));
             }
         });
-
-        
-
-//     $("#mastHead").click(function(){
-//       window.location.href="Index.html";
-//     });
   });
-
-
-
 
 //
 
@@ -104,13 +96,3 @@ function mrClicky(hikeNameField){
   localStorage.setItem('Name', passName);
   window.location.href="hike_page_template.html";
 }
-
-
-
-
-
-
-
-
-
-//

@@ -25,4 +25,4 @@ $(document).ready(function() {
     $("#login_button").on("click", loginHandler);
 
     $("#create_account_link").on("click", goToCreateAccountHandler);
-}
+});

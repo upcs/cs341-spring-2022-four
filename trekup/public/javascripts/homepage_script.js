@@ -23,9 +23,9 @@ $(document).ready(function(){
   });
 
   //populate flip cards with database information
-  // $.post("/popRecHikes",{name: "'Tim'", noFilter: 1},function(data, status){
-  //   displayHikePostInfo(data, status, 4);
-  // });
+  $.post("/popRecHikes",{name: "'Tim'", noFilter: 1},function(data, status){
+    displayHikePostInfo(data, status, 4);
+  });
 });
 
 function initHikes(){

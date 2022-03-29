@@ -14,16 +14,43 @@ router.post('/', async function(req, res, next) {
     var newName = req.body.newName;
 
 
+    var get_salt_query = `select SALT from USER_PROFILES where USERNAME='${currUser}'`;
+    var salt_result = dbms.dbquery(get_salt_query);
+
+    salt_result.then(function(results) {
+        if (results.length < 1) 
+            return -1;
+
+        console.log("salt: " + results[0].SALT);
+        const password_hashed = bcrypt.hashSync(currPass, results[0].SALT);
+        console.log("password: " + password_hashed);
+
+        var login_query = `select * from USER_PROFILES 
+                where USERNAME='${currUser}'
+                and PASSWORD_HASHED='${password_hashed}'`;
+        
+        return dbms.dbquery(login_query);
+    }).then(function(results) {
+        if (results.length > 0) {
+            res.send("user exists");
+        } else {
+            res.send("user does not exist");
+        }
+    });
+
+
     dbms.dbquery(`SELECT * FROM USER_PROFILES WHERE USERNAME = '${currUser}'`, function(err, data) {
         if (!err) {
             console.log(data.length)
             if (data.length != 1) {
                 return res.status(400).send("Bad username");
             } else {
-                if (currPass == data[0]["PASSWORD_HASHED"]) {
-                    console.log("password matches")
+                if(currPass == data[0]["PASSWORD_HASHED"]){
+                console.log("password matches")
                         if (newPass) {
-                            dbms.dbquery(`UPDATE USER_PROFILES SET PASSWORD_HASHED = '${newPass}' WHERE USERNAME = '${currUser}'`, function(err, data){
+                            var new_password_hashed = bcrypt.hashSync(newPass, results[0].SALT);
+
+                            dbms.dbquery(`UPDATE USER_PROFILES SET PASSWORD_HASHED = '${new_password_hashed}' WHERE USERNAME = '${currUser}'`, function(err, data){
                                 res.sendStatus(200);
                              })
                             }   
@@ -41,7 +68,6 @@ router.post('/', async function(req, res, next) {
         }
         
     })
-
-});
+})
 
 module.exports = router;

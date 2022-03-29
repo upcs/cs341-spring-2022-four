@@ -19,8 +19,7 @@ The site begins with the home page. The page will display an array of top rated 
 The user profile page has a list of the trails that user has recorded, general statistics such as miles traversed and trails trekked, and achievements that they have earned. A user can record that they have completed a trail by going to the trail’s page which will have a button specified as “Add trail”. After the user has added the trail, a system will calculate it into their statistics and compare it to unachieved achievements, updating the achievement list if one is completed. 
 
 From the search bar and/or by using filters, users can look for a trail archived in the product’s database. If the trail they are looking for is found, they can visit the trail’s page. The page will contain information about the hike such as how long it is, characteristic tags, the elevation change, and general difficulty. There are also users’ ratings and reviews. If the user is logged in to their account, they can leave a review and rate the hike as well. 
-TODO add picture
-
+![flow chart](https://github.com/upcs/cs341-spring-2022-four/blob/harringt23-patch-2/SRS_images/flow_chart.png)
 ### 2.3 User Classes and Characteristics
 One class of users is the infrequent or one-time-use user. They may be visiting Portland, hiking infrequently, or hike a lot but do not feel the need to use the product a lot. They will not feel the need to create an account and are using the product solely for the trail catalogue. Functionality for accounts will be a nonfactor to them and the product must still be useful to them without it.  
 
@@ -197,10 +196,11 @@ From the search page, hikes can be searched for by clicking on the search bar an
 The user profile displays statistics about a user's hiking such as total miles walked, total elevation change, and number of hikes completed. It also contains cards for the hikes completed so users can go back and see what they’ve finished. To increase engagement, the user profile also contains various achievements that can be unlocked such as finishing a certain number of hikes and walking certain distances across several hikes.  
 
 ### 4.2 Software Interfaces
-The database we are using for the webpage is from: https://www.oregonhikers.org/field_guide/Portland_and_Willamette_Valley_Hikes. This data lists different trails in different parts of Oregon in a general view. The rows are grouped by the areas that the trails are in. Inside each group, the first column of the first row is the name of area, the following rows list information about the corresponding trail. The first column is empty, the second is the name of the trail, the difficulty of the trail, the distance in miles of the trail, the change of elevation in feet, and a brief description of the hike. The following represents an example group of data:  
-
+The database we are using for the webpage is from [Oregon Hikers](https://www.oregonhikers.org/field_guide/Portland_and_Willamette_Valley_Hikes). This data lists different trails in different parts of Oregon in a general view. The rows are grouped by the areas that the trails are in. Inside each group, the first column of the first row is the name of area, the following rows list information about the corresponding trail. The first column is empty, the second is the name of the trail, the difficulty of the trail, the distance in miles of the trail, the change of elevation in feet, and a brief description of the hike. The following represents an example group of data in a tabular form in Excel and on gcloud, respectively:  
+![db snip](https://github.com/upcs/cs341-spring-2022-four/blob/harringt23-patch-2/SRS_images/db_snip.png)
+![sql_snip](https://github.com/upcs/cs341-spring-2022-four/blob/harringt23-patch-2/SRS_images/sql_snip.png)
 Additionally, we plan on storing the user information in a secure database with rows being each user. The first column will be the username, hidden passwords, and the achievements they have achieved. The second column followed the following Entity Relationship Diagram represents how our data interacts with each other: 
-
+![ERD](https://github.com/upcs/cs341-spring-2022-four/blob/harringt23-patch-2/SRS_images/erd.png)
 ## 5. Nonfunctional Requirements 
 Below we list all non-functional requirements for your project in a convenient format. Non-functional requirements specify broad properties of the product that are not associated with a particular use case.
 ### 5.1 Security

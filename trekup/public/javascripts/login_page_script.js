@@ -1,25 +1,23 @@
 loginHandler = function(event) {
-        var exists = $.post('/user_login', {
-            username: $("#username").val(),
-            password: $("#password").val()
-        }).done(function(data) {
-            return data == "user exists";
-        });
-
-        if (exists) {
-            sessionStorage.setItem('current_user', $("#username").val())
+    $.post('/user_login', {
+        username: $("#username").val(),
+        password: $("#password").val()
+    }, function(data) {
+        if (data.localeCompare("user exists") == 0) {
+            sessionStorage.setItem('current_user', $("#username").val());
             window.location.href = "profile.html";
             event.preventDefault();
+        } 
+        else {
+            window.location.href = "login_page.html";
+            event.preventDefault();
         }
-    }
-    // gets the username from the element 
-    // Brynn Harrington 28 Mar 2022
-function getUsername() {
-    var username = document.getElementById('');
+    });
+    event.preventDefault();
 }
 
 goToCreateAccountHandler = function(event) {
-    window.location.href = "create_account_page.html"
+    window.location.href = "create_account_page.html";
 }
 
 $(document).ready(function() {
@@ -27,8 +25,4 @@ $(document).ready(function() {
     $("#login_button").on("click", loginHandler);
 
     $("#create_account_link").on("click", goToCreateAccountHandler);
-
-    $("#mastHead").click(function() {
-        window.location.href = "Index.html";
-    });
-});
+}

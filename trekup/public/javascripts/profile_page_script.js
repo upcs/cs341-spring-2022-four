@@ -3,8 +3,6 @@
  * updated by: Francisco Nguyen
  */
 
-
-
 addStars = function (stars_num) {
     var star_elements = "";
     for (let i = 0; i < 5; i++) {
@@ -15,15 +13,15 @@ addStars = function (stars_num) {
 
 addHike = function (hike) {
     return `
-    <div id="hikebox">
+    <div id="hikebox", onClick='mrClicky("#ProfileHike5Name")'>
       <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
-      <h3>${hike["hike_name"]}</h3>
+      <h3 id="ProfileHike5Name" class="hikeprofile">${hike.HIKE_NAME}</h3>
       <table>
           <tr>
-            ${addStars(hike["rating"])}
+            ${addStars(hike.RATING)}
           </tr>
       </table>
-      <h4>Di. ${hike["distance"]} mi. El. ${hike["elevation"]} ft.</h4>
+      <h4>Di. ${hike.DISTANCE} mi. El. ${hike.ELEVATION_CHANGE} ft.</h4>
     </div>
   `;
 }
@@ -54,29 +52,29 @@ addTrophies = function (achievements_bits) {
         $("#achievementsbox").append(makeTrophy("Sprinter Badge", "Complete 60 miles in 24 hours."));
 }
 
-$(document).ready(function(){
-    
-    $("#logoutbutton").click(function(){
-        sessionStorage.setItem('current_user', null);
+$(document).ready(function() { 
+    $("#logoutbutton").click(function() {
+        sessionStorage.clear();
         window.location.href="index.html";
    });
-   $("#updatebutton").click(function(){
-    window.location.href="update_profile.html";
-});
 
+   $("#updatebutton").click(function(){
+        window.location.href="update_profile.html";
+    });
     
-    var usrnm = sessionStorage.getItem('current_user');
+    // var usrnm = sessionStorage.getItem('current_user');
+    var usrnm = 'f.nguyen123';
 
     //making POST to get profile data
     $.post('/profile_load', {username: usrnm})
     .done(function(profile_data) {
         $("#username").text(`@${usrnm}`);
-        $("#name").text(profile_data["name"]);
-        $("#trails_completed").text(profile_data["trails_completed"]);
-        $("#distance_walked").text(profile_data["distance_walked"]);
-        $("#elevation_gain").text(profile_data["elevation_gained"]);
+        $("#name").text(profile_data.NAME);
+        $("#trails_completed").text(profile_data.TRAILS_COMPLETED);
+        $("#distance_walked").text(profile_data.DISTANCE_WALKED);
+        $("#elevation_gain").text(profile_data.ELEVATION_GAINED);
 
-        addTrophies(profile_data["achievements"]);
+        addTrophies(profile_data.ACHIEVEMENTS);
     });
 
     //making POST to get profile's list of completed hikes
@@ -86,31 +84,10 @@ $(document).ready(function(){
                 $("#completedbox").append(addHike(hike));
             }
         });
-
-        
-
-//     $("#mastHead").click(function(){
-//       window.location.href="Index.html";
-//     });
   });
-
-
-
-
-//
 
 function mrClicky(hikeNameField){
   passName = $(hikeNameField).text();
   localStorage.setItem('Name', passName);
   window.location.href="hike_page_template.html";
 }
-
-
-
-
-
-
-
-
-
-//

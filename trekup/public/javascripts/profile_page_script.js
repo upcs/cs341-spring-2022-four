@@ -66,19 +66,20 @@ $(document).ready(function(){
 
     
     var usrnm = sessionStorage.getItem('current_user');
-    // var usrnm = 'f.nguyen123';
-    // var usrnm = 'notjohnwalker';
+
+    //making POST to get profile data
     $.post('/profile_load', {username: usrnm})
-        .done(function(data) {
-            $("#username").text(`@${usrnm}`);
-            $("#name").text(data["name"]);
-            $("#trails_completed").text(data["trails_completed"]);
-            $("#distance_walked").text(data["distance_walked"]);
-            $("#elevation_gain").text(data["elevation_gain"]);
+    .done(function(profile_data) {
+        $("#username").text(`@${usrnm}`);
+        $("#name").text(profile_data["name"]);
+        $("#trails_completed").text(profile_data["trails_completed"]);
+        $("#distance_walked").text(profile_data["distance_walked"]);
+        $("#elevation_gain").text(profile_data["elevation_gained"]);
 
-            addTrophies(data["achievements"]);
-        });
+        addTrophies(profile_data["achievements"]);
+    });
 
+    //making POST to get profile's list of completed hikes
     $.post('/profile_hike_list', {username: usrnm})
         .done(function(data) {
             for (let hike of data) {

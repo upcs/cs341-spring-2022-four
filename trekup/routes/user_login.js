@@ -14,10 +14,13 @@ router.post('/', function(req, res, next) {
     var get_salt_query = `select SALT from USER_PROFILES where USERNAME='${req.body.username}'`;
     var salt_result = dbms.dbquery(get_salt_query);
 
+    //need salt to hash user inputted passowrd consistently
     salt_result.then(function(results) {
+        //check if invalid username
         if (results.length < 1) 
             return -1;
 
+        //hashing password
         console.log("salt: " + results[0].SALT);
         const password_hashed = bcrypt.hashSync(req.body.password, results[0].SALT);
         console.log("password: " + password_hashed);
@@ -28,6 +31,7 @@ router.post('/', function(req, res, next) {
         
         return dbms.dbquery(login_query);
     }).then(function(results) {
+        //checking if username and password inputted link to an existing account
         if (results.length > 0) {
             res.send("user exists");
         } else {

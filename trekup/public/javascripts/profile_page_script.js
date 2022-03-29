@@ -62,8 +62,7 @@ $(document).ready(function() {
         window.location.href="update_profile.html";
     });
     
-    // var usrnm = sessionStorage.getItem('current_user');
-    var usrnm = 'f.nguyen123';
+    var usrnm = sessionStorage.getItem('current_user');
 
     //making POST to get profile data
     $.post('/profile_load', {username: usrnm})

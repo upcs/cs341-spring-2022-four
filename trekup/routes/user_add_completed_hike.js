@@ -6,7 +6,7 @@ var router = express.Router();
 // var dbms = require('./user_info_dbms_promise');
 var dbms = require('./dbms_promise');
 
-/* GET home page. */
+/* POST user to add hike to completed list. */
 router.post('/', function(req, res, next) {
     console.log("entered adding post");
     //if the user hasn't added the hike, then they can add it
@@ -15,6 +15,7 @@ router.post('/', function(req, res, next) {
                  '${req.body.rating}', '${req.body.distance}', '${req.body.elevation}')`;
     console.log(add_query);
 
+    //adding the hike to completed list
     dbms.dbquery(add_query).then(function() {
         var update_profile_query = `update USER_PROFILES set TRAILS_COMPLETED=TRAILS_COMPLETED + 1, 
                                     DISTANCE_WALKED=DISTANCE_WALKED + ${req.body.distance}, 

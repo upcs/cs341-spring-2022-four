@@ -1,4 +1,9 @@
-
+/**
+ * @homepage_script.js
+ *
+ * Loads in the recommended hikes on page load. Sends the post request for
+ * the 8 search hikes when the search bar is clicked on
+*/
 
 $(document).ready(function(){
   $("#mastHead").click(function(){
@@ -25,7 +30,6 @@ $(document).ready(function(){
   // $.post("/popSearchHikes",{name: "'Tim'", noFilter: 1},function(data, status){
   //   displayHikePostInfo(data, status, 8);
   // });
-
 });
 
 // function initHikes(){
@@ -38,7 +42,12 @@ let passName = "";
 
 function mrClicky(hikeNameField){
   passName = $(hikeNameField).text();
+
+  //send the hike name to local storage, so we can pull it in the
+  //hike_page_script.js file so we can post with the hike name to fill
+  //in the data fields.
   localStorage.setItem('Name', passName);
+
   window.location.href="hike_page_template.html";
 }
 
@@ -46,18 +55,19 @@ function displayHikePostInfo(data, status, numPop){
   const recHikes = JSON.parse(data);
   // alert(recHikes);
   for(let i = 0; i < numPop; i++){
+    //this helper string is used in conjunction with the index
+    //for the population of each individual card so we can access
+    //the required card component by id.
     let helperStr = "";
+
     if(numPop == 4){
       helperStr = "Hike";
     }else{
       helperStr = "SearchHike";
     }
+
     populateRecHikes(recHikes, i, helperStr);
   }
-  // populateRecHikes(recHikes, 0, "Hike");
-  // populateRecHikes(recHikes, 1, "Hike");
-  // populateRecHikes(recHikes, 2, "Hike");
-  // populateRecHikes(recHikes, 3, "Hike");
 }
 
 function populateRecHikes(recHikes, hikeIdx, helperStr){
@@ -70,6 +80,7 @@ function populateRecHikes(recHikes, hikeIdx, helperStr){
   $(component).text("Elevation Change: " + recHikes[hikeIdx].ELEVATION_CHANGE
       + ", Mileage: " + recHikes[hikeIdx].DISTANCE + ", Difficulty: " + recHikes[hikeIdx].DIFFICULTY);
 }
+
 
 // function searchHikesFilter(){
 //   //get checked boxes for difficulty
@@ -127,3 +138,4 @@ function populateRecHikes(recHikes, hikeIdx, helperStr){
 // }
 
 // export const toPass = passName
+

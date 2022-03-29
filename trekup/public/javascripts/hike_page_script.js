@@ -1,3 +1,10 @@
+/**
+ * @hike_page_script.js
+ *
+ * sets all of the components for the specific hike page after the post
+ *
+ * Posts with file: popHikePage.js
+ */
 
 $(document).ready(function(){
     let hikeToPost = localStorage.getItem('Name');

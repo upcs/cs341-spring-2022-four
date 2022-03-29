@@ -18,10 +18,7 @@ var database = "TREKUP"; //database name
 var user = "root"; //username (change to match your db)
 var password = "teamFour!SQL"; //password (change to match your db, yes this is very poor practice)
 
-// var host = "34.105.17.16";
-// var database = "CHEESECAKE";
-// var user = "root";
-// var password = "341ultimateProduction777";
+
 /**
  * dbquery
  *

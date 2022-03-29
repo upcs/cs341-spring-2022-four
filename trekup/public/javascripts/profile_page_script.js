@@ -61,9 +61,8 @@ $(document).ready(function(){
         window.location.href="index.html";
    });
    $("#updatebutton").click(function(){
-    window.location.href="update_profile.html";
-});
-
+        window.location.href="update_profile.html";
+    });
     
     var usrnm = sessionStorage.getItem('current_user');
 

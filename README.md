@@ -1,10 +1,10 @@
 # TrekUp
 
 ### Team-Four
-Contributers: Brynn Harrington, Francisco Nguyen, Gareth Rice, Jennifer Brana, and Logan Machida. 
+Contributors: Brynn Harrington, Francisco Nguyen, Gareth Rice, Jennifer Brana, and Logan Machida. 
 
 ## 1. Introduction
-The work that is most related to our project is AllTrails (https://www.alltrails.com) which is a fitness and mapping application that is used in activities such as hiking and other outdoor activities. It uses a database of trail maps and included crowdsourced reviews and images. The major issue with AllTrails is that it lacks sufficient data for all the hiking trails available and a social component. The idea that we have with TrekUp is to enhance the features that AllTrails has by providing a social media platform for users to interact with.  
+The work that is most related to our project is AllTrails (https://www.alltrails.com) which is a fitness and mapping application that is used in activities such as hiking and other outdoor activities. It uses a database of trail maps and included crowd-sourced reviews and images. The major issue with AllTrails is that it lacks sufficient data for all the hiking trails available and a social component. The idea that we have with TrekUp is to enhance the features that AllTrails has by providing a social media platform for users to interact with.  
 
 We believe this is a good idea because there is a lack of applications with rewards and achievements for those who enjoy outdoor activities. Under consideration of the scope of the project, not all outdoor activities can be included in the given timeline. Therefore, we decided to focus on one of the most popular activities: hiking. We plan on implementing a program whereby users will build a profile to track the hikes they’ve given and achieve “points” to achieve rewards. The user can view hikes based on certain attributes such as location and difficulty. We hope to gain a functional website with a consistent user base upon which we can begin to sell advertisements on the website. 
 
@@ -16,12 +16,12 @@ The (greater) Portland area has many hiking trails and paths and there is not a 
 ### 2.2 Product Features
 The site begins with the home page. The page will display an array of top rated and popular hiking trails, an account button, a search bar, and a filter menu on the bottom of the page. From the home page, users can go to a create-an-account page or their profile page if they are logged in, go to the top hiking trails’ pages, or search for a trail.  
 
-The user profile page has a list of the trails that user has recorded, general statistics such as miles traversed and trails trekked, and achievements that they have earned. A user can record that they have completed a trail by going to the trail’s page which will have a button specified as “Add trail”. After the user has added the trail, a system will calculate it into their statistics and compare it to unachieved achievements, updating the achievement list if one is completed. 
+The user profile page has a list of the trails that user has recorded, general statistics such as miles traversed and trails trekked, and achievements that they have earned. A user can record that they have completed a trail by going to the trail’s page which will have a button specified as “Add trail”. After the user has added the trail, a system will calculate it into their statistics and compare it to unaccomplished achievements, updating the achievement list if one is completed. 
 
 From the search bar and/or by using filters, users can look for a trail archived in the product’s database. If the trail they are looking for is found, they can visit the trail’s page. The page will contain information about the hike such as how long it is, characteristic tags, the elevation change, and general difficulty. There are also users’ ratings and reviews. If the user is logged in to their account, they can leave a review and rate the hike as well. 
 ![flow chart](https://github.com/upcs/cs341-spring-2022-four/blob/harringt23-patch-2/SRS_images/flow_chart.png)
 ### 2.3 User Classes and Characteristics
-One class of users is the infrequent or one-time-use user. They may be visiting Portland, hiking infrequently, or hike a lot but do not feel the need to use the product a lot. They will not feel the need to create an account and are using the product solely for the trail catalogue. Functionality for accounts will be a nonfactor to them and the product must still be useful to them without it.  
+One class of users is the infrequent or one-time-use user. They may be visiting Portland, hiking infrequently, or hike a lot but do not feel the need to use the product a lot. They will not feel the need to create an account and are using the product solely for the trail catalogue. Functionality for accounts will be a non-factor to them and the product must still be useful to them without it.  
 
 There are power users who will visit the site very frequently. They could be achievement hunting, exploring the city, or someone who hikes to be active. They will want trails that meet specifications, to meet achievement requirements or be found in a certain area. For them, the search and filter functions must always return a result that they will be satisfied with. Their statistics must be well documented, and their achievements must be organized so they know what they have, what they do not have, what they need to get them, and (if applicable) how close they are to achieving it.  
 ### 2.4 Design and Implementation Constraints
@@ -58,7 +58,7 @@ Alternates:
     Solution: The website displays that there are no trails with this name and suggests trails with similar names (matching specific words or parts of words in the name. For example, is Bob searches for “Wild wood trail”, it would suggest instead “Wildwood trail”). If there are no trails with similar names, it will prompt Bob to search again. 
 
 ### 3.2 Searching for a Hike by Filter(s) 
-Primary Actor: Bob is training for an ultramarathon that is 30 miles long and has 6000 feet of elevation gain. He would like to do a training run around 25 miles with the same amount of elevation gain per mile as his race (200 feet/mile). 
+Primary Actor: Bob is training for an ultra-marathon that is 30 miles long and has 6000 feet of elevation gain. He would like to do a training run around 25 miles with the same amount of elevation gain per mile as his race (200 feet/mile). 
 Goal: Find a trail that is roughly 25 miles long with a total of 5000 feet elevation gain. 
 Pre-condition: Website is open. Bob has an idea of what kind of trail he is looking for. 
 Description: 

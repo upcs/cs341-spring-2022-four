@@ -26,8 +26,7 @@ router.post('/', function(req, res) {
     var added = true;
     console.log("entered create-an-account post");
 
-    // search for the user
-    //////// USERS change to actual TABLE name
+    // search if username is taken
     var check_query = `select * from USER_PROFILES where USERNAME='${req.body.username}'`;
     var checked_username = dbms.dbquery(check_query);
     checked_username.then(function(results) {
@@ -43,7 +42,7 @@ router.post('/', function(req, res) {
             const salt = bcrypt.genSaltSync(10);
             const hashed_pass = bcrypt.hashSync(req.body.password, salt);
 
-            //////// USERS change to actual TABLE name
+            //adding new account to database
             let add_query = `insert into USER_PROFILES (NAME, USERNAME, EMAIL, PASSWORD_HASHED, SALT) 
                             values ('${req.body.name}', '${req.body.username}', '${req.body.email}', '${hashed_pass}', '${salt}')`;
             dbms.dbquery(add_query);

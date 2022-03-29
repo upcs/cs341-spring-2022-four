@@ -19,8 +19,7 @@ router.post('/', function(req, res, next) {
             return;
         }
 
-        console.log(JSON.stringify(results));
-        console.log("performed query");
+        //check if user has already added this hike
         if (results.length > 0) {
             console.log("found that user has completed hike");
             res.send("user already added hike");

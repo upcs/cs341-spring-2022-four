@@ -5,7 +5,7 @@ var router = express.Router();
 
 var dbms = require('./user_info_dbms');
 
-/* GET home page. */
+/* POST profile's info. */
 router.post('/', function(req, res, next) {
     var query = `select NAME, TRAILS_COMPLETED, DISTANCE_WALKED, ELEVATION_GAINED, ACHIEVEMENTS 
                 from USER_PROFILES where USERNAME='${req.body.username}'`;

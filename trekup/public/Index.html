@@ -149,176 +149,143 @@
               <div id="milesdropdown" class="dropdown-content">
                 <!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
                 <!-- Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
-                <div class="slidercontainer">
-                  <input type="range" id="mileRange" name="mileRange" class="slider" min=1 max=30>
-                  <!-- <label for="mileRange">Miles</label> -->
-                </div>
+								<!-- Source: https://www.sliderrevolution.com/resources/css-range-slider/ -->
+                <!-- <div class="slidercontainer"> -->
+									<section class="range-slider container">
+										<!-- for displaying the inputted filter values -->
+										<span class="outRangeUpper"></span>
+									  <span class="outRangeLower"></span>
+										<!-- <span class="output outRangeUpper"></span>
+									  <span class="output outRangeLower"></span> -->
+
+									  <span class="full-range"></span>
+									  <span class="incl-range"></span>
+										<div class="slidercontainer">
+											<input type="range" id="mileRangeLower" name="mileRange" class="range-slider" min=1 max=30 value=1>
+											<input type="range" id="mileRange" name="mileRangeLower" class="range-slider" min=1 max=30 value=30>
+										</div>
+										<!-- <p><span id="milesVal"></span> miles</p>
+										<p><span id="milesValLower"></span> miles</p> -->
+									</section>
+                <!-- </div> -->
               </div>
           </div>
+
+
 
           <!-- filter by elevation gain -->
           <div class="dropdown">
             <button onclick="filterElevation()" class="dropbtn">Elevation Gain</button>
-            <div id="elevationGain" class="dropdown-content">
+            <!-- <div id="elevationGain" class="dropdown-content">
               <div class="slidercontainer">
-                <input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000><!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
-                <!-- <label for="mileRange">Miles</label> -->
-              </div>
-            </div>
+								<input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000> Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+								<!-- <p><span id="elevationVal"></span> ft</p>
+								 <label for="mileRange">Miles</label> -->
+              <!-- </div>
+            </div> -->
+						<div id="elevationGain" class="dropdown-content">
+							<!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+							<!-- Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
+							<!-- Source: https://www.sliderrevolution.com/resources/css-range-slider/ -->
+							<!-- <div class="slidercontainer"> -->
+								<section class="range-slider container">
+									<span class="outRangeUpperE"></span>
+									<span class="outRangeLowerE"></span>
+									<!-- <span class="output outRangeUpperE"></span>
+									<span class="output outRangeLowerE"></span> -->
+									<span class="full-rangeE"></span>
+									<span class="incl-rangeE"></span>
+									<div class="slidercontainer">
+										<input type="range" id="elevationRangeLower" name="elevationRange" class="range-slider" min=0 max=5000 value=1>
+										<!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+										<input type="range" id="elevationRange" name="elevationRangeLower" class="range-slider" min=0 max=5000 value=5000>
+										<!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
+
+										<!-- <input type="range" id="mileRange" name="mileRange" class="range-slider" min=1 max=30 value=1>
+										<input type="range" id="mileRangeLower" name="mileRangeLower" class="range-slider" min=1 max=30 value=30> -->
+									</div>
+									<!-- <p><span id="milesVal"></span> miles</p>
+									<p><span id="milesValLower"></span> miles</p> -->
+								</section>
+							<!-- </div> -->
+						</div>
           </div>
 
-          <button type="submit" onclick=searchHikesFilter()>submit</button>
-      </div>
-      <!-- WANT: sorted list of hikes to appear in collapsible when the user has searched -->
+
+
+
+			<button type="submit" onclick=searchHikesFilter()>submit</button>
+		  </div>
+      <!-- sorted list of hikes to appear in collapsible when the user has searched -->
 			<!-- <p id="selection"></p> -->
-      <!-- <p id="milesSelected"></p> -->
-      <!-- <p id="elevationSelected"></p> -->
+      <p id="milesSelected"></p>
+      <p id="elevationSelected"></p>
       <!-- <p id="difficultySelected"></p> -->
       <!-- <p id="hike1"></p> -->
       <!-- <p id="hike2"></p> -->
 			<!-- <p id="hike3"></p> -->
 
-			<!-- create a table for searched and filtered hikes  -->
-			<table class="searchHikes">
-				<tr>
+			<div id="hikeresults" overflow-y:auto>
+				<div id="hikelist">
+					<div id="individualhike" name="hike1", onClick='mrClicky("#SearchHike1Name")'>
+						<img id="hikepic" src="./images/hike1.jpg">
+						<h3 id="SearchHike1Name" class="hikesearch">Hike 1</h3>
+						<p id="SearchHike1Metrics" class="hikesearch">Elevation Change: 1000, Mileage: 27</p>
+						<p class="hikesearch">Rating: This will be POST</p>
+						<!-- <img id="hikepic" src="./images/hike1.jpg"> -->
+					</div>
+					<div id="individualhike" name="hike2", onClick='mrClicky("#SearchHike2Name")'>
+						<img id="hikepic" src="./images/hike1.jpg">
+						<h3 id="SearchHike2Name" class="hikesearch">Hike 2</h3>
+						<p id="SearchHike2Metrics" class="hikesearch">Elevation Change: 1000, Mileage: 27</p>
+						<p class="hikesearch">Rating: This will be POST</p>
+					</div>
+					<div id="individualhike" name="hike3", onClick='mrClicky("#SearchHike3Name")'>
+						<img id="hikepic" src="./images/hike1.jpg">
+						<h3 id="SearchHike3Name" class="hikesearch">Hike 3</h3>
+						<p id="SearchHike3Metrics" class="hikesearch">Elevation Change: 1000, Mileage: 27</p>
+						<p class="hikesearch">Rating: This will be POST</p>
+					</div>
+					<div id="individualhike" name="hike4", onClick='mrClicky("#SearchHike4Name")'>
+						<img id="hikepic" src="./images/hike1.jpg">
+						<h3 id="SearchHike4Name" class="hikesearch">Hike 4</h3>
+						<p id="SearchHike4Metrics" class="hikesearch">Elevation Change: 1000, Mileage: 27</p>
+						<p class="hikesearch">Rating: This will be POST</p>
+					</div>
+					<div id="individualhike" name="hike5", onClick='mrClicky("#SearchHike5Name")'>
+						<img id="hikepic" src="./images/hike1.jpg">
+						<h3 id="SearchHike5Name" class="hikesearch">Hike 5</h3>
+						<p id="SearchHike5Metrics" class="hikesearch">Elevation Change: 1000, Mileage: 27</p>
+						<p class="hikesearch">Rating: This will be POST</p>
+					</div>
+					<div id="individualhike" name="hike6", onClick='mrClicky("#SearchHike6Name")'>
+						<img id="hikepic" src="./images/hike1.jpg">
+						<h3 id="SearchHike6Name" class="hikesearch">Hike 6</h3>
+						<p id="SearchHike6Metrics" class="hikesearch">Elevation Change: 1000, Mileage: 27</p>
+						<p class="hikesearch">Rating: This will be POST</p>
+					</div>
+					<div id="individualhike" name="hike7", onClick='mrClicky("#SearchHike7Name")'>
+						<img id="hikepic" src="./images/hike1.jpg">
+						<h3 id="SearchHike7Name" class="hikesearch">Hike 7</h3>
+						<p id="SearchHike7Metrics" class="hikesearch">Elevation Change: 1000, Mileage: 27</p>
+						<p class="hikesearch">Rating: This will be POST</p>
+					</div>
+					<div id="individualhike" name="hike8", onClick='mrClicky("#SearchHike8Name")'>
+						<img id="hikepic" src="./images/hike1.jpg">
+						<h3 id="SearchHike8Name" class="hikesearch">Hike 8</h3>
+						<p id="SearchHike8Metrics" class="hikesearch">Elevation Change: 1000, Mileage: 27</p>
+						<p class="hikesearch">Rating: This will be POST</p>
+					</div>
+				</div>
+			</div>
 
-					<td>
-						<!-- first result -->
-						<div id="searchflip1outer" class="flip-card-search", onClick='mrClicky("#SearchHike1Name")'>
-							<div class="flip-card-inner">
-								<div class="flip-card-front">
-									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
-								</div>
-								<div class="flip-card-back">
-									<h1 id="SearchHike1Name" class="flip-text">Hike 2</h1>
-									<p id="SearchHike1Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
-									<p class="flip-text">Rating: This will be POST</p>
-								</div>
-							</div>
-						</div>
 
-					</td>
-
-
-					<td>
-						<!-- first result -->
-						<div id="searchflip2outer" class="flip-card-search", onClick='mrClicky("#SearchHike2Name")'>
-							<div class="flip-card-inner">
-								<div class="flip-card-front">
-									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
-								</div>
-								<div class="flip-card-back">
-									<h1 id="SearchHike2Name" class="flip-text">Hike 2</h1>
-									<p id="SearchHike2Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
-									<p class="flip-text">Rating: This will be POST</p>
-								</div>
-							</div>
-						</div>
-
-					</td>
-					<td>
-						<!-- first result -->
-						<div id="searchflip3outer" class="flip-card-search", onClick='mrClicky("#SearchHike3Name")'>
-							<div class="flip-card-inner">
-								<div class="flip-card-front">
-									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
-								</div>
-								<div class="flip-card-back">
-									<h1 id="SearchHike3Name" class="flip-text">Hike 2</h1>
-									<p id="SearchHike3Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
-									<p class="flip-text">Rating: This will be POST</p>
-								</div>
-							</div>
-						</div>
-
-					</td>
-					<td>
-						<!-- first result -->
-						<div id="searchflip4outer" class="flip-card-search", onClick='mrClicky("#SearchHike4Name")'>
-							<div class="flip-card-inner">
-								<div class="flip-card-front">
-									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
-								</div>
-								<div class="flip-card-back">
-									<h1 id="SearchHike4Name" class="flip-text">Hike 2</h1>
-									<p id="SearchHike4Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
-									<p class="flip-text">Rating: This will be POST</p>
-								</div>
-							</div>
-						</div>
-
-					</td>
-					<td>
-						<!-- first result -->
-						<div id="searchflip5outer" class="flip-card-search", onClick='mrClicky("#SearchHike5Name")'>
-							<div class="flip-card-inner">
-								<div class="flip-card-front">
-									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
-								</div>
-								<div class="flip-card-back">
-									<h1 id="SearchHike5Name" class="flip-text">Hike 2</h1>
-									<p id="SearchHike5Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
-									<p class="flip-text">Rating: This will be POST</p>
-								</div>
-							</div>
-						</div>
-
-					</td>
-					<td>
-						<!-- first result -->
-						<div id="searchflip6outer" class="flip-card-search", onClick='mrClicky("#SearchHike6Name")'>
-							<div class="flip-card-inner">
-								<div class="flip-card-front">
-									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
-								</div>
-								<div class="flip-card-back">
-									<h1 id="SearchHike6Name" class="flip-text">Hike 2</h1>
-									<p id="SearchHike6Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
-									<p class="flip-text">Rating: This will be POST</p>
-								</div>
-							</div>
-						</div>
-
-					</td>
-					<td>
-						<!-- first result -->
-						<div id="searchflip7outer" class="flip-card-search", onClick='mrClicky("#SearchHike7Name")'>
-							<div class="flip-card-inner">
-								<div class="flip-card-front">
-									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
-								</div>
-								<div class="flip-card-back">
-									<h1 id="SearchHike7Name" class="flip-text">Hike 2</h1>
-									<p id="SearchHike7Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
-									<p class="flip-text">Rating: This will be POST</p>
-								</div>
-							</div>
-						</div>
-
-					</td>
-					<td>
-						<!-- first result -->
-						<div id="searchflip8outer" class="flip-card-search", onClick='mrClicky("#SearchHike8Name")'>
-							<div class="flip-card-inner">
-								<div class="flip-card-front">
-									<img id="flip2" src="./images/hike1.jpg" alt="Pic">
-								</div>
-								<div class="flip-card-back">
-									<h1 id="SearchHike8Name" class="flip-text">Hike 2</h1>
-									<p id="SearchHike8Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
-									<p class="flip-text">Rating: This will be POST</p>
-								</div>
-							</div>
-						</div>
-
-					</td>
-				</tr>
 
     </div>
   </div>
 
   <script src="javascripts/bottomnavjs.js"></script> <!-- js for file -->
-
+	<script src="javascripts/bottomnavrangesjs.js"></script>
 
 
 </body>

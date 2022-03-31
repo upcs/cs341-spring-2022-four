@@ -10,6 +10,34 @@ body{
 	background-attachment:fixed;
 }
 
+#bannerAdImage{
+	position:absolute;
+	border-style:solid;
+	border-color:white;
+	/* margin-left:0%; */
+	/* margin-top:0%; */
+	left:0%;
+	top:80px;
+	width:10%;
+	height:70%;
+}
+
+#bannerAdImageRight{
+	position:absolute;
+	border-style:solid;
+	border-color:white;
+	/* margin-right:10px; */
+	/* margin-top:10px; */
+	right:0%;
+	top:80px;
+	width:10%;
+	height:70%;
+}
+
+.bannerAd:hover{
+	cursor:pointer;
+}
+
 /* ========================================== */
 /* TAKE THIS FOR THE MASTHEAD */
 /* ========================================== */
@@ -179,7 +207,7 @@ body{
 	width:30%;
 	height:85%;
 	margin-bottom:25%;
-	margin-top:6%; /* 8 */
+	margin-top:6%; /* 8
 	/* margin-left:300%; */
 	margin-left:85%;
 }

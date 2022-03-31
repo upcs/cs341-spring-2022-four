@@ -9,9 +9,17 @@ $(document).ready(function(){
   $("#mastHead").click(function(){
     window.location.href="Index.html";
   });
-  
+
   $(".flip-card").click(function(){
     window.location.href="hike_page_template.html";
+  });
+
+  $(".bannerAd").click(function(){
+    // window.location.href="https://up.cafebonappetit.com/";
+    // if(("#bannerAdImage").src.equals("./images/BonApAd.jpg")){
+          window.open("https://up.cafebonappetit.com/", "_blank");
+    // }
+
   });
 
   //populate flip cards with database information
@@ -130,4 +138,3 @@ function populateRecHikes(recHikes, hikeIdx, helperStr){
 // }
 
 // export const toPass = passName
-

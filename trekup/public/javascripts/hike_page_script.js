@@ -1,10 +1,17 @@
+/**
+ * @hike_page_script.js
+ *
+ * sets all of the components for the specific hike page after the post
+ *
+ * Posts with file: popHikePage.js
+ */
 
 $(document).ready(function(){
     let hikeToPost = localStorage.getItem('Name');
     // alert(localStorage.getItem('Name'));
-    // $.post("/popHikePage",{hName: hikeToPost}, function(data, status){
-    //   displayHikePageInfo(data, status);
-    // });
+    $.post("/popHikePage",{hName: hikeToPost}, function(data, status){
+      displayHikePageInfo(data, status);
+    });
 
     //hide the link to add a hike to a users completed list if:
     //no user is logged in OR the user has already added it
@@ -13,7 +20,7 @@ $(document).ready(function(){
     } else {
         $.post('/if_user_added_hike', {
             username: sessionStorage.getItem("current_user"),
-            hike_name: $("#hike_name").text()
+            hike_name: hikeToPost
         }).done(function (data) {
             if (data.localeCompare("user already added hike") == 0) {
                 $("#user_add_link").hide();

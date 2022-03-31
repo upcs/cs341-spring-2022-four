@@ -1,9 +1,17 @@
+/**
+ * @popSearchHikes.js
+ *
+ * send the actual post request for searching
+*/
+
 var express = require('express');
 var router = express.Router();
 
 var dbq = require('../../routes/dbms_promise');
 
 router.post('/', async(req, res, next)=>{
+
+
 
   if(req.body.nam){
     var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE HIKE = " + "'" + req.body.nam + "'"));
@@ -27,9 +35,8 @@ router.post('/', async(req, res, next)=>{
   else{
     console.log("default");
       var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO LIMIT 30"));
+
   }
-
-
 
   res.send(hi1);
 });

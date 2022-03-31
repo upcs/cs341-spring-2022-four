@@ -1,3 +1,10 @@
+/**
+ * @popHikePage.js
+ *
+ * Called by the actual post request. Sends for the individual, more
+ * specific hike page.
+*/
+
 var express = require('express');
 var router = express.Router();
 

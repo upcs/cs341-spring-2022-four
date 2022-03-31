@@ -63,8 +63,10 @@ li{
 #profPic{
 	float:right;
 	margin-right:0.7%;
-	width:4%;
-	height:4%;
+	/* width:4%; */
+	/* height:4%; */
+	width:60px;
+	height:60px;
 }
 
 #profPic:hover{

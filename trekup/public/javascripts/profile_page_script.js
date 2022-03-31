@@ -57,7 +57,7 @@ $(document).ready(function() {
         sessionStorage.clear();
         window.location.href="index.html";
    });
-
+  
    $("#updatebutton").click(function(){
         window.location.href="update_profile.html";
     });

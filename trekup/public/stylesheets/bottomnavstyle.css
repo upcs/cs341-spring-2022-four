@@ -372,7 +372,7 @@ input[type=range]:focus {
 /* region for holding the hike results */
 #hikeresults{
     display: none;
-    height:200px;
+    height:400px;
     width:100%;
     float:center;
 }

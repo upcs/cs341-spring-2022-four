@@ -53,14 +53,14 @@ router.post('/', async(req, res, next)=>{
   //   //console.log(req.body.mileL + " miles");
   //   var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE DISTANCE <= " + "'" + req.body.mileR + "'" + " LIMIT 8"));
   // }
-  else if(req.body.elevU, req.body.elevL){
-    console.log("upper: " + req.body.elevU + " ft");
-    console.log("lower: " + req.body.elevL + " ft");
-    var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE ELEVATION_CHANGE <= " + "'" + req.body.elevU + "'" + " LIMIT 30"));
-  }
+  // else if(req.body.elevU, req.body.elevL){
+  //   console.log("upper: " + req.body.elevU + " ft");
+  //   console.log("lower: " + req.body.elevL + " ft");
+  //   var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE ELEVATION_CHANGE <= " + "'" + req.body.elevU + "'" + " LIMIT 30"));
+  // }
   else{
     console.log("default");
-      var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO LIMIT 30"));
+      var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO LIMIT 8"));
 
   }
 

@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "start-server-and-test": "^1.14.0"
+  },
+  "dependencies": {
+    "coverage": "^0.4.1"
   }
 }

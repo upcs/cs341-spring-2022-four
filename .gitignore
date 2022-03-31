@@ -109,3 +109,6 @@ dist
 /.vs
 .DS_Store
 /node_modules
+trekup/public/images/.hike3.jpg.icloud
+trekup/public/images/.hike4.jpg.icloud
+*.icloud

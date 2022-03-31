@@ -14,38 +14,38 @@
 
 // require file system, query, and javascript
 var $ = require('jquery');
-var js = require('../public/javascripts/profile_page_script');
+var js = require('../public/javascripts/login_page_script.js');
 
-test('account information: username', () => {
-    document.body.innerHTML = '<div> \
-    <input type="text" id="email"> </div>';
-    document.getElementById('email').value = 'bob';
-    expect(f.getUsername()).toBe('bob');
-});
+// test('account information: username', () => {
+//     document.body.innerHTML = '<div> \
+//     <input type="text" id="email"> </div>';
+//     document.getElementById('email').value = 'bob';
+//     expect(f.getUsername()).toBe('bob');
+// });
 
 
 
 // // /* BUTTON FUNCTIONALITY TESTS */
-// // test('login button test', () => {
-// //     // find the username in the HTML document
-// //     document.body.innerHTML = '<div> \
-// //     <input type="text" id="email"> </div>';
+// test('login button test', () => {
+//     // find the username in the HTML document
+//     document.body.innerHTML = '<div> \
+//     <input type="text" id="email"> </div>';
 
-// //     // get the value of the username
-// //     document.getElementById('email').value = 'f.nguyen123'
+//     // get the value of the username
+//     document.getElementById('email').value = 'f.nguyen123'
 
-// //     // verify correct username
-// //     // expect(js.)
-// //     // wait until the function is fully set up
-// // });
+//     // verify correct username
+//     // expect(js.)
+//     // wait until the function is fully set up
+// });
 
 
-// /* USERNAME TEST */
+/* USERNAME TEST */
 // //https://bholmes.dev/blog/mocking-browser-apis-fetch-localstorage-dates-the-easy-way-with-jest/
 // // create a mock login for tests to use
 // let mockLogin = {}
 
-// // get the values from the global storage object
+// get the values from the global storage object
 // beforeAll(() => {
 //     global.Storage.prototype.setItem = jest.fn((key, value) => {
 //         mockLogin[key] = value

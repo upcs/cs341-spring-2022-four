@@ -23,9 +23,22 @@ router.post('/', async(req, res, next)=>{
   // else if(req.body.nam){
   //   var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE HIKE = " + "'" + req.body.nam + "'"));
   // }
+  // else if(req.body.mileR, req.body.mileL){
+  //   console.log(req.body.mileR + " miles");
+  //   console.log(req.body.mileL + " miles lower");
+  //   var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE DISTANCE <= " + "'" + req.body.mileR + "'" +
+  //   " UNION " + "'" + "WHERE DISTANCE >= " + req.body.mileL + "'" + " LIMIT 8"));
+  // }
+  // else if(req.body.mileR, req.body.elevU){
+  //   console.log(req.body.mileR + " miles");
+  //   console.log(req.body.mileL + " miles lower");
+  //   var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE DISTANCE <= " + "'" + req.body.mileR + "'" +
+  //    " AND WHERE ELEVATION_CHANGE <= " + "'" + req.body.elevU + "'" + " LIMIT 8"));
+  // }
   else if(req.body.mileR){
     console.log(req.body.mileR + " miles");
-    var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE DISTANCE <= " + "'" + req.body.mileR + "'" + " LIMIT 30"));
+    //console.log(req.body.mileL + " miles");
+    var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE DISTANCE <= " + "'" + req.body.mileR + "'" + " LIMIT 8"));
   }
   else if(req.body.elevU, req.body.elevL){
     console.log("upper: " + req.body.elevU + " ft");

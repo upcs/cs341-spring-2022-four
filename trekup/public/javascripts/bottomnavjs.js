@@ -45,7 +45,7 @@ function searchHikesFilter(){
   }
   //get mile range
   var miles = document.getElementById("mileRange").value;
-  //var milesLower = document.getElementById("milesRangeLower").value;
+  var milesLower = document.getElementById("mileRangeLower").value;
 
   //get elevation range
   var elevation = document.getElementById("elevationRange").value;
@@ -62,7 +62,7 @@ function searchHikesFilter(){
   // localStorage.setItem('UseFilter', true);
 
   // $.post("/popSearchHikes",{ez: diffEasy, me: diffMod, ha: diffHard, mileR: miles, elev: elevation, noFilter: 0},function(data, status){
-  $.post("/popSearchHikes", {dif:diff, mileR: miles, elevU: elevation, elevL: elevationLower},function(data, status){
+  $.post("/popSearchHikes", {dif:diff, mileR: miles, mileL: milesLower, elevU: elevation, elevL: elevationLower},function(data, status){
     displayHikePostInfo(data, status, 8);
   });
 

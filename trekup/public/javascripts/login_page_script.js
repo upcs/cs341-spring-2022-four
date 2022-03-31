@@ -45,13 +45,12 @@ goToCreateAccountHandler = function(event) {
  */
 function getUsername() {
     var username = document.getElementById('username').value;
-    // username =
     return username;
 }
 
 /* getPassword
  * 
- * @author Francisco and Brynn 
+ * @author Francisco, Logan, and Brynn 
  * gets the password  
  */
 function getPassword() {

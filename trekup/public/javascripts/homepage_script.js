@@ -82,6 +82,7 @@ function populateRecHikes(recHikes, hikeIdx, helperStr){
 }
 
 
+
 // function searchHikesFilter(){
 //   //get checked boxes for difficulty
 //   // var diffEasy = document.getElementById("easy").checked;

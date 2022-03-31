@@ -95,6 +95,7 @@ function displayHikePostInfo(data, status, numPop){
     }else{
       helperStr = "SearchHike";
     }
+
     populateRecHikes(recHikes, i, helperStr);
   }
   // populateRecHikes(recHikes, 0, "Hike");

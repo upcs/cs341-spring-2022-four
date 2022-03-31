@@ -61,7 +61,6 @@ router.post('/', async(req, res, next)=>{
   else{
     console.log("default");
       var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO LIMIT 8"));
-
   }
 
   res.send(hi1);

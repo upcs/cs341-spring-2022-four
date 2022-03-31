@@ -9,7 +9,7 @@ $(document).ready(function(){
   $("#mastHead").click(function(){
     window.location.href="Index.html";
   });
-  
+
   $(".flip-card").click(function(){
     window.location.href="hike_page_template.html";
   });
@@ -74,6 +74,7 @@ function populateRecHikes(recHikes, hikeIdx, helperStr){
 }
 
 
+
 // function searchHikesFilter(){
 //   //get checked boxes for difficulty
 //   // var diffEasy = document.getElementById("easy").checked;
@@ -130,4 +131,3 @@ function populateRecHikes(recHikes, hikeIdx, helperStr){
 // }
 
 // export const toPass = passName
-

@@ -1,5 +1,5 @@
 /*@author Gareth Rice*/
-/*rieg23@up.edu*/
+/*riceg23@up.edu*/
 
 body{
 	/*set a gradient background*/
@@ -10,13 +10,11 @@ body{
 	background-attachment:fixed;
 }
 
-<<<<<<< HEAD
 #bannerAdImage{
 	position:absolute;
 	border-style:solid;
 	border-color:white;
-	/* margin-left:0%; */
-	/* margin-top:0%; */
+
 	left:0%;
 	top:80px;
 	width:10%;
@@ -38,52 +36,6 @@ body{
 .bannerAd:hover{
 	cursor:pointer;
 }
-
-=======
->>>>>>> origin/main
-/* ========================================== */
-/* TAKE THIS FOR THE MASTHEAD */
-/* ========================================== */
-/*the table for the masthead*/
-/* #mastHead{ */
-	/* background-color:#006622; */
-	/* position:inherit; */
-	/* position:absolute; */
-	/* border-radius:25px; */
-	/* width:10%; */
-	/* height:12%; */
-	/* height:inherit; */
-/* } */
-
-/* the labels in the table have the same color and font */
-/* td{ */
-	/* color:#111111; */
-	/* font-weight:bold; */
-	/* font-size:42px; */
-	/* font-size:300%; */
-/* } */
-
-/*trek header is inside of masthead table*/
-/* #trekHeader{ */
-	/* position:relative; */
-	/* position:inherit; */
-	/* top:8px; */
-	/* top:100%; */
-	/* left:4px; */
-/* } */
-
-/* move the up letters */
-/* #upHeader{ */
-	/* position:relative; */
-	/* position:inherit; */
-	/* bottom:8px; */
-	/* right:4px; */
-/* } */
-
-/* ========================================== */
-/* TAKE THIS FOR THE MASTHEAD */
-/* ========================================== */
-
 
 .flip-card{
 	background-color: transparent;
@@ -168,8 +120,6 @@ body{
 #flip1outer{
 	width:30%;
 	height:70%;
-	/* margin-bottom:30%; */
-	/* margin-left:300%; */
 
 	margin-bottom: 40%;
 	margin-left:84%;
@@ -183,7 +133,7 @@ body{
 #flip2outer{
 	width:30%;
 	height:85%;
-	/* margin-left:150%; */
+
 	margin-bottom:33%;
 	margin-left:45%;
 }
@@ -196,47 +146,24 @@ body{
 #flip3outer{
 	width:30%;
 	height:85%;
-	/* margin-left:350%; */
+
 	margin-bottom:33%;
 	margin-left:25%;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 #flip4outer{
 	width:30%;
 	height:85%;
+
 	margin-bottom:25%;
-	margin-top:6%; /* 8
-	/* margin-left:300%; */
+	margin-top:6%;
 	margin-left:85%;
-=======
-#flip4outer {
-    width: 30%;
-    height: 85%;
-    margin-bottom: 25%;
-    margin-top: 6%;
-    /* 8 */
-    /* margin-left:300%; */
-    margin-left: 85%;
->>>>>>> origin/main
-=======
+}
+
 #flip4{
 	width:100%;
 	height:100%;
->>>>>>> origin/main
 }
-
-#flip4outer{
-	width:30%;
-	height:85%;
-	margin-bottom:25%;
-	margin-top:6%; /* 8 */
-	/* margin-left:300%; */
-	margin-left:85%;
-}
-
-
 
 /* New compass implementation */
 .compassRecommend{
@@ -267,47 +194,3 @@ body{
 	width: 50%;
 	height: 100%;
 }
-
-/* #profPicture{
-	width:50%;
-	height:50%;
-}
-
-li{
-	display:inline;
-} */
-
-/* #navBar{
-	position:fixed;
-	list-style-type:none;
-	top:0;
-	width:100%;
-	margin:0;
-	margin-left:0;
-	padding:0;
-	overflow:hidden;
-	background-color:#006622;
-}
-
-#homepage{
-	float:left;
-	margin-left:0;
-}
-
-
-#profPic{
-	float:right;
-	margin-right:0.7%;
-	width:4%;
-	height:4%;
-}
-
-#profPic:hover{
-	background-color:#648B7F;
-	cursor:pointer;
-}
-
-#mastHead:hover{
-	background-color:#648B7F;
-	cursor:pointer;
-} */

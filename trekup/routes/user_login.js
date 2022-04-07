@@ -11,6 +11,7 @@ var bcrypt = require('bcrypt');
 
 /* POST for login. */
 router.post('/', function(req, res, next) {
+    console.log("making login post");
     var get_salt_query = `select SALT from USER_PROFILES where USERNAME='${req.body.username}'`;
     var salt_result = dbms.dbquery(get_salt_query);
 

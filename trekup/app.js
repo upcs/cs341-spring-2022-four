@@ -18,6 +18,7 @@ var userLoginRouter = require('./routes/user_login');
 var userAddRouter = require('./routes/user_add');
 var userAddCompletedHikeRouter = require('./routes/user_add_completed_hike');
 var ifUserAddedHikeRouter = require('./routes/if_user_added_hike');
+var userRemoveFromCompletedHikeRouter = require('./routes/user_remove_from_completed_hike');
 var trailsRetrieveRouter = require('./routes/trails_retrieve'); // retrieve the trails from the DB
 var userUpdateRouter = require('./routes/user_update');
 
@@ -46,6 +47,7 @@ app.use('/user_login', userLoginRouter);
 app.use('/user_add', userAddRouter);
 app.use('/user_add_completed_hike', userAddCompletedHikeRouter);
 app.use('/if_user_added_hike', ifUserAddedHikeRouter);
+app.use('/user_remove_from_completed_hike', userRemoveFromCompletedHikeRouter);
 app.use('/user_update', userUpdateRouter); // update a new profile
 
 

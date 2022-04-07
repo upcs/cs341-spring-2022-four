@@ -113,10 +113,10 @@ this can be uncommented*/
 }
 
 /*hyperlink for use to say they completed a hike*/
-.to_add_hike {
+.user_hike_list {
     color: blue;
 }
 
-.to_add_hike:hover {
+.user_hike_list:hover {
     text-decoration: underline;
 }

@@ -3,24 +3,11 @@
  * updated by: Francisco Nguyen
  */
 
-addStars = function (stars_num) {
-    var star_elements = "";
-    for (let i = 0; i < 5; i++) {
-        star_elements += (i < stars_num) ? "<td><div class=\"rating user star\"></div></td>" : "<td><div class=\"rating user star blank\"></div></td>";
-    }
-    return star_elements;
-}
-
 addHike = function (hike) {
     return `
     <div id="hikebox", onClick='mrClicky("#ProfileHike5Name")'>
       <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
       <h3 id="ProfileHike5Name" class="hikeprofile">${hike.HIKE_NAME}</h3>
-      <table>
-          <tr>
-            ${addStars(hike.RATING)}
-          </tr>
-      </table>
       <h4>Di. ${hike.DISTANCE} mi. El. ${hike.ELEVATION_CHANGE} ft.</h4>
     </div>
   `;

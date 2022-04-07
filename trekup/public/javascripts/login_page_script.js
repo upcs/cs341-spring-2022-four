@@ -60,7 +60,7 @@ function getPassword() {
 }
 
 // export the functions for testing 
-module.exports = { login, getUsername, getPassword };
+// module.exports = { login, getUsername, getPassword };
 // PAST CODE FOR REFERENCE
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 // $.post('/user_login', {

@@ -5,9 +5,9 @@
 
 addHike = function (hike) {
     return `
-    <div id="hikebox", onClick='mrClicky("#ProfileHike5Name")'>
+    <div id="hikebox", onClick='mrClicky("${hike.HIKE_NAME}")'>
       <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
-      <h3 id="ProfileHike5Name" class="hikeprofile">${hike.HIKE_NAME}</h3>
+      <h3 class="hikeprofile">${hike.HIKE_NAME}</h3>
       <h4>Di. ${hike.DISTANCE} mi. El. ${hike.ELEVATION_CHANGE} ft.</h4>
     </div>
   `;
@@ -53,15 +53,15 @@ $(document).ready(function() {
 
     //making POST to get profile data
     $.post('/profile_load', {username: usrnm})
-    .done(function(profile_data) {
-        $("#username").text(`@${usrnm}`);
-        $("#name").text(profile_data.NAME);
-        $("#trails_completed").text(profile_data.TRAILS_COMPLETED);
-        $("#distance_walked").text(profile_data.DISTANCE_WALKED);
-        $("#elevation_gain").text(profile_data.ELEVATION_GAINED);
+        .done(function(profile_data) {
+            $("#username").text(`@${usrnm}`);
+            $("#name").text(profile_data.NAME);
+            $("#trails_completed").text(profile_data.TRAILS_COMPLETED);
+            $("#distance_walked").text(profile_data.DISTANCE_WALKED);
+            $("#elevation_gain").text(profile_data.ELEVATION_GAINED);
 
-        addTrophies(profile_data.ACHIEVEMENTS);
-    });
+            addTrophies(profile_data.ACHIEVEMENTS);
+        });
 
     //making POST to get profile's list of completed hikes
     $.post('/profile_hike_list', {username: usrnm})
@@ -72,8 +72,7 @@ $(document).ready(function() {
         });
   });
 
-function mrClicky(hikeNameField){
-  passName = $(hikeNameField).text();
-  localStorage.setItem('Name', passName);
-  window.location.href="hike_page_template.html";
+function mrClicky(hikeNameField) {
+    localStorage.setItem('Name', hikeNameField);
+    window.location.href="hike_page_template.html";
 }

@@ -142,6 +142,27 @@ body{
     margin-top: 1%;
     margin-right: 1%;
 }
+/*Picture of a closed trash can*/
+.removehike {
+    background:url("../images/trashClosed.jpg") no-repeat;
+    background-size:contain;
+    float:right;
+    padding:0px;
+    margin:0px;
+    margin-top:1%;
+    width:7%;
+    height:40%;
+    max-height:80%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(70%);
+  
+}
+/*Picture of trash can changes to open trash can on hover*/
+.removehike:hover {
+    background:url("../images/trashOpen.jpg") no-repeat;
+    background-size:contain;
+}
 /* Picture of a trophy */
 #trophy {
     width: 30%;

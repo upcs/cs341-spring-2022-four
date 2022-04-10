@@ -70,6 +70,12 @@ $(document).ready(function() {
                 $("#completedbox").append(addHike(hike));
             }
         });
+    
+    $("#hikebox").hover(function() {
+        $(this).prepend('<div class="removehike"></div>');
+    }, function() {
+        $(this).find("div").first().remove();
+    });
   });
 
 function mrClicky(hikeNameField) {

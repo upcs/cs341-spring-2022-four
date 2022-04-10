@@ -9,9 +9,11 @@
  * 
  * SOURCE: https: //www.npmjs.com/package/start-server-and-test-with-options  
  */
-var $ = require('jquery');
-var f = require('../public/javascripts/login_page_script').default;
 
+'use strict';
+
+var f = require('../public/javascripts/login_page_script');
+var $ = require('jquery');
 // test getting username
 it('test username', () => {
     document.body.innerHTML = '<div> \

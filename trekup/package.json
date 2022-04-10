@@ -9,7 +9,11 @@
         "ci": "start-server-and-test start-server http://localhost:3000 test"
     },
     "jest": {
+        "verbose": true,
         "resetMocks": false,
+        "globals": {
+            "__DEV__": true
+        },
         "setupFiles": [
             "jest-localstorage-mock"
         ]

@@ -71,17 +71,17 @@ function goToCreateAccountHandler(event) {
     window.location.href = "create_account_page.html";
 }
 
-/* 
+/* ready 
  * 
  * @author Francisco 
  * processes click   
  */
-// $(document).ready(function() {
-//     //actions for when the submit button for the form is clicked
-//     $("#login_button").on("click", loginHandler);
-//     $("#create_account_link").on("click", goToCreateAccountHandler);
-// });
-$(document).ready(loginHandler);
+$(document).ready(function() {
+    //actions for when the submit button for the form is clicked
+    $("#login_button").on("click", loginHandler);
+    $("#create_account_link").on("click", goToCreateAccountHandler);
+});
+// $(document).ready(loginHandler);
 
 // export the functions for testing 
 module.exports = { getUsername, getPassword, loginHandler, goToCreateAccountHandler };

@@ -3,6 +3,14 @@
 ### Team-Four
 Contributors: Brynn Harrington, Francisco Nguyen, Gareth Rice, Jennifer Brana, and Logan Machida. 
 
+Our compnay's primary quality focus consists of 
+
+#1. Learnability: Our product should be easy to learn and work with
+#2. Accuracy: Our product should display appropriate data and find appropriate desired information
+#3. Usability: Our product should be easy to use and not be overly complicated
+#4. Responsiveness: Our product should clearly react to the user and have clean interaction indication
+#5. Scalability: Our product should be able to add a wide array of users and additional information
+
 ## 1. Introduction
 The work that is most related to our project is AllTrails (https://www.alltrails.com) which is a fitness and mapping application that is used in activities such as hiking and other outdoor activities. It uses a database of trail maps and included crowd-sourced reviews and images. The major issue with AllTrails is that it lacks sufficient data for all the hiking trails available and a social component. The idea that we have with TrekUp is to enhance the features that AllTrails has by providing a social media platform for users to interact with.  
 

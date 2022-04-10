@@ -1,9 +1,9 @@
-/* server.get.test
+/* login.test
  * Brynn Harrington 
- * Date Modified: 23 Mar 2022
+ * Date Modified: 30 Mar 2022
  *
  * Tests the operations associated with
- * GET functionality 
+ * login functionality 
  * 
  * STATUS: PASSED (yay)
  * 

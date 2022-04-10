@@ -1,7 +1,7 @@
 createAccountHandler = function(event) {
     //check if input is empty and if passwords match
-    if ($("#email").val().localeCompare("") == 0 || 
-        $("#name").val().localeCompare("") == 0 || 
+    if ($("#email").val().localeCompare("") == 0 ||
+        $("#name").val().localeCompare("") == 0 ||
         $("#username").val().localeCompare("") == 0 ||
         $("#password").val().localeCompare("") == 0 ||
         $("#password").val().localeCompare($("#confirm_password").val()) != 0) {
@@ -31,13 +31,16 @@ goToLoginHandler = function(event) {
     window.location.href = "login_page.html"
 }
 
-$(document).ready(function(){
+$(document).ready(function() {
     //actions for when the submit button for the form is clicked
     $("#create_account_button").on("click", createAccountHandler);
 
     $("#login_link").on("click", goToLoginHandler);
 
-    $("#mastHead").click(function(){
-        window.location.href="Index.html";
+    $("#mastHead").click(function() {
+        window.location.href = "Index.html";
     });
 });
+
+// export functions
+module.exports = { createAccountHandler, goToLoginHandler };

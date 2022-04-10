@@ -10,7 +10,7 @@
  * SOURCE: https: //www.npmjs.com/package/start-server-and-test-with-options  
  */
 var $ = require('jquery');
-var f = require('../public/javascripts/login_page_script');
+var f = require('../public/javascripts/login_page_script').default;
 
 // test getting username
 it('test username', () => {

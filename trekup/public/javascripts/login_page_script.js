@@ -3,6 +3,8 @@
  * @author Francisco and Brynn 
  * attempts to login to an account  
  */
+"use strict";
+
 function login(event) {
     $("#login_button").on("click", loginHandler); // handle click on login
     $("#create_account_link").on("click", goToCreateAccountHandler); // handle click on create account
@@ -59,8 +61,7 @@ function getPassword() {
     return password;
 }
 
-// export the functions for testing 
-// module.exports = { login, getUsername, getPassword };
+
 // PAST CODE FOR REFERENCE
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 // $.post('/user_login', {
@@ -111,3 +112,6 @@ goToCreateAccountHandler = function(event) {
 //     var password = getPassword();
 //     $("#login_button").on("click", loginHandler);
 // }
+
+// export the functions for testing 
+module.exports = { login, goToCreateAccountHandler, getUsername, getPassword };

@@ -78,6 +78,7 @@ $(document).ready(function() {
     });
   });
 
+  /*on clicking hike in completed list, go to that hike's page */
 function mrClicky(hikeNameField) {
     localStorage.setItem('Name', hikeNameField);
     window.location.href="hike_page_template.html";

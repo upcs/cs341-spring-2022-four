@@ -1,261 +1,177 @@
-/*@author Gareth Rice*/
-/*rieg23@up.edu*/
+/*@author Gareth Rice - rieg23@up.edu
+ @author Brynn Harrington - harringt23@up.edu
+    - cleanup because the colors are really not
+    even remotely close to color-blind friendly
+    (yes I'm color-blind, yes didn't realize how
+    often this would come up in CS MY BAD I'M SORRY*/
 
-body{
-	/*set a gradient background*/
-	background-image:linear-gradient(to bottom, #648B7F, #648B7F);
-	/*cover the whole page*/
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-attachment:fixed;
+body {
+    /*set a gradient background*/
+    background-image: linear-gradient(to bottom, white, white);
+    /*cover the whole page*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* ========================================== */
-/* TAKE THIS FOR THE MASTHEAD */
-/* ========================================== */
-/*the table for the masthead*/
-/* #mastHead{ */
-	/* background-color:#006622; */
-	/* position:inherit; */
-	/* position:absolute; */
-	/* border-radius:25px; */
-	/* width:10%; */
-	/* height:12%; */
-	/* height:inherit; */
-/* } */
-
-/* the labels in the table have the same color and font */
-/* td{ */
-	/* color:#111111; */
-	/* font-weight:bold; */
-	/* font-size:42px; */
-	/* font-size:300%; */
-/* } */
-
-/*trek header is inside of masthead table*/
-/* #trekHeader{ */
-	/* position:relative; */
-	/* position:inherit; */
-	/* top:8px; */
-	/* top:100%; */
-	/* left:4px; */
-/* } */
-
-/* move the up letters */
-/* #upHeader{ */
-	/* position:relative; */
-	/* position:inherit; */
-	/* bottom:8px; */
-	/* right:4px; */
-/* } */
-
-/* ========================================== */
-/* TAKE THIS FOR THE MASTHEAD */
-/* ========================================== */
-
-
-.flip-card{
-	background-color: transparent;
-	/* width:150px; */
-	/* height:150px; */
-	width:30%;
-	height:100%;
-	/* perspective:1000px; */
+.flip-card {
+    background-color: transparent;
+    width: 30%;
+    height: 100%;
 }
+
 
 /* this isn't needed anymore since I found a lower solution but I don't want to change it back */
-.flip-card-search{
-	background-color: transparent;
-	width:150px;
-	height:150px;
 
-	/* margin-left:30%; */
-	/* margin-right:5%; */
-
-	perspective:1000px;
+.flip-card-search {
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    /* margin-left:30%; */
+    /* margin-right:5%; */
+    perspective: 1000px;
 }
 
-.searchHikes td{
-	padding:17px;
+.searchHikes td {
+    padding: 17px;
 }
 
-#firstCol{
-	position:relative;
-	margin-left:auto;
-	margin-right:auto;
+#firstCol {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.flip-card-inner{
-	position:relative;
-	width:100%;
-	height:100%;
-	text-align:center;
-	transition:transform 0.8s;
-	transform-style:preserve-3d;
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner{
-	transform:rotateY(180deg);
-	cursor:pointer;
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
 }
 
-.flip-card-search:hover .flip-card-inner{
-	transform:rotateY(180deg);
-	cursor:pointer;
+.flip-card-search:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
 }
 
-.flip-card-front, .flip-card-back{
-	position:absolute;
-	width:100%;
-	height:100%;
-	-webkit-backface-visibility:hidden;
-	backface-visibility:hidden;
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
+
 
 /* Style the front side (fallback if image is missing) */
+
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+    background-color: #bbb;
+    color: black;
 }
+
 
 /* Style the back side */
+
 .flip-card-back {
-  background-color: #111111;
-  color: white;
-  transform: rotateY(180deg);
+    background-color: #111111;
+    color: white;
+    transform: rotateY(180deg);
 }
 
-.flip-text{
-	font-size:30%;
+.flip-text {
+    font-size: 30%;
 }
 
-#flip1{
-	width:100%;
-	height:100%;
+#flip1 {
+    width: 100%;
+    height: 100%;
 }
 
-#flip1outer{
-	width:30%;
-	height:70%;
-	/* margin-bottom:30%; */
-	/* margin-left:300%; */
-
-	margin-bottom: 40%;
-	margin-left:84%;
+#flip1outer {
+    width: 30%;
+    height: 70%;
+    /* margin-bottom:30%; */
+    /* margin-left:300%; */
+    margin-bottom: 40%;
+    margin-left: 84%;
 }
 
-#flip2{
-	width:100%;
-	height:100%;
+#flip2 {
+    width: 100%;
+    height: 100%;
 }
 
-#flip2outer{
-	width:30%;
-	height:85%;
-	/* margin-left:150%; */
-	margin-bottom:33%;
-	margin-left:45%;
+#flip2outer {
+    width: 30%;
+    height: 85%;
+    /* margin-left:150%; */
+    margin-bottom: 33%;
+    margin-left: 45%;
 }
 
-#flip3{
-	width:100%;
-	height:100%;
+#flip3 {
+    width: 100%;
+    height: 100%;
 }
 
-#flip3outer{
-	width:30%;
-	height:85%;
-	/* margin-left:350%; */
-	margin-bottom:33%;
-	margin-left:25%;
+#flip3outer {
+    width: 30%;
+    height: 85%;
+    /* margin-left:350%; */
+    margin-bottom: 33%;
+    margin-left: 25%;
 }
 
-#flip4{
-	width:100%;
-	height:100%;
+#flip4 {
+    width: 100%;
+    height: 100%;
 }
 
-#flip4outer{
-	width:30%;
-	height:85%;
-	margin-bottom:25%;
-	margin-top:6%; /* 8 */
-	/* margin-left:300%; */
-	margin-left:85%;
+#flip4outer {
+    width: 30%;
+    height: 85%;
+    margin-bottom: 25%;
+    margin-top: 6%;
+    /* 8 */
+    /* margin-left:300%; */
+    margin-left: 85%;
 }
-
 
 
 /* New compass implementation */
-.compassRecommend{
-	position:relative;
-	margin:auto;
-	margin-top:85px;
 
-	background:url('../images/compass1.png');
-	background-repeat:no-repeat;
-	background-position:center;
-	background-size:30%;
-
-	width:70%;
-	height:70%;
+.compassRecommend {
+    position: relative;
+    margin: auto;
+    margin-top: 85px;
+    background: url('../images/compass1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    width: 70%;
+    height: 70%;
 }
 
-.compassTable{
-	width: 100%;
-	height: 100%;
+.compassTable {
+    width: 100%;
+    height: 100%;
 }
 
-.ctRow{
-	width: 100%;
-	height: 33%;
+.ctRow {
+    width: 100%;
+    height: 33%;
 }
 
-.ctCol{
-	width: 50%;
-	height: 100%;
+.ctCol {
+    width: 50%;
+    height: 100%;
 }
-
-/* #profPicture{
-	width:50%;
-	height:50%;
-}
-
-li{
-	display:inline;
-} */
-
-/* #navBar{
-	position:fixed;
-	list-style-type:none;
-	top:0;
-	width:100%;
-	margin:0;
-	margin-left:0;
-	padding:0;
-	overflow:hidden;
-	background-color:#006622;
-}
-
-#homepage{
-	float:left;
-	margin-left:0;
-}
-
-
-#profPic{
-	float:right;
-	margin-right:0.7%;
-	width:4%;
-	height:4%;
-}
-
-#profPic:hover{
-	background-color:#648B7F;
-	cursor:pointer;
-}
-
-#mastHead:hover{
-	background-color:#648B7F;
-	cursor:pointer;
-} */

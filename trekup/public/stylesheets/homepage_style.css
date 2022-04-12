@@ -5,6 +5,11 @@
     (yes I'm color-blind, yes didn't realize how
     often this would come up in CS MY BAD I'M SORRY*/
 
+* {
+    color: rgb(73, 10, 29);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 body {
     /*set a gradient background*/
     background-image: linear-gradient(to bottom, white, white);

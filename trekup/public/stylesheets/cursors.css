@@ -1,0 +1,7 @@
+/* IMPORT THIS CURSOR FOR CLASS
+ * @author Brynn Harringont  
+ */
+ /* implements "hikers" cursor */
+.cursor {
+    curosr: url(../images/cursor.png), auto;
+}

@@ -1,8 +1,15 @@
-/*@author Gareth Rice*/
-/*rieg23@up.edu*/
+/*@author Gareth Rice-rieg23@up.edu*/
+/* @author Brynn Harrington */
+/* this is deuteranope color-blind friendly (since brynn's genetics said "no" */
+
+/* default for the ENTIRE index */
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 body{
 	/*set a gradient background*/
+    /* why???? @gareth - it's literally just the same color? */
 	background-image:linear-gradient(to bottom, #648B7F, #648B7F);
 	/*cover the whole page*/
 	background-size:cover;
@@ -56,11 +63,8 @@ body{
 
 .flip-card{
 	background-color: transparent;
-	/* width:150px; */
-	/* height:150px; */
 	width:30%;
 	height:100%;
-	/* perspective:1000px; */
 }
 
 /* this isn't needed anymore since I found a lower solution but I don't want to change it back */
@@ -68,10 +72,6 @@ body{
 	background-color: transparent;
 	width:150px;
 	height:150px;
-
-	/* margin-left:30%; */
-	/* margin-right:5%; */
-
 	perspective:1000px;
 }
 

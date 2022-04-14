@@ -105,7 +105,7 @@ body{
     overflow-y: auto;
 }
 /* Box that contains a singular hike */
-#hikebox{
+.hikebox{
     margin-left: 20px;
     width:98%;
     height:25%;
@@ -144,6 +144,7 @@ body{
 }
 /*Picture of a closed trash can*/
 .removehike {
+    display: none;
     background:url("../images/trashClosed.jpg") no-repeat;
     background-size:contain;
     float:right;

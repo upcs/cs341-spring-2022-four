@@ -5,7 +5,8 @@
 
 addHike = function (hike) {
     return `
-    <div id="hikebox", onClick='mrClicky("${hike.HIKE_NAME}")'>
+    <div class="hikebox", onClick='mrClicky("${hike.HIKE_NAME}")'>
+      <div class="removehike"></div>
       <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
       <h3 class="hikeprofile">${hike.HIKE_NAME}</h3>
       <h4>Di. ${hike.DISTANCE} mi. El. ${hike.ELEVATION_CHANGE} ft.</h4>
@@ -40,6 +41,8 @@ addTrophies = function (achievements_bits) {
 }
 
 $(document).ready(function() { 
+    // $(".removehike").hide();
+
     $("#logoutbutton").click(function() {
         sessionStorage.clear();
         window.location.href="index.html";
@@ -69,16 +72,21 @@ $(document).ready(function() {
             for (let hike of data) {
                 $("#completedbox").append(addHike(hike));
             }
+            $(".hikebox").hover(function() {
+                $(this).find(".removehike").show();
+            }, function() {
+                $(this).find(".removehike").hide();
+            });
         });
     
-    $("#hikebox").hover(function() {
-        $(this).prepend('<div class="removehike"></div>');
+    $(".hikebox").hover(function() {
+        $(this).find(".removehike").show();
     }, function() {
-        $(this).find("div").first().remove();
-    });
+        $(this).find(".removehike").hide();
+    })
   });
 
-  /*on clicking hike in completed list, go to that hike's page */
+/*on clicking hike in completed list, go to that hike's page */
 function mrClicky(hikeNameField) {
     localStorage.setItem('Name', hikeNameField);
     window.location.href="hike_page_template.html";

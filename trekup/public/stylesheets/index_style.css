@@ -1,0 +1,230 @@
+/* index_style
+ * @author Brynn Harrington
+ * style sheet for the homepage 
+ */
+
+
+
+/********************************************************
+ * Higher-Level Styling 
+ ********************************************************/
+/* styling for all */
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* styling for the body */
+body {
+    background-size: auto;
+    z-index: 2;
+}
+
+/* create a gradient layer */
+#gradient-layer {
+    z-index: -1;
+    background-color: rgb(81, 129, 110);
+    background: linear-gradient(rgba(81, 129, 110, 0.7), rgba(81, 129, 110, 0.6), rgb(81, 129, 110, 0.8));
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/********************************************************
+ * Element-Specific Styling
+ ********************************************************/
+/* introduce an element to fade in */
+@keyframes fadeAndTurn {
+    0% {
+        opacity: 0%;
+        /* all the  */
+        transform: rotate3d(0.5, 1, 0, 20deg);
+    }
+
+    50% {
+        opacity: 0%;
+        transform: rotate3d(0.5, 1, 0, 20deg);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: rotate3d(0.5, 1, 0, 0deg);
+    }
+}
+
+
+
+
+/* style the front and back of the flip card */
+.flip-card {
+    background-color: transparent;
+    /* width:150px; */
+    /* height:150px; */
+    /* width:30%;
+	height:100%; */
+    /* perspective:1000px; */
+    width: auto;
+    height: auto;
+}
+
+/* style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: #648B7F;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-text {
+    /* font-size:30%; */
+    /* TODO - figure out how to change with resizing of window */
+    font-size: 20%;
+}
+
+#flip1 {
+    width: 100%;
+    height: 100%;
+}
+
+#flip1outer {
+    width: 30%;
+    height: 70%;
+    /* margin-bottom:30%; */
+    /* margin-left:300%; */
+
+    margin-bottom: 40%;
+    margin-left: 84%;
+}
+
+#flip2 {
+    width: 100%;
+    height: 100%;
+}
+
+#flip2outer {
+    width: 30%;
+    height: 85%;
+    /* margin-left:150%; */
+    margin-bottom: 33%;
+    margin-left: 45%;
+}
+
+#flip3 {
+    width: 100%;
+    height: 100%;
+}
+
+#flip3outer {
+    width: 30%;
+    height: 85%;
+    /* margin-left:350%; */
+    margin-bottom: 33%;
+    margin-left: 25%;
+}
+
+#flip4 {
+    width: 100%;
+    height: 100%;
+}
+
+#flip4outer {
+    width: 30%;
+    height: 85%;
+    margin-bottom: 25%;
+    margin-top: 6%;
+    /* 8 */
+    /* margin-left:300%; */
+    margin-left: 85%;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+
+
+
+
+
+
+/* this isn't needed anymore since I found a lower solution but I don't want to change it back */
+.flip-card-search {
+    background-color: #648B7F;
+    width: 150px;
+    height: 150px;
+
+    /* margin-left:30%; */
+    /* margin-right:5%; */
+
+    perspective: 1000px;
+}
+
+.searchHikes td {
+    padding: 17px;
+}
+
+#firstCol {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+/* style the compass */
+/* New compass implementation */
+.compassRecommend {
+    position: relative;
+    margin: auto;
+    margin-top: 85px;
+
+    background: url('../images/compass1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+
+    width: 70%;
+    height: 70%;
+}
+
+.compassTable {
+    width: 100%;
+    height: 100%;
+}
+
+.ctRow {
+    width: 100%;
+    height: 33%;
+}
+
+.ctCol {
+    width: 50%;
+    height: 100%;
+}

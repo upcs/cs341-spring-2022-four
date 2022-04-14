@@ -1,5 +1,5 @@
 
-/* script for navbar */
+/* script for nav-bar */
 
 
   var coll = document.getElementsByClassName("collapsible");

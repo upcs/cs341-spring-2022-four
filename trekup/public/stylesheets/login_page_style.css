@@ -68,8 +68,8 @@ span:hover {
 }
 
 
-/*the table for the masthead*/
-/* #mastHead{ */
+/*the table for the mast-head*/
+/* #mast-head{ */
 	/* background-color:#FF6600; */
 	/* position:absolute; */
 	/* top:10px; */
@@ -86,7 +86,7 @@ span:hover {
 	font-size:42px;
 } */
 
-/*trek header is inside of masthead table*/
+/*trek header is inside of mast-head table*/
 /* #trekHeader{
 	position:relative;
 	top:8px;

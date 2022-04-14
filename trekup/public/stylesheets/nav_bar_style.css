@@ -1,4 +1,4 @@
-#mastHead{
+#mast-head{
 	background-color:#006622;
 	position:inherit;
 	/* position:absolute; */
@@ -16,7 +16,7 @@ td{
 	font-size:300%;
 }
 
-/*trek header is inside of masthead table*/
+/*trek header is inside of mast-head table*/
 #trekHeader{
 	position:relative;
 	/* position:inherit; */
@@ -42,7 +42,7 @@ li{
 	display:inline;
 }
 
-#navBar{
+#nav-bar{
 	position:fixed;
 	list-style-type:none;
 	top:0;
@@ -74,7 +74,7 @@ li{
 	cursor:pointer;
 }
 
-#mastHead:hover{
+#mast-head:hover{
 	background-color:#648B7F;
 	cursor:pointer;
 }

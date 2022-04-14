@@ -37,7 +37,7 @@ $(document).ready(function(){
 
     $("#login_link").on("click", goToLoginHandler);
 
-    $("#mastHead").click(function(){
+    $("#mast-head").click(function(){
         window.location.href="Index.html";
     });
 });

@@ -18,8 +18,8 @@
 
 
 
-/* Place the navbar at the bottom of the page, and make it stick */
-.navbar {
+/* Place the nav-bar at the bottom of the page, and make it stick */
+.nav-bar {
   background-color: #333;
   overflow: hidden;
   position: fixed;
@@ -125,19 +125,19 @@ background-color: #00A4BD;
 
 
 /* for search bar */
-.navbar .search-container {
+.nav-bar .search-container {
   float: right;
   text-align: right;
 }
 
-.navbar input[type=text] {
+.nav-bar input[type=text] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
   border: none;
 }
 
-.navbar .search-container button {
+.nav-bar .search-container button {
   float: right;
   padding: 6px 10px;
   margin-top: 8px;

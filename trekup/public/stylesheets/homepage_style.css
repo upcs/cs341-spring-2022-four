@@ -11,10 +11,10 @@ body{
 }
 
 /* ========================================== */
-/* TAKE THIS FOR THE MASTHEAD */
+/* TAKE THIS FOR THE mast-head */
 /* ========================================== */
-/*the table for the masthead*/
-/* #mastHead{ */
+/*the table for the mast-head*/
+/* #mast-head{ */
 	/* background-color:#006622; */
 	/* position:inherit; */
 	/* position:absolute; */
@@ -32,7 +32,7 @@ body{
 	/* font-size:300%; */
 /* } */
 
-/*trek header is inside of masthead table*/
+/*trek header is inside of mast-head table*/
 /* #trekHeader{ */
 	/* position:relative; */
 	/* position:inherit; */
@@ -50,10 +50,8 @@ body{
 /* } */
 
 /* ========================================== */
-/* TAKE THIS FOR THE MASTHEAD */
+/* TAKE THIS FOR THE mast-head */
 /* ========================================== */
-
-
 .flip-card{
 	background-color: transparent;
 	/* width:150px; */
@@ -95,11 +93,6 @@ body{
 }
 
 .flip-card:hover .flip-card-inner{
-	transform:rotateY(180deg);
-	cursor:pointer;
-}
-
-.flip-card-search:hover .flip-card-inner{
 	transform:rotateY(180deg);
 	cursor:pointer;
 }
@@ -225,7 +218,7 @@ li{
 	display:inline;
 } */
 
-/* #navBar{
+/* #nav-bar{
 	position:fixed;
 	list-style-type:none;
 	top:0;
@@ -255,7 +248,7 @@ li{
 	cursor:pointer;
 }
 
-#mastHead:hover{
+#mast-head:hover{
 	background-color:#648B7F;
 	cursor:pointer;
 } */

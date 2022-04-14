@@ -2,31 +2,36 @@
 <html>
 <head>
 	<title>TrekUp</title>
-	<link rel="stylesheet" href="./stylesheets/homepage_style.css"></link>
+    <link rel="stylesheet" href="./stylesheets/index_style.css"></link>
+	<!-- <link rel="stylesheet" href="./stylesheets/homepage_style.css"></link> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="./javascripts/homepage_script.js"></script>
 	<script src="./javascripts/nav_bar_script.js"></script>
 
-	<link rel="stylesheet" href="stylesheets/bottomnavstyle.css"> <!--link to CSS file for bottomnavbar-->
-	<link rel="stylesheet" href="stylesheets/nav_bar_style.css">
+	<link rel="stylesheet" href="stylesheets/bottomnavstyle.css"> <!--link to CSS file for bottomnav-bar-->
+	<link rel="stylesheet" href="./stylesheets/navigation_style.css"></link>
+    <!-- <link rel="stylesheet" href="stylesheets/nav_bar_style.css"> -->
 	<!-- Load icon library for searchbar -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
+    <!-- create a gradient layer -->
+    <div id="gradient-layer"></div>
 	<!-- make a top nav bar -->
-	<ul id="navBar">
+	<ul id="nav-bar">
 		<li id="homepage">
-
-
-			<!--Table housing the mastHead text-->
-			<table id="mastHead">
+			<!--Table housing the mast-head text-->
+			<table id="mast-head">
 				<tr>
-					<td id="trekHeader">Trek</td>
-					<td id="upHeader">Up</td>
-				</tr>
+					<!-- <td id="trekHeader">Trek</td> -->
+					<!-- <td id="upHeader">Up</td> -->
+                    <img id="mast-head" src="./images/logo.png" alt="logo">
+                </tr>
 			</table>
+            <!-- <img id="logo" src="./images/logo.png" alt="logo"> -->
+
 		</li>
 		<li id="prof">
 			<img id="profPic" src="./images/profile.png"></img>
@@ -114,9 +119,9 @@
 	</div>
 
 
-	<!-- navbar -->
+	<!-- nav-bar -->
   <!-- source: https://www.w3schools.com/howto/howto_css_bottom_nav.asp -->
-  <div class="navbar">
+  <div class="nav-bar">
     <!-- collapsible: https://www.w3schools.com/howto/howto_js_collapsible.asp -->
     <button type="button" class="collapsible" onClick="initHikes()">SEARCH</button>
     <div class="content">

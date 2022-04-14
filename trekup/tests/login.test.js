@@ -12,11 +12,13 @@
 
 'use strict';
 // var $ = require('jquery');
+var fs = require('fs');
 var f = require('../public/javascripts/login_page_script');
+// read index file to string
+var html = fs.readFileSync('public/Index.html', 'utf8');
 
 // test getting username
 it('test username', () => {
-    var $ = require('jquery');
     document.body.innerHTML = '<div> \
     <input type="text" id="username"> </div>';
     document.getElementById('username').value = 'f.nguyen123';
@@ -25,7 +27,6 @@ it('test username', () => {
 
 // test getting password
 it('test password', () => {
-    var $ = require('jquery');
     document.body.innerHTML = '<div> \
     <input type="text" id="password"> </div>';
     document.getElementById('password').value = 'b';

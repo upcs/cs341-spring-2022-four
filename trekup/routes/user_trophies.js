@@ -23,15 +23,15 @@ async function updateTrophies(username) {
             newAchievements= newAchievements.substring(0, index) + '1' + newAchievements.substring(index + 1);
         }
 
-        if(distance_walked >= 1000){
+        if(distance_walked >= 10){
             var index = 3;
             newAchievements= newAchievements.substring(0, index) + '1' + newAchievements.substring(index + 1);
         }
-        if(distance_walked >= 2000){
+        if(distance_walked >= 20){
             var index = 4;
             newAchievements= newAchievements.substring(0, index) + '1' + newAchievements.substring(index + 1);
         }
-        if(distance_walked >= 3000){
+        if(distance_walked >= 30){
             var index = 5;
             newAchievements= newAchievements.substring(0, index) + '1' + newAchievements.substring(index + 1);
         }

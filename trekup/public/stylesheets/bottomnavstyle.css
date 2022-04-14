@@ -59,8 +59,8 @@
 
 
 
-/* dropdown */
-/* dropdown Button */
+/* search-dropdown */
+/* search-dropdown Button */
 .dropbtn {
   background-color: #04AA6D;
   color: white;
@@ -72,21 +72,21 @@
   text-align: center;
 }
 
-/* dropdown button on hover & focus */
+/* search-dropdown button on hover & focus */
 /* .dropbtn:hover, .dropbtn:focus {
   background-color: #3e8e41;
 } */
 
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
+/* The container <div> - needed to position the search-dropdown content */
+.search-dropdown {
   position: relative;
   display: inline-block;
-  padding-bottom: 50px;/* adds space below dropdown buttons so the dropdown shows up */
+  padding-bottom: 50px;/* adds space below search-dropdown buttons so the search-dropdown shows up */
 }
 
-/* dropdown Content (Hidden by Default) */
-.dropdown-content {
+/* search-dropdown Content (Hidden by Default) */
+.search-dropdown-content {
   display: none;
   position: absolute;
   background-color: #f6f6f6;
@@ -95,12 +95,12 @@
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
+.search-dropdown:hover .search-dropdown-content {
 display: block;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
+/* Links inside the search-dropdown */
+.search-dropdown-content a {
   color: black;
   padding: 6px;
   margin-top: 8px;
@@ -108,16 +108,16 @@ display: block;
   display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+/* Change color of search-dropdown links on hover */
+.search-dropdown-content a:hover {background-color: #f1f1f1}
 
 
-.dropdown-content a:hover {
+.search-dropdown-content a:hover {
 color: #FFFFFF;
 background-color: #00A4BD;
 }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+/* Show the search-dropdown menu (use JS to add this class to the .search-dropdown-content container when the user clicks on the search-dropdown button) */
 /* .show {display:block;} */
 
 

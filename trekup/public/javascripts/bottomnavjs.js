@@ -216,15 +216,15 @@ function sendPostName(name){
 }
 
 
-/* script for displaying dropdowns */
-/* source: https://www.w3schools.com/howto/howto_js_filter_dropdown.asp */
+/* script for displaying search-dropdowns */
+/* source: https://www.w3schools.com/howto/howto_js_filter_search-dropdown.asp */
 /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+toggle between hiding and showing the search-dropdown content */
 function filterDifficulty() {
   document.getElementById("difficultyDrop").classList.toggle("show");
 }
 function filterMiles() {
-  document.getElementById("milesdropdown").classList.toggle("show");
+  document.getElementById("milessearch-dropdown").classList.toggle("show");
 }
 function filterElevation() {
   document.getElementById("elevationGain").classList.toggle("show");

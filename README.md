@@ -120,8 +120,8 @@ Description:
   2. Bob clicks on the “create new profile” button. 
   3. Bob clicks on the tab called “email address” and enters bob@gmail.com. 
   4. Bob clicks on tab called “name” and enters “Bob.” 
-  5. Bob clicks on the “add completed trail” tab, and from the trail dropdown select “Rock Creek Trail.” 
-  6. In the month dropdown, Bob selects January and, in the year dropdown, select “2022.” 
+  5. Bob clicks on the “add completed trail” tab, and from the trail search-dropdown select “Rock Creek Trail.” 
+  6. In the month search-dropdown, Bob selects January and, in the year search-dropdown, select “2022.” 
   7. Bob clicks on the create profile button. 
 Post-Conditions: Bob has an account that he can sign into 
 Alternates: 

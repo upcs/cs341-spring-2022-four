@@ -133,10 +133,10 @@
               <button type="submit" onclick="searchHikesName()"><i class="fa fa-search"></i></button>
           </div>
           <!-- WANT: filters drop down selection -->
-          <!-- source: https://www.w3schools.com/howto/howto_js_filter_dropdown.asp -->
-          <div class="dropdown">
+          <!-- source: https://www.w3schools.com/howto/howto_js_filter_search-dropdown.asp -->
+          <div class="search-dropdown">
             <button onclick="filterDifficulty()" class="dropbtn">Difficulty</button>
-            <div id="difficultyDrop" class="dropdown-content">
+            <div id="difficultyDrop" class="search-dropdown-content">
               <!-- NEXT: implement a filter list here -->
               <!-- Source: https://www.w3schools.com/tags/att_input_type_checkbox.asp -->
               <input type="checkbox" id="easy" name="easy" value="easy">
@@ -151,9 +151,9 @@
 
 
           <!-- filter by miles -->
-          <div class="dropdown">
+          <div class="search-dropdown">
             <button onclick="filterMiles()" class="dropbtn">Miles</button>
-              <div id="milesdropdown" class="dropdown-content">
+              <div id="milessearch-dropdown" class="search-dropdown-content">
                 <!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
                 <!-- Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
 								<!-- Source: https://www.sliderrevolution.com/resources/css-range-slider/ -->
@@ -181,16 +181,16 @@
 
 
           <!-- filter by elevation gain -->
-          <div class="dropdown">
+          <div class="search-dropdown">
             <button onclick="filterElevation()" class="dropbtn">Elevation Gain</button>
-            <!-- <div id="elevationGain" class="dropdown-content">
+            <!-- <div id="elevationGain" class="search-dropdown-content">
               <div class="slidercontainer">
 								<input type="range" id="elevationRange" name="elevationRange" class="slider" min=0 max=10000> Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
 								<!-- <p><span id="elevationVal"></span> ft</p>
 								 <label for="mileRange">Miles</label> -->
               <!-- </div>
             </div> -->
-						<div id="elevationGain" class="dropdown-content">
+						<div id="elevationGain" class="search-dropdown-content">
 							<!-- Source: https://www.w3schools.com/tags/att_input_type_range.asp -->
 							<!-- Source: https://www.w3schools.com/howto/howto_js_rangeslider.asp -->
 							<!-- Source: https://www.sliderrevolution.com/resources/css-range-slider/ -->

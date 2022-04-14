@@ -14,6 +14,7 @@ createAccountHandler = function(event) {
             username: $("#username").val(),
             password: $("#password").val()
         }, function(data) {
+            //check POST return value for if account was created
             if (data.localeCompare("added") == 0) {
                 localStorage.setItem('current_user', $("#username").val())
                 window.location.href = "profile.html";
@@ -27,6 +28,7 @@ createAccountHandler = function(event) {
     }
 }
 
+/** if user clicks go-to-login hyperlink, change page */
 goToLoginHandler = function(event) {
     window.location.href = "login_page.html"
 }

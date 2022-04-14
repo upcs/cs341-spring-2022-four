@@ -4,7 +4,7 @@ var express = require('express');
 var router = express.Router();
 var bcrypt = require('bcrypt');
 
-var dbms = require('./update_user_info_dbms');
+var dbms = require('./user_info_dbms');
 
 /* Update the user information */
 router.post('/', async function(req, res, next) {

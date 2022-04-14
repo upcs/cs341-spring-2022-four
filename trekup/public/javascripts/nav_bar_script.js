@@ -12,7 +12,7 @@ $(document).ready(function(){
     window.location.href="Index.html";
   });
   $("#profPic").click(function(){
-    let loggedIn = sessionStorage.getItem('current_user');
+    let loggedIn = localStorage.getItem('current_user');
 
     // window.location.href = 'profile.html';
     if(loggedIn){

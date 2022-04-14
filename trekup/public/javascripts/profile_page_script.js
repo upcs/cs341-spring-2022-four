@@ -3,6 +3,7 @@
  * updated by: Francisco Nguyen
  */
 
+/**creating html for a hike box to append to completed hike list */
 addHike = function (hike) {
     return `
     <div class="hikebox", onClick='mrClicky(this, "${hike.HIKE_NAME}")'>
@@ -14,6 +15,7 @@ addHike = function (hike) {
   `;
 }
 
+/**creaging html for a achievement box to append to achievements list */
 makeTrophy = function (trophyName, desc) {
     return `
     <div id = trophybox>
@@ -40,9 +42,7 @@ addTrophies = function (achievements_bits) {
         $("#achievementsbox").append(makeTrophy("Sprinter Badge", "Complete 60 miles in 24 hours."));
 }
 
-$(document).ready(function() { 
-    // $(".removehike").hide();
-
+$(document).ready(function() {
     $("#logoutbutton").click(function() {
         localStorage.clear();
         window.location.href="index.html";
@@ -80,6 +80,8 @@ $(document).ready(function() {
         });
   });
 
+/**called when user clicks trash can in hike box,
+ * makes POST to remove the hike from completed list */
 function trashRemoveHike(event) {
     $.post('user_remove_from_completed_hike', {
         username: localStorage.getItem('current_user'),
@@ -93,6 +95,7 @@ function trashRemoveHike(event) {
 
 /*on clicking hike in completed list, go to that hike's page */
 function mrClicky(event, hikeNameField) {
+    //TODO: don't go to hike's page when clicking on trash can
     if (event.target !== event.currentTarget) {
         alert("clicked on trash can, not hike box");
         return;

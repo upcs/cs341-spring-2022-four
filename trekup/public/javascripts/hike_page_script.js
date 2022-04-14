@@ -19,10 +19,12 @@ $(document).ready(function(){
         $("#user_add_link").hide();
         $("#user_remove_link").hide();
     } else {
+        //making POST for if user has already added particular hike
         $.post('/if_user_added_hike', {
             username: localStorage.getItem("current_user"),
             hike_name: hikeToPost
         }).done(function (data) {
+            //hide respective button depending on if user has added this hike
             if (data.localeCompare("user already added hike") == 0) {
                 $("#user_add_link").hide();
             } else {
@@ -40,9 +42,9 @@ $(document).ready(function(){
     });
 });
 
-/*when user clicks button to add hike, call post to add
-hike from list of hikes user has completed and update
-the users statistics*/
+/** when user clicks button to add hike, 
+ * call POST to add hike to list of hikes user 
+ * has completed and update the users statistics*/
 addHikeHandler = function(hikeName) {
     $("#user_add_link").hide();
     $.post('/user_add_completed_hike', {
@@ -55,9 +57,9 @@ addHikeHandler = function(hikeName) {
     });
 }
 
-/*when user clicks button to remove hike, call post to remove
-hike from list of hikes user has completed and update
-the users statistics*/
+/** when user clicks button to remove hike, 
+ * call POST to remove hike from list of hikes 
+ * user has completed and update the users statistics*/
 removeHikeHandler = function(hikeName) {
     $("#user_remove_link").hide();
     $.post('user_remove_from_completed_hike', {

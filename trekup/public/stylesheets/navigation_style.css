@@ -10,13 +10,10 @@
     position: relative;
     list-style-type: none;
     background-color: #ffffff;
-    top: 0;
-    width: 100%;
-    height: 10%;
     margin-top: 0;
 	margin-left:0;
-	padding: 10px;;
-	overflow:hidden;
+    width: 100%;
+	overflow: hidden;
 }
 /********************************************************
  * Element-Specific Styling 
@@ -27,23 +24,28 @@
     float: left;
     background-color: #ffffff;
     vertical-align: left;
-    width: 10%;
-	height: 10%;
+    width: 15%;
+	height: 15%;
 }
 
+/* style the profile image */
 #profPic{
 	float: right;
-	margin-right:0.7%;
-	width: 10%;
-	height: 10%;
+	/* margin-right:0.7%; */
+    /* padding: 2%; */
+	width: 15%;
+	height: 15%;
+}
+
+/* style hovering over the clickable items */
+#mast-head:hover{
+	background-color:#648b7f65;
+	cursor:pointer;
 }
 
 #profPic:hover{
-	background-color:#648b7f9e;
+	background-color:#648b7f65;
 	cursor:pointer;
 }
 
-#mast-head:hover{
-	background-color:#648b7f9e;
-	cursor:pointer;
-}
+

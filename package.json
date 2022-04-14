@@ -3,6 +3,7 @@
     "start-server-and-test": "^1.14.0"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "coverage": "^0.4.1"
   }
 }

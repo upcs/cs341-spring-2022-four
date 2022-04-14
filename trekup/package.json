@@ -1,6 +1,7 @@
 {
     "name": "trekup",
     "version": "0.0.0",
+    "main": "homepage_script.js",
     "private": true,
     "scripts": {
         "start": "node ./bin/www",

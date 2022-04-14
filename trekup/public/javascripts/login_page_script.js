@@ -4,7 +4,7 @@
  * attempts to login to an account  
  */
 'use strict';
-const $ = require('jquery');
+// const $ = require('jquery');
 
 /* getUsername
  * 

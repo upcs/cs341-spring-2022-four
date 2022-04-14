@@ -9,14 +9,7 @@
         "ci": "start-server-and-test start-server http://localhost:3000 test"
     },
     "jest": {
-        "verbose": true,
-        "resetMocks": false,
-        "globals": {
-            "__DEV__": true
-        },
-        "setupFiles": [
-            "jest-localstorage-mock"
-        ]
+        "verbose": true
     },
     "dependencies": {
         "async": "^3.2.3",
@@ -28,6 +21,7 @@
         "express": "~4.16.1",
         "http-errors": "~1.6.3",
         "jade": "^0.29.0",
+        "jest-environment-jsdom": "^27.5.1",
         "jquery": "~3.6.0",
         "morgan": "~1.9.1",
         "mysql": "^2.18.1",

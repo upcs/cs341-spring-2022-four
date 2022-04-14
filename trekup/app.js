@@ -41,7 +41,11 @@ app.use(cookieParser());
 //   index: "public/Index.html"
 // }));
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
+// Port website will run on
+app.listen(8080);
+
+//app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);

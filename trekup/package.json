@@ -4,8 +4,7 @@
     "private": true,
     "scripts": {
         "start": "node ./bin/www",
-        "test": "jest --env=jsdom",
-        "start-server": "npm start"
+        "test": "jest --env=jsdom"
     },
     "jest": {
         "resetMocks": false,

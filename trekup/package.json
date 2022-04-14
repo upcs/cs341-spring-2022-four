@@ -5,8 +5,7 @@
     "scripts": {
         "start": "node ./bin/www",
         "test": "jest --env=jsdom",
-        "start-server": "npm start",
-        "ci": "start-server-and-test start-server http://localhost:3000 test"
+        "start-server": "npm start"
     },
     "jest": {
         "resetMocks": false,

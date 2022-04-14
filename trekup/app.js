@@ -32,9 +32,17 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+// var options = {
+//   index: "Index.html"
+// };
+
+// app.use('/', express.static('app', {
+//   index: "public/Index.html"
+// }));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.listen(8080);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

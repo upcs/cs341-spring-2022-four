@@ -9,7 +9,7 @@ addHike = function (hike) {
       <div class="removehike"></div>
       <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
       <h3 class="hikeprofile">${hike.HIKE_NAME}</h3>
-      <h4>Di. ${hike.DISTANCE} mi. El. ${hike.ELEVATION_CHANGE} ft.</h4>
+      <h4>Di. <span class=hikedistance>${hike.DISTANCE}</span> mi. El. <span class=hikeelevation>${hike.ELEVATION_CHANGE}</span> ft.</h4>
     </div>
   `;
 }
@@ -78,11 +78,17 @@ $(document).ready(function() {
                 $(this).find(".removehike").hide();
             });
         });
-    
-    $(".hikebox").hover(function() {
-        $(this).find(".removehike").show();
-    }, function() {
-        $(this).find(".removehike").hide();
+
+    $(".removehike").on("click", function() {
+        var hikebox = $(this).siblings();
+        $.post('user_remove_from_completed_hike', {
+            username: usrnm,
+            hike_name: hikebox.find(".hikeprofile").text(),
+            distance: hikebox.find("h4").find(".hikedistance").text(),
+            elevation: hikebox.find("h4").find(".hikeelevation").text() 
+        }).done(function() {
+            $("#user_add_link").show();
+    });
     })
   });
 

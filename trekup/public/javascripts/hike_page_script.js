@@ -40,26 +40,34 @@ $(document).ready(function(){
     });
 });
 
+/*when user clicks button to add hike, call post to add
+hike from list of hikes user has completed and update
+the users statistics*/
 addHikeHandler = function(hikeName) {
+    $("#user_add_link").hide();
     $.post('/user_add_completed_hike', {
         username: sessionStorage.getItem("current_user"),
         hike_name: hikeName,
         distance: $("#distance").text(),
         elevation: $("#elevation_change").text() 
+    }).done(function() {
+        $("#user_remove_link").show();
     });
-    $("#user_add_link").hide();
-    $("#user_remove_link").show();
 }
 
+/*when user clicks button to remove hike, call post to remove
+hike from list of hikes user has completed and update
+the users statistics*/
 removeHikeHandler = function(hikeName) {
+    $("#user_remove_link").hide();
     $.post('user_remove_from_completed_hike', {
         username: sessionStorage.getItem("current_user"),
         hike_name: hikeName,
         distance: $("#distance").text(),
         elevation: $("#elevation_change").text() 
+    }).done(function() {
+        $("#user_add_link").show();
     });
-    $("#user_remove_link").hide();
-    $("#user_add_link").show();
 }
 
 function displayHikePageInfo(data, status){

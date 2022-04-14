@@ -44,7 +44,7 @@ $(document).ready(function() {
     // $(".removehike").hide();
 
     $("#logoutbutton").click(function() {
-        sessionStorage.clear();
+        localStorage.clear();
         window.location.href="index.html";
    });
   
@@ -52,7 +52,7 @@ $(document).ready(function() {
         window.location.href="update_profile.html";
     });
     
-    var usrnm = sessionStorage.getItem('current_user');
+    var usrnm = localStorage.getItem('current_user');
 
     //making POST to get profile data
     $.post('/profile_load', {username: usrnm})
@@ -82,7 +82,7 @@ $(document).ready(function() {
 
 function trashRemoveHike(event) {
     $.post('user_remove_from_completed_hike', {
-        username: sessionStorage.getItem('current_user'),
+        username: localStorage.getItem('current_user'),
         hike_name: $(event).siblings(".hikeprofile").text(),
         distance: $(event).siblings("h4").find(".hikedistance").text(),
         elevation: $(event).siblings("h4").find(".hikeelevation").text() 

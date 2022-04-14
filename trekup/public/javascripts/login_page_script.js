@@ -17,7 +17,7 @@ function login(event) {
 //     $.post(`/login?username=${getUsername()}&password=${getPassword()}`, function(data) {
 //         // verify the user exists
 //         if (data != null && data.localeCompare("user exists") == 0) {
-//             sessionStorage.setItem('current_user', getUsername()); // store current user
+//             localStorage.setItem('current_user', getUsername()); // store current user
 //             window.location.href = "profile.html"; // open profile page
 //             event.preventDefault(); // prevent default 
 //         } else {
@@ -68,7 +68,7 @@ function getPassword() {
 //     password: $("#password").val()
 // }, function(data) {
 //     if (data.localeCompare("user exists") == 0) {
-//         sessionStorage.setItem('current_user', $("#username").val());
+//         localStorage.setItem('current_user', $("#username").val());
 //         window.location.href = "profile.html";
 //         event.preventDefault();
 //     } else {
@@ -90,7 +90,7 @@ loginHandler = function(event) {
         password: getPassword()
     }, function(data) {
         if (data.localeCompare("user exists") == 0) {
-            sessionStorage.setItem('current_user', getUsername());
+            localStorage.setItem('current_user', getUsername());
             window.location.href = "profile.html";
             event.preventDefault();
         } else {

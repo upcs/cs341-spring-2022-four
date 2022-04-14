@@ -15,7 +15,7 @@ createAccountHandler = function(event) {
             password: $("#password").val()
         }, function(data) {
             if (data.localeCompare("added") == 0) {
-                sessionStorage.setItem('current_user', $("#username").val())
+                localStorage.setItem('current_user', $("#username").val())
                 window.location.href = "profile.html";
                 event.preventDefault();
             } else {

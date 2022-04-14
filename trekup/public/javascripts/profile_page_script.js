@@ -5,8 +5,8 @@
 
 addHike = function (hike) {
     return `
-    <div class="hikebox", onClick='mrClicky("${hike.HIKE_NAME}")'>
-      <div class="removehike"></div>
+    <div class="hikebox", onClick='mrClicky(this, "${hike.HIKE_NAME}")'>
+      <div class="removehike" onClick='trashRemoveHike(this)'></div>
       <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
       <h3 class="hikeprofile">${hike.HIKE_NAME}</h3>
       <h4>Di. <span class=hikedistance>${hike.DISTANCE}</span> mi. El. <span class=hikeelevation>${hike.ELEVATION_CHANGE}</span> ft.</h4>
@@ -78,22 +78,26 @@ $(document).ready(function() {
                 $(this).find(".removehike").hide();
             });
         });
-
-    $(".removehike").on("click", function() {
-        var hikebox = $(this).siblings();
-        $.post('user_remove_from_completed_hike', {
-            username: usrnm,
-            hike_name: hikebox.find(".hikeprofile").text(),
-            distance: hikebox.find("h4").find(".hikedistance").text(),
-            elevation: hikebox.find("h4").find(".hikeelevation").text() 
-        }).done(function() {
-            $("#user_add_link").show();
-    });
-    })
   });
 
+function trashRemoveHike(event) {
+    $.post('user_remove_from_completed_hike', {
+        username: sessionStorage.getItem('current_user'),
+        hike_name: $(event).siblings(".hikeprofile").text(),
+        distance: $(event).siblings("h4").find(".hikedistance").text(),
+        elevation: $(event).siblings("h4").find(".hikeelevation").text() 
+    }).done(function() {
+        $(event).parent(".hikebox").hide();
+    });
+}
+
 /*on clicking hike in completed list, go to that hike's page */
-function mrClicky(hikeNameField) {
+function mrClicky(event, hikeNameField) {
+    if (event.target !== event.currentTarget) {
+        alert("clicked on trash can, not hike box");
+        return;
+    }
+
     localStorage.setItem('Name', hikeNameField);
     window.location.href="hike_page_template.html";
 }

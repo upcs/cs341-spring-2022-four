@@ -35,6 +35,7 @@ app.use(cookieParser());
 const publicDirectoryPath = path.join(__dirname, 'public')
 
 app.use(express.static(publicDirectoryPath));
+//app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

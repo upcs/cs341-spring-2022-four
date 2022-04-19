@@ -4,12 +4,12 @@
  * Implemented on all of the pages.
  * Adds click functionality to name to bring back to home page
  * When clicking on profile picture, it brings to a log in page, or
- * user homepage depending on if a user is logged in or not. 
+ * user homepage depending on if a user is logged in or not.
 */
 
 $(document).ready(function(){
   $("#mastHead").click(function(){
-    window.location.href="Index.html";
+    window.location.href="index.html";
   });
   $("#profPic").click(function(){
     let loggedIn = localStorage.getItem('current_user');

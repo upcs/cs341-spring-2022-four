@@ -1,7 +1,7 @@
 createAccountHandler = function(event) {
     //check if input is empty and if passwords match
-    if ($("#email").val().localeCompare("") == 0 || 
-        $("#name").val().localeCompare("") == 0 || 
+    if ($("#email").val().localeCompare("") == 0 ||
+        $("#name").val().localeCompare("") == 0 ||
         $("#username").val().localeCompare("") == 0 ||
         $("#password").val().localeCompare("") == 0 ||
         $("#password").val().localeCompare($("#confirm_password").val()) != 0) {
@@ -40,6 +40,6 @@ $(document).ready(function(){
     $("#login_link").on("click", goToLoginHandler);
 
     $("#mastHead").click(function(){
-        window.location.href="Index.html";
+        window.location.href="index.html";
     });
 });

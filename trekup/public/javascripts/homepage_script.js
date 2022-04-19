@@ -9,7 +9,7 @@
 
 $(document).ready(function(){
   $("#mastHead").click(function(){
-    window.location.href="Index.html";
+    window.location.href="index.html";
   });
 
   $(".flip-card").click(function(){

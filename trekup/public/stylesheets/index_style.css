@@ -13,12 +13,12 @@
 .flip-card-back,
 .flip-card-inner,
 .flip-card-search {
-    display: flex;
-    position: relative;
-    margin: auto;
-    height: 65%;
-    width: 100%;
-    z-index: 5;
+    /* display: flex; */
+    /* position: relative; */
+    /* margin: auto; */
+    /* height: 65%;
+    width: 100%; */
+    /* z-index: 5; */
 }
 
 /* page divider */
@@ -63,16 +63,14 @@
 /* flip card style 
  * source: https://www.w3schools.com/howto/howto_css_flip_card.asp */
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
+/* .flip-card {
     background-color: transparent;
     width: 300px;
     height: 200px;
     border: 1px solid transparent;
     perspective: 1000px;
-    /* Remove this if you don't want the 3D effect */
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -82,38 +80,62 @@
     transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
-    /* Safari */
     backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
     background-color: #588c7e;
     color: white;
 }
 
-/* Style the back side */
 .flip-card-back {
     background-color: #588c7e;
     color: white;
     transform: rotateY(180deg);
-}
-
-/* .flip-text {
-    font-size: 30%;
 } */
 
+.flip-text {
+    /* font-size: 30%; */
+}
+
+.flip-card-front, .flip-card-back {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card:hover {
+    transform: rotateY(180deg);
+    transition-duration: 0.8ms;
+}
+
+.flip-card {
+    height: 200px;
+    border: solid;
+    transition-duration: 0.8ms;
+    transform-style: preserve-3d;
+}
+
+.flip-card-back {
+    background: #588c7e;
+    transform: rotateY(180deg);
+}
+
+.flip-card-front {
+    background: #588c7e;
+    position: absolute;
+    width: 100%;
+}
 
 /* .flip-card {
     background-color: transparent;

@@ -187,7 +187,7 @@ body{
 
 
 /* New compass implementation */
-.compassRecommend{
+.compass-div{
 	position:relative;
 	margin:auto;
 	margin-top:85px;
@@ -201,17 +201,17 @@ body{
 	height:70%;
 }
 
-.compassTable{
+.compass-table{
 	width: 100%;
 	height: 100%;
 }
 
-.ctRow{
+.compass-table-row{
 	width: 100%;
 	height: 33%;
 }
 
-.ctCol{
+.compass-table-col{
 	width: 50%;
 	height: 100%;
 }

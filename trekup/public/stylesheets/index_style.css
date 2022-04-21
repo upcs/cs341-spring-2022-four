@@ -27,15 +27,13 @@ body {
     background: transparent;
 }
 
-
 /********************************************************
  * Top of Page Styling 
  ********************************************************/
-
-
 /* header */
 .header-div {
     width: 100%;
+    /* border-style: dashed; */
     display: flex;
     position: fixed;
     z-index: 5;
@@ -53,10 +51,12 @@ body {
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
+    /*line-height: 2vw;*/
     padding-left: 2.5%;
-    /* top: -15%; */
+    top: -15%;
     position: absolute;
 }
+
 
 /* top bar divider */
 .topBar {
@@ -64,11 +64,6 @@ body {
     display: inline-block;
     text-align: center;
     margin-top: 2%;
-}
-
-a.top {
-    padding-left: 2%;
-    padding-right: 2%;
 }
 
 /* hamburger menu styling
@@ -86,12 +81,12 @@ a.top {
     margin-right: 10%;
 }
 
-.account, 
-.about, 
-.help {
+.top-bar,
+.middle-bar,
+.bottom-bar {
     width: 3vw;
     height: 0.5vw;
-    background-color: #333;
+    background-color: black;
     margin: 0.5vw 0;
     transition: 0.4s;
 }
@@ -116,14 +111,59 @@ a.top {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 
-.dropdown-content {
+/* .dropdown-content {
     display: none;
+} */
+
+#account {
+    text-align: center;
+    border-style: ridge;
+    background-color: white;
 }
 
-#account,
-#about,
+#about {
+    text-align: center;
+    border-style: ridge;
+    background-color: white;
+}
+
 #help {
     text-align: center;
     border-style: ridge;
     background-color: white;
 }
+
+/********************************************************
+ * Middle of Page Styling 
+ ********************************************************/
+ /* style for scaling / viewing */
+ /* .page-div,
+.compass-table,
+.compass-table-row,
+.compass-table-col {
+    display: flex;
+    position: fixed;
+    margin: auto;
+    height: 65%;
+    width: 100%;
+    z-index: 5;
+} */
+
+/* page divider */
+.page-div {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-image: url('../images/compass.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    height: 65%;
+    width: 100%;
+    z-index: 5;
+}
+/* .page-div {
+    padding-top: 5%;
+    background-color: #ebebeb;
+    height: auto;
+    width: 100%;
+} */

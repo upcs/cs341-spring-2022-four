@@ -13,6 +13,8 @@
 
     <!-- style sheets -->
     <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./stylesheets/default_style.css">
+    <link rel="stylesheet" href="./stylesheets/mast_head_style.css">
     <link rel="stylesheet" href="./stylesheets/index_style.css">
     <link rel="stylesheet" href="stylesheets/bottomnavstyle.css">
     <link rel="stylesheet" href="stylesheets/nav_bar_style.css">
@@ -50,16 +52,26 @@
 
     <!-- make a top bar for the header -->
     <div class="page-div">
-        <div class="compass-div">
+        <div id="flip1outer" class="flip-card" , onClick='mrClicky("#Hike1Name")'>
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img id="flip-top" src="./images/hike1.jpg" alt="Pic">
+                </div>
+                <div class="flip-card-back">
+                    <h1 id="Hike1Name" class="flip-text">Hike 1</h1>
+                    <p id="Hike1Metrics" class="flip-text">Elevation Change: 1000, Mileage: 27</p>
+                    <p class="flip-text">Rating: This will be POST</p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="compass-div">
             <table class="compass-table">
                 <tr class="compass-table-row">
                     <td class="compass-table-col">
-                        <!-- <img id="hike1pic" src="./images/hike1.jpg"> -->
-                        <!-- top flip card -->
                         <div id="flip1outer" class="flip-card" , onClick='mrClicky("#Hike1Name")'>
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-                                    <img id="flip1" src="./images/hike1.jpg" alt="Pic">
+                                    <img id="flip-top" src="./images/hike1.jpg" alt="Pic">
                                 </div>
                                 <div class="flip-card-back">
                                     <h1 id="Hike1Name" class="flip-text">Hike 1</h1>
@@ -74,7 +86,6 @@
 
                 <tr class="compass-table-row">
                     <td class="compass-table-col">
-                        <!-- middle flip card -->
                         <div id="flip2outer" class="flip-card" , onClick='mrClicky("#Hike2Name")'>
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
@@ -90,7 +101,6 @@
 
                     </td>
                     <td class="compass-table-col">
-                        <!-- middle flip card -->
                         <div id="flip3outer" class="flip-card" , onClick='mrClicky("#Hike3Name")'>
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
@@ -109,7 +119,6 @@
 
                 <tr class="compass-table-row">
                     <td class="compass-table-col">
-                        <!-- bottom flip card -->
                         <div id="flip4outer" class="flip-card" , onClick='mrClicky("#Hike4Name")'>
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
@@ -127,7 +136,7 @@
                 </tr>
 
             </table>
-        </div>
+        </div> -->
     </div>
 
     <!-- navbar -->

@@ -4,7 +4,7 @@ Stylesheet for the static profile page.
 */
 body{
   	/*set a gradient background*/
-	background-image:linear-gradient(to bottom, #648B7F, #648B7F);
+	background-image:linear-gradient(to bottom, #588c7e, #588c7e);
 	/*cover the whole page*/
 	background-size:cover;
 	background-repeat:no-repeat;

@@ -3,6 +3,19 @@
  * style sheet for the mast head 
  */
 
+/* header */
+.header-div {
+    width: 100%;
+    /* border-style: dashed; */
+    display: flex;
+    position: fixed;
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 5;
+    background-color: #588c7e;
+}
 
 /* title */
 .title-div {

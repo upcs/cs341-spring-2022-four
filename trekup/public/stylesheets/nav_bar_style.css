@@ -26,9 +26,17 @@
 
 /* mast head division */
 .mast-head {
-    position: inherit;
-    line-height: inherit;
-    padding: 2.5%;
+    font-size: 3vw;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 2vw;
+    padding-left: 2.5%;
+    top: -15%;
+    position: absolute;
+    /* position: inherit; */
+    /* line-height: inherit; */
+    /* padding: 2.5%; */
     /* border-radius:25px; */
     /* height:inherit; */
 }
@@ -44,7 +52,7 @@ td {
     color: white;
     font-size: 200%;
     font-weight: bold;
-    line-height: inherit;   
+    line-height: inherit;
 }
 
 /* trek text */
@@ -61,13 +69,88 @@ td {
     right: 2px;
 }
 
+/*  divider */
+.separator {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 2%;
+}
+
+/* hamburger menu styling
+ source: https://stackoverflow.com/questions/44207293/adding-a-drop-down-menu-to-three-line-menu-icon */
+
+/* three line bar styling */
+
+.account-div {
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+    margin-top: 1%;
+}
+
+.menu {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 3vw;
+    height: 0.5vw;
+    background-color: white;
+    margin: 0.5vw 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
 
 
+/* Fade out the second bar */
+
+.change .bar2 {
+    opacity: 0;
+}
+
+
+/* Rotate last bar */
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.dropdwn-content {
+    display: none;
+}
+
+#div_one {
+    text-align: center;
+    border-style: ridge;
+    background-color: black;
+}
+
+#div_two {
+    text-align: center;
+    border-style: ridge;
+    background-color: black;
+}
+
+#div_three {
+    text-align: center;
+    border-style: ridge;
+    background-color: black;
+}
+
+/* old code
 .profPic {
     float: right;
     margin-right: 0.7%;
-    /* width:4%; */
-    /* height:4%; */
     width: 60px;
     height: 60px;
 }
@@ -75,4 +158,4 @@ td {
 .profPic:hover {
     background-color: #648B7F;
     cursor: pointer;
-}
+} */

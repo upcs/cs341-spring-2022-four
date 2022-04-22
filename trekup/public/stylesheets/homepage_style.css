@@ -3,7 +3,7 @@
 
 body{
 	/*set a gradient background*/
-	background-image:linear-gradient(to bottom, #648B7F, #648B7F);
+	background-image:linear-gradient(to bottom, white, white);
 	/*cover the whole page*/
 	background-size:cover;
 	background-repeat:no-repeat;
@@ -14,7 +14,7 @@ body{
 /* TAKE THIS FOR THE MASTHEAD */
 /* ========================================== */
 /*the table for the masthead*/
-/* #mastHead{ */
+/* #mast-head{ */
 	/* background-color:#006622; */
 	/* position:inherit; */
 	/* position:absolute; */
@@ -33,7 +33,7 @@ body{
 /* } */
 
 /*trek header is inside of masthead table*/
-/* #trekHeader{ */
+/* #trek-header{ */
 	/* position:relative; */
 	/* position:inherit; */
 	/* top:8px; */
@@ -42,7 +42,7 @@ body{
 /* } */
 
 /* move the up letters */
-/* #upHeader{ */
+/* #up-header{ */
 	/* position:relative; */
 	/* position:inherit; */
 	/* bottom:8px; */
@@ -255,7 +255,7 @@ li{
 	cursor:pointer;
 }
 
-#mastHead:hover{
+#mast-head:hover{
 	background-color:#648B7F;
 	cursor:pointer;
 } */

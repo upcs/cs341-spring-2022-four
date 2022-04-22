@@ -8,7 +8,7 @@
 */
 
 $(document).ready(function(){
-  $("#mastHead").click(function(){
+  $("#mast-head").click(function(){
     window.location.href="index.html";
   });
   $("#profPic").click(function(){

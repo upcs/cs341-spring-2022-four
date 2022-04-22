@@ -1,80 +1,78 @@
-#mastHead{
-	background-color:#006622;
-	position:inherit;
-	/* position:absolute; */
-	/* border-radius:25px; */
-	width:10%;
-	height:12%;
-	/* height:inherit; */
+/*
+ * @author Brynn Harrington and Gareth Rice
+ * style sheet for the top bar
+ */
+
+/* header */
+.header-div {
+    /* border-style: dashed; */
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 5;
+    background-color: #588c7e;
 }
 
-/* the labels in the table have the same color and font */
-td{
-	color:#E5FF66;
-	font-weight:bold;
-	/* font-size:42px; */
-	font-size:300%;
+/* title division */
+.title-div {
+    width: 25%;
+    display: inline-block;
 }
 
-/*trek header is inside of masthead table*/
-#trekHeader{
-	position:relative;
-	/* position:inherit; */
-	top:8px;
-	/* top:100%; */
-	left:4px;
+/* mast head division */
+.mast-head {
+    position: inherit;
+    line-height: inherit;
+    padding: 2.5%;
+    /* border-radius:25px; */
+    /* height:inherit; */
 }
 
-/* move the up letters */
-#upHeader{
-	position:relative;
-	/* position:inherit; */
-	bottom:8px;
-	right:4px;
+/* mast head hover */
+.mast-head:hover {
+    background-color: #83a39b;
+    cursor: pointer;
 }
 
-#profPicture{
-	width:50%;
-	height:50%;
+/* mast head table */
+td {
+    color: white;
+    font-size: 200%;
+    font-weight: bold;
+    line-height: inherit;   
 }
 
-li{
-	display:inline;
+/* trek text */
+.trek-header {
+    position: relative;
+    top: 6px;
+    left: 4px;
 }
 
-#navBar{
-	position:fixed;
-	list-style-type:none;
-	top:0;
-	width:100%;
-	margin:0;
-	margin-left:0;
-	padding:0;
-	overflow:hidden;
-	background-color:#006622;
-}
-
-#homepage{
-	float:left;
-	margin-left:0;
+/* up text */
+.up-header {
+    position: relative;
+    bottom: 2px;
+    right: 2px;
 }
 
 
-#profPic{
-	float:right;
-	margin-right:0.7%;
-	/* width:4%; */
-	/* height:4%; */
-	width:60px;
-	height:60px;
+
+.profPic {
+    float: right;
+    margin-right: 0.7%;
+    /* width:4%; */
+    /* height:4%; */
+    width: 60px;
+    height: 60px;
 }
 
-#profPic:hover{
-	background-color:#648B7F;
-	cursor:pointer;
-}
-
-#mastHead:hover{
-	background-color:#648B7F;
-	cursor:pointer;
+.profPic:hover {
+    background-color: #648B7F;
+    cursor: pointer;
 }

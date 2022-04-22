@@ -1,0 +1,103 @@
+/* mast_head_style
+ * @author Brynn Harrington
+ * style sheet for the mast head 
+ */
+
+
+/* title */
+.title-div {
+    width: 25%;
+    display: inline-block;
+}
+
+.title {
+    font-size: 3vw;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 2vw;
+    padding-left: 2.5%;
+    top: -15%;
+    position: absolute;
+}
+
+.title:hover {
+    cursor: pointer;
+    background-color: #87a49b;
+}
+
+/* top bar divider */
+.topBar {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+/* hamburger menu styling
+ source: https://stackoverflow.com/questions/44207293/adding-a-drop-down-menu-to-three-line-menu-icon */
+.menu-div {
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+    margin-top: 1%;
+}
+
+.menu {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+.top-bar,
+.middle-bar,
+.bottom-bar {
+    width: 3vw;
+    height: 0.5vw;
+    background-color: black;
+    margin: 0.5vw 0;
+    transition: 0.4s;
+}
+
+/* rotate first bar */
+.change,
+.top-bar {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* fade out the second bar */
+.change,
+.middle-bar {
+    opacity: 0;
+}
+
+/*rotate last bar */
+.change,
+.bottom-bar {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.dropdown-content {
+    display: none;
+}
+
+#account {
+    text-align: center;
+    border-style: ridge;
+    background-color: white;
+}
+
+#about {
+    text-align: center;
+    border-style: ridge;
+    background-color: white;
+}
+
+#help {
+    text-align: center;
+    border-style: ridge;
+    background-color: white;
+}

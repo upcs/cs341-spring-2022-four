@@ -56,13 +56,11 @@ HTML file for static profile page.
                 <div id="completedbox" >
                     <h2>Hikes Completed:</h2>
                       <!-- A Bunch of Dummy Hikes for now -->
-                        
-                      <div id="hikebox">
-                        <h3 id="ProfileHike1Name" class="hikeprofile">Instructions:</h3>
-                        <h4>This section will contain all the hikes you have finished! To add a completed hike, use the homepage to 
-                            take you to the page of that hike and then click "+Add hike to completed list."
-                        </h4>
-                    </div>
+                      <p id="hikeinstruct" onclick="removeHikeInstruct()">This section will contain all the hikes you have finished! To add a completed hike, use the homepage to 
+                        take you to the page of that hike and then click "+Add hike to completed list." (Click to remove)</p>
+
+               
+                 
                     <!--
                     <div id="hikebox", onClick='mrClicky("#ProfileHike2Name")'>
                         <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
@@ -127,12 +125,11 @@ HTML file for static profile page.
             <div id = achievements>
                 <div id = achievementsbox>
                     <h2>Achievements:</h2>
-                       <!-- Add user's trophies -
-                    <div id = trophybox>
-                        <h3 style="margin-left: 10px; margin-right:10px"><i>Explorer Badge</i> </h3>
-                        <h5 style="margin-left: 10px; margin-right:10px">Complete 5 hikes in Portland.</h5>
-                        <img id="trophy" src="./images/trophy.png">
-                    </div>
+
+                        <p id="trophyinstruct" onclick="removeTrophyInstruct()">This section will contain your achievements, which will automatically
+                            appear here once you have completed more hikes. (Click to remove)</p>
+
+                     <!-- Add user's trophies -
                     <div id = trophybox>
                         <h3 style="margin-left: 10px; margin-right:10px"><i>Overnight Camper Badge</i> </h3>
                         <h5 style="margin-left: 10px; margin-right:10px">Spend 3 nights with nature.</h5>

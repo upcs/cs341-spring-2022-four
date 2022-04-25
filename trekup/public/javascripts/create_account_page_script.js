@@ -33,17 +33,13 @@ goToLoginHandler = function(event) {
     window.location.href = "login_page.html"
 }
 
-$(document).ready(function() {
+$(document).ready(function(){
     //actions for when the submit button for the form is clicked
     $("#create_account_button").on("click", createAccountHandler);
 
     $("#login_link").on("click", goToLoginHandler);
 
-    $("#mastHead").click(function(){
+    $("#mast-head").click(function(){
         window.location.href="index.html";
-
     });
 });
-
-// export functions
-module.exports = { createAccountHandler, goToLoginHandler };

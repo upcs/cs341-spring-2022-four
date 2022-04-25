@@ -3,10 +3,6 @@
  * @author Francisco and Brynn 
  * attempts to login to an account  
  */
-
-'use strict';
-// const $ = require('jquery');
-
 function login(event) {
     $("#login_button").on("click", loginHandler); // handle click on login
     $("#create_account_link").on("click", goToCreateAccountHandler); // handle click on create account
@@ -42,40 +38,26 @@ goToCreateAccountHandler = function(event) {
     window.location.href = "create_account_page.html";
 }
 
-
 /* getUsername
  * 
- * @author Francisco 
- * @modified by Brynn 
+ * @author Francisco and Brynn 
  * gets the username  
  */
 function getUsername() {
     var username = document.getElementById('username').value;
+    // username =
     return username;
 }
 
 /* getPassword
  * 
- * @author Francisco 
- * @modified by Brynn 
+ * @author Francisco and Brynn 
  * gets the password  
  */
 function getPassword() {
     var password = document.getElementById('password').value;
     return password;
 }
-
-
-/* login
- * 
- * @author Francisco  
- * @modified by Brynn Brynn 
- * attempts to login once click received
- */
-// function login(event) {
-//     $("#login_button").on("click", loginHandler); // handle click on login
-//     $("#create_account_link").on("click", goToCreateAccountHandler); // handle click on create account
-// }
 
 // export the functions for testing 
 // module.exports = { login, getUsername, getPassword };
@@ -102,13 +84,7 @@ $(document).ready(function() {
     $("#create_account_link").on("click", goToCreateAccountHandler);
 });
 
-
-/* loginHandler
- * 
- * @author Francisco and Brynn 
- * attempts to login once click received
- */
-function loginHandler(event) {
+loginHandler = function(event) {
     $.post('/user_login', {
         username: getUsername(),
         password: getPassword()
@@ -125,27 +101,13 @@ function loginHandler(event) {
     event.preventDefault();
 }
 
-/* goToCreateAccountHandler
- * 
- * @author Francisco  
- * @modified by Brynn Brynn 
- * attempts to create account once click received
- */
-function goToCreateAccountHandler(event) {
+goToCreateAccountHandler = function(event) {
     window.location.href = "create_account_page.html";
 }
 
-/* ready 
- * 
- * @author Francisco 
- * processes click   
- */
-$(document).ready(function() {
-    //actions for when the submit button for the form is clicked
-    $("#login_button").on("click", loginHandler);
-    $("#create_account_link").on("click", goToCreateAccountHandler);
-});
-// $(document).ready(loginHandler);
-
-// export the functions for testing 
-module.exports = { getUsername, getPassword, loginHandler, goToCreateAccountHandler };
+// login function
+// function login() {
+//     var username = getUsername();
+//     var password = getPassword();
+//     $("#login_button").on("click", loginHandler);
+// }

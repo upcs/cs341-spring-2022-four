@@ -1,100 +1,116 @@
-/*the white box in the middle of the page with the form*/
-#div_form {
-    margin: auto;
-    margin-top: 5%;
-    width: 4in;
-    border: 3px solid black;
-    border-radius: 10px;
-    padding: 50px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color:WHITE;
-}
-
-body{
-  	background-image:linear-gradient(to bottom, #648B7F, #648B7F);
-}
-
-h1 {
-    text-align: center;
-    font-family: Garamond, 'Times New Roman', Times, serif;
-}
-
-input {
-    width: 100%;
-}
-
-form button {
-    background:forestgreen;
-    border: none;
-    color: white;
-    padding: 8px 36px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition-duration: 0.2s;
-    width: 100%;
-}
-
-form button:hover {
-    background-color: rgb(31, 187, 31);
-}
-
-#login_form {
-    margin: auto;
-    width: 50%;
-}
-
-input, label {
-    display: block;
-}
-
-/*style for the text following the form which asks users if
+    /*
+ * @author Brynn Harrington, Francisco Nguyen,
+ * and Logan Machida
+ * style sheet for the login page
+ */
+    /* the white box in the middle of the page with the form */
+    
+    #div_form {
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15%;
+        /* margin-bottom: 15%; */
+        width: 4in;
+        border: 2px solid #588c7e;
+        border-radius: 10px;
+        padding: 50px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        background-color: white;
+    }
+    
+    body {
+        background-image: linear-gradient(to bottom, #648B7F, #648B7F);
+    }
+    
+    h1 {
+        align-items: center;
+        text-align: center;
+        color: #588c7e;
+        font-size: large;
+    }
+    
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50%;
+        width: 40%;
+    }
+    
+    input {
+        width: 100%;
+    }
+    
+    form button {
+        background: #588c7e;
+        border: none;
+        color: white;
+        padding: 8px 36px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        /* font-size: 16px; */
+        margin: 4px 2px;
+        cursor: pointer;
+        /* transition-duration: 0.2s; */
+        width: 100%;
+    }
+    
+    form button:hover {
+        background-color: #83a39b;
+        cursor: pointer;
+    }
+    
+    #login_form {
+        margin: auto;
+        width: 50%;
+    }
+    
+    input,
+    label {
+        display: block;
+    }
+    /*style for the text following the form which asks users if
 they want to create an account or sign in*/
-form + p {
-    text-align: center;
-    margin-top: 10%
-}
-
-/*hyperlink to login page or create and account page*/
-span {
-    color: blue;
-}
-
-span:hover {
-    text-decoration: underline;
-}
-
-
-/*the table for the masthead*/
-/* #mastHead{ */
-	/* background-color:#FF6600; */
-	/* position:absolute; */
-	/* top:10px; */
-	/* left:10px; */
-	/* border-radius:25px; */
-	/* width:150px; */
-	/* height:75px; */
-/* } */
-
-/* the labels in the table have the same color and font */
-/* td{
+    
+    form+p {
+        text-align: center;
+        margin-top: 10%
+    }
+    /*hyperlink to login page or create and account page*/
+    
+    span {
+        color: #588c7e;
+    }
+    
+    span:hover {
+        text-decoration: underline;
+    }
+    /*the table for the masthead*/
+    /* #mast-head{ */
+    /* background-color:#FF6600; */
+    /* position:absolute; */
+    /* top:10px; */
+    /* left:10px; */
+    /* border-radius:25px; */
+    /* width:150px; */
+    /* height:75px; */
+    /* } */
+    /* the labels in the table have the same color and font */
+    /* td{
 	color:#111111;
 	font-weight:bold;
 	font-size:42px;
 } */
-
-/*trek header is inside of masthead table*/
-/* #trekHeader{
+    /*trek header is inside of masthead table*/
+    /* #trek-header{
 	position:relative;
 	top:8px;
 	left:4px;
 } */
-
-/* move the up letters */
-/* #upHeader{
+    /* move the up letters */
+    /* #up-header{
 	position:relative;
 	bottom:8px;
 	right:4px;

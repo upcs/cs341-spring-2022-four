@@ -50,6 +50,8 @@ $(document).ready(function() {
             //$("#achievements").text(profile_data.ACHIEVEMENTS); // may not work
 
             addTrophies(profile_data.ACHIEVEMENTS);
+
+
         });
 
     //making POST to get profile's list of completed hikes
@@ -69,12 +71,11 @@ $(document).ready(function() {
 /**called when user clicks trash can in hike box,
  * makes POST to remove the hike from completed list */
 function trashRemoveHike(event) {
-    $.post('user_update_completed_hike', {
+    $.post('user_remove_from_completed_hike', {
         username: localStorage.getItem('current_user'),
         hike_name: $(event).siblings(".hikeprofile").text(),
         distance: $(event).siblings("h4").find(".hikedistance").text(),
-        elevation: $(event).siblings("h4").find(".hikeelevation").text(),
-        adding: 0
+        elevation: $(event).siblings("h4").find(".hikeelevation").text() 
     }).done(function() {
         $(event).parent(".hikebox").hide();
     });
@@ -92,20 +93,16 @@ function mrClicky(event, hikeNameField) {
     window.location.href="hike_page_template.html";
 }
 
-/* functions to remove user instructions */
-function removeHikeInstruct() {
-    document.getElementById("hikeinstruct").innerHTML = "";
-  }
-  function removeTrophyInstruct() {
-    document.getElementById("trophyinstruct").innerHTML = "";
-  }
 
+
+  
 
 function addTrophies(achievements_bits) {
     console.log(achievements_bits.charAt(0));
    // trails completed badges
     if (achievements_bits.charAt(0) == '1')
         $("#achievementsbox").append(makeTrophy("Discoverer Badge", "You completed 1 hike."));
+
     if (achievements_bits.charAt(1) == '1') 
         $("#achievementsbox").append(makeTrophy("Explorer Badge", "You completed 5 hikes."));
 
@@ -114,13 +111,13 @@ function addTrophies(achievements_bits) {
 
     // distance walked badges
     if (achievements_bits.charAt(3) == '1') 
-        $("#achievementsbox").append(makeTrophy("Pioneer Badge", "You walked 5 miles."));
+        $("#achievementsbox").append(makeTrophy("Pioneer Badge", "You walked 1000 miles."));
 
     if (achievements_bits.charAt(4) == '1') 
-        $("#achievementsbox").append(makeTrophy("Cross Country Badge", "You walked 10 miles."));
+        $("#achievementsbox").append(makeTrophy("Cross Country Badge", "You walked 2000 miles."));
 
     if (achievements_bits.charAt(5) == '1') 
-        $("#achievementsbox").append(makeTrophy("Tourer Badge", "You walked 20 miles."));
+        $("#achievementsbox").append(makeTrophy("Tourer Badge", "You walked 2000 miles."));
 
     // elevation gained badges
     if (achievements_bits.charAt(6) == '1') 
@@ -131,7 +128,4 @@ function addTrophies(achievements_bits) {
         
     if (achievements_bits.charAt(8) == '1') 
         $("#achievementsbox").append(makeTrophy("Heaven Badge", "You climbed 3000 ft."));
-
-    if (achievements_bits.charAt(9) == '1') 
-        $("#achievementsbox").append(makeTrophy("Startup Badge", "You joined the community!"));
 }

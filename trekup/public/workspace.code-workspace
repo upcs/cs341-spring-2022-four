@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"name": "test",
+			"path": ".."
+		},
+		{
+			"name": "public",
+			"path": "../../../../../../../../Downloads/cs341-project-ss2020-rust-master/public"
+		}
+	],
+    "settings": {}
+}

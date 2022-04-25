@@ -19,11 +19,6 @@ var database = "TREKUP"; //database name
 var user = "root"; //username (change to match your db)
 var password = "teamFour!SQL"; //password (change to match your db, yes this is very poor practice)
 
-// var host = "127.0.0.1"; //from GCloud instance (change to match your db)
-// var database = "USERPROFILES"; //database name
-// var user = "root"; //username (change to match your db)
-// var password = "password"; //password (change to match your db, yes this is very poor practice)
-
 /**
  * dbquery
  *

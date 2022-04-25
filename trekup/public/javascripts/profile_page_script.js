@@ -50,8 +50,6 @@ $(document).ready(function() {
             //$("#achievements").text(profile_data.ACHIEVEMENTS); // may not work
 
             addTrophies(profile_data.ACHIEVEMENTS);
-
-
         });
 
     //making POST to get profile's list of completed hikes
@@ -71,11 +69,12 @@ $(document).ready(function() {
 /**called when user clicks trash can in hike box,
  * makes POST to remove the hike from completed list */
 function trashRemoveHike(event) {
-    $.post('user_remove_from_completed_hike', {
+    $.post('user_update_completed_hike', {
         username: localStorage.getItem('current_user'),
         hike_name: $(event).siblings(".hikeprofile").text(),
         distance: $(event).siblings("h4").find(".hikedistance").text(),
-        elevation: $(event).siblings("h4").find(".hikeelevation").text() 
+        elevation: $(event).siblings("h4").find(".hikeelevation").text(),
+        adding: 0
     }).done(function() {
         $(event).parent(".hikebox").hide();
     });

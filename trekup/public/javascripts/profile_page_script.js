@@ -3,16 +3,19 @@
  * updated by: Francisco Nguyen
  */
 
- addHike = function (hike) {
+/**creating html for a hike box to append to completed hike list */
+addHike = function (hike) {
     return `
-    <div id="hikebox", onClick='mrClicky("${hike.HIKE_NAME}")'>
+    <div class="hikebox", onClick='mrClicky(this, "${hike.HIKE_NAME}")'>
+      <div class="removehike" onClick='trashRemoveHike(this)'></div>
       <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
       <h3 class="hikeprofile">${hike.HIKE_NAME}</h3>
-      <h4>Di. ${hike.DISTANCE} mi. El. ${hike.ELEVATION_CHANGE} ft.</h4>
+      <h4>Di. <span class=hikedistance>${hike.DISTANCE}</span> mi. El. <span class=hikeelevation>${hike.ELEVATION_CHANGE}</span> ft.</h4>
     </div>
   `;
 }
 
+/**creaging html for a achievement box to append to achievements list */
 makeTrophy = function (trophyName, desc) {
     return `
     <div id = trophybox>
@@ -23,9 +26,9 @@ makeTrophy = function (trophyName, desc) {
 }
 
 
-$(document).ready(function() { 
+$(document).ready(function() {
     $("#logoutbutton").click(function() {
-        sessionStorage.clear();
+        localStorage.clear();
         window.location.href="index.html";
    });
   
@@ -33,9 +36,7 @@ $(document).ready(function() {
         window.location.href="update_profile.html";
     });
     
-    
-
-    var usrnm = sessionStorage.getItem('current_user');
+    var usrnm = localStorage.getItem('current_user');
 
     //making POST to get profile data
     $.post('/profile_load', {username: usrnm})
@@ -59,23 +60,35 @@ $(document).ready(function() {
             for (let hike of data) {
                 $("#completedbox").append(addHike(hike));
             }
+            $(".hikebox").hover(function() {
+                $(this).find(".removehike").show();
+            }, function() {
+                $(this).find(".removehike").hide();
+            });
         });
-    
-    /*
-    $("#hikebox").hover(function() {
-        $(this).prepend('<div class="removehike"></div>');
-    }, function() {
-        $(this).find("div").first().remove();
-    });
-    */
-
-
-    
-
   });
 
-  /*on clicking hike in completed list, go to that hike's page */
-function mrClicky(hikeNameField) {
+/**called when user clicks trash can in hike box,
+ * makes POST to remove the hike from completed list */
+function trashRemoveHike(event) {
+    $.post('user_remove_from_completed_hike', {
+        username: localStorage.getItem('current_user'),
+        hike_name: $(event).siblings(".hikeprofile").text(),
+        distance: $(event).siblings("h4").find(".hikedistance").text(),
+        elevation: $(event).siblings("h4").find(".hikeelevation").text() 
+    }).done(function() {
+        $(event).parent(".hikebox").hide();
+    });
+}
+
+/*on clicking hike in completed list, go to that hike's page */
+function mrClicky(event, hikeNameField) {
+    //TODO: don't go to hike's page when clicking on trash can
+    if (event.target !== event.currentTarget) {
+        alert("clicked on trash can, not hike box");
+        return;
+    }
+
     localStorage.setItem('Name', hikeNameField);
     window.location.href="hike_page_template.html";
 }

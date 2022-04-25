@@ -14,6 +14,8 @@ $(document).ready(function(){
     window.location.href="hike_page_template.html";
   });
 
+  // $(".flip-card").click(); //this automatically clicks?
+
   $(".bannerAd").click(function(){
     // window.location.href="https://up.cafebonappetit.com/";
     // if(("#bannerAdImage").src.equals("./images/BonApAd.jpg")){

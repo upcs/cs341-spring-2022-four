@@ -1,0 +1,460 @@
+.float-parent-element {
+    width: 50%;
+}
+
+.float-child-element {
+    float: left;
+    width: 50%;
+}
+
+
+/* .red {
+    background-color: red;
+    margin-left: 50%;
+    height: 100px;
+}
+.yellow {
+    margin-left: 50%;
+    height: 100px;
+    background-color: yellow;
+} */
+
+
+/* Place the navbar at the bottom of the page, and make it stick */
+
+.navbar {
+    background-color: #588c7e;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* For collapsible */
+
+
+/* Style the button that is used to open and close the collapsible content */
+
+.collapsible {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #588c7e;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 150%;
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.active,
+.collapsible:hover {
+    background-color: #588c7e;
+}
+
+
+/* Style the collapsible content. Note: hidden by default */
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+}
+
+
+/* dropdown */
+
+
+/* dropdown Button */
+
+.dropbtn {
+    background-color: #588c7e;
+    color: white;
+    padding: 16px 32px;
+    margin-top: 4px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* dropdown button on hover & focus */
+
+
+/* .dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+} */
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 80px;
+    /* adds space below dropdown buttons so the dropdown shows up */
+}
+
+
+/* dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: none;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    margin: auto;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: #588c7e;
+    padding: 6px;
+    margin-top: 8px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #588c7e;
+}
+
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
+
+/* .show {display:block;} */
+
+
+/* for search bar */
+
+.navbar .search-container {
+    float: right;
+    text-align: right;
+}
+
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.navbar .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* for sliders */
+
+.slidercontainer {
+    width: 100%;
+}
+
+.slider {
+    width: 50%;
+    height: 15px;
+}
+
+
+/* for ranges */
+
+
+/* .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+} */
+
+.range-slider {
+    position: relative;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+}
+
+.range-slider input {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 15px;
+    width: 100px;
+    outline: none;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.range-slider input::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+}
+
+.range-slider input::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: 9px;
+}
+
+.range-slider input::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 1);
+    border: 0;
+}
+
+.range-slider input:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+}
+
+.range-slider input[type=range]::-moz-focus-outer {
+    border: 0;
+}
+
+.rangeValue {
+    width: 30px;
+}
+
+
+/* output for miles */
+
+.output {
+    position: absolute;
+    border: 1px solid #000000;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    color: #000000;
+    border-radius: 4px;
+    display: inline-block;
+    font: bold 15px/30px Helvetica, Arial;
+    bottom: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.output.outputRangeLower {
+    left: 100%;
+}
+
+
+/* output for elevation */
+
+.outputE {
+    position: absolute;
+    border: 1px solid #999;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    color: #999;
+    border-radius: 4px;
+    display: inline-block;
+    font: bold 15px/30px Helvetica, Arial;
+    bottom: 75%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.outputE.outputRangeLowerE {
+    left: 100%;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+    border: none;
+    border-radius: 3px;
+    background: transparent;
+}
+
+input[type=range]::-ms-track {
+    height: 5px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-track {
+    height: 5px;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #555;
+    margin-top: -5px;
+    position: relative;
+    z-index: 10000;
+}
+
+input[type=range]::-ms-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #555;
+    margin-top: -5px;
+    position: relative;
+    z-index: 10000;
+}
+
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #555;
+    margin-top: -5px;
+    position: relative;
+    z-index: 10000;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+.full-range,
+.incl-range {
+    width: 100%;
+    height: 5px;
+    left: 0;
+    top: 21px;
+    position: absolute;
+    background: #DDD;
+}
+
+.incl-range {
+    background: gold;
+}
+
+.full-rangeE,
+.incl-rangeE {
+    width: 100%;
+    height: 5px;
+    left: 0;
+    top: 21px;
+    position: absolute;
+    background: #DDD;
+}
+
+.incl-rangeE {
+    background: #588c7e;
+}
+
+
+/* ahhh */
+
+
+/* region for holding the hike results */
+
+#hikeresults {
+    display: none;
+    height: 400px;
+    width: 100%;
+    float: center;
+}
+
+
+/* for the hikes */
+
+#hikelist {
+    width: 90%;
+    height: 95%;
+    border: 1px solid #000;
+    border: 1px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: #588c7e;
+    overflow-y: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Box that contains a singular hike */
+
+#individualhike {
+    width: 98%;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+
+/* Picture of a hike */
+
+#hikepic {
+    border: 1% solid #ddd;
+    border-radius: 2%;
+    max-height: 80%;
+    object-fit: scale-down;
+    width: 20%;
+    height: 80%;
+    float: right;
+    padding: 5px;
+    margin-top: 1%;
+    margin-right: 1%;
+}
+
+.hikesearch {
+    font-size: 90%;
+}
+
+
+/*  */

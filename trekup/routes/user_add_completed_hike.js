@@ -2,6 +2,7 @@
 
 var express = require('express');
 var router = express.Router();
+var user_trophies = require("./user_trophies");
 
 // var dbms = require('./user_info_dbms_promise');
 var dbms = require('./dbms_promise');
@@ -22,6 +23,7 @@ router.post('/', function(req, res, next) {
                                     ELEVATION_GAINED=ELEVATION_GAINED + ${req.body.elevation} 
                                     where USERNAME='${req.body.username}'`;
         dbms.dbquery(update_profile_query);
+        user_trophies.updateTrophies(req.body.username);
     });
 });
 

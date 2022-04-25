@@ -14,8 +14,9 @@ createAccountHandler = function(event) {
             username: $("#username").val(),
             password: $("#password").val()
         }, function(data) {
+            //check POST return value for if account was created
             if (data.localeCompare("added") == 0) {
-                sessionStorage.setItem('current_user', $("#username").val())
+                localStorage.setItem('current_user', $("#username").val())
                 window.location.href = "profile.html";
                 event.preventDefault();
             } else {
@@ -27,6 +28,7 @@ createAccountHandler = function(event) {
     }
 }
 
+/** if user clicks go-to-login hyperlink, change page */
 goToLoginHandler = function(event) {
     window.location.href = "login_page.html"
 }
@@ -37,8 +39,9 @@ $(document).ready(function() {
 
     $("#login_link").on("click", goToLoginHandler);
 
-    $("#mastHead").click(function() {
-        window.location.href = "Index.html";
+    $("#mastHead").click(function(){
+        window.location.href="index.html";
+
     });
 });
 

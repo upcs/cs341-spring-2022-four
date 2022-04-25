@@ -38,11 +38,11 @@ HTML file for static profile page.
         <div id="userinfo">
             <div id="databox">
                 <h2>Statistics:</h2>
-                <p>Trails Completed: <span id="trails_completed">10</span> hikes <br> Distance Walked: <span id=distance_walked>2417</span> mi. <br> Elevation Gain: <span id="elevation_gain">900,000</span> ft.</p>
+                <p>Trails Completed: <span id="trails_completed"></span> hikes <br> Distance Walked: <span id=distance_walked></span> mi. <br> Elevation Gain: <span id="elevation_gain"></span> ft.</p>
             </div> 
             <div id ="userbox">
-                <h2 id="name">Francisco Nguyen</h2>
-                <h4 id ="username"><i>nguyenf23@up.edu</i></h4>  
+                <h2 id="name"></h2>
+                <h4 id ="username"><i></i></h4>  
                 <button type="button" id="updatebutton">Update Profile</button>
                 <button type="button" id="logoutbutton">Logout</button>
             </div>   
@@ -55,24 +55,13 @@ HTML file for static profile page.
             <div id="completed">
                 <div id="completedbox" >
                     <h2>Hikes Completed:</h2>
-                      <!-- A Bunch of Dummy Hikes for now 
-                    <div class="hikebox" onClick='mrClicky("#ProfileHike1Name")'>
-                        <div class="removehike"></div>
-                        <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
-                        <h3 id="ProfileHike1Name" class="hikeprofile">Hike 1</h3>
-                        <table>
-                            <tr>
-                            <!-- A Bunch of stars depending on the rating of the hike
-                            <td><div class="rating user star"></div></td>
-                            <td><div class="rating user star"></div></td>
-                            <td><div class="rating user star"></div></td>
-                            <td><div class="rating user star blank"></div></td>
-                            <td><div class="rating user star blank"></div></td>
-                            </tr>
-                        </table>
-                        <h4>Di. 370 mi. El. 352 ft.</h4>
-                    </div>
-                    <div class="hikebox", onClick='mrClicky("#ProfileHike2Name")'>
+                      <!-- A Bunch of Dummy Hikes for now -->
+                      <p id="hikeinstruct" onclick="removeHikeInstruct()">This section will contain all the hikes you have finished! To add a completed hike, use the homepage to 
+                        take you to the page of that hike and then click "+Add hike to completed list." (Click to remove)</p>
+
+                 
+                    <!--
+                    <div id="hikebox", onClick='mrClicky("#ProfileHike2Name")'>
                         <img id="hikepic" src="https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/New-Hiking.jpg?itok=p0tfoXXi">
                         <h3 id="ProfileHike2Name" class="hikeprofile">Hike 2</h3>
                         <table>
@@ -120,12 +109,11 @@ HTML file for static profile page.
             <div id = achievements>
                 <div id = achievementsbox>
                     <h2>Achievements:</h2>
-                       <!-- Add user's trophies -
-                    <div id = trophybox>
-                        <h3 style="margin-left: 10px; margin-right:10px"><i>Explorer Badge</i> </h3>
-                        <h5 style="margin-left: 10px; margin-right:10px">Complete 5 hikes in Portland.</h5>
-                        <img id="trophy" src="./images/trophy.png">
-                    </div>
+
+                        <p id="trophyinstruct" onclick="removeTrophyInstruct()">This section will contain your achievements, which will automatically
+                            appear here once you have completed more hikes. (Click to remove)</p>
+
+                     <!-- Add user's trophies -
                     <div id = trophybox>
                         <h3 style="margin-left: 10px; margin-right:10px"><i>Overnight Camper Badge</i> </h3>
                         <h5 style="margin-left: 10px; margin-right:10px">Spend 3 nights with nature.</h5>

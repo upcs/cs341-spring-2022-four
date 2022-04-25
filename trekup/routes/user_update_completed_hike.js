@@ -6,13 +6,13 @@ var user_trophies = require("./user_trophies");
 
 var dbms = require('./dbms_promise');
 
-/* POST user to add hike to completed list. */
+/* POST user to add or remove hike to or from completed list. */
 router.post('/', function(req, res, next) {
-    console.log("entered adding post");
-    //if the user hasn't added the hike, then they can add it
+    console.log("entered hike list updating post");
     var query;
     var operand;
     console.log(typeof req.body.adding);
+    //if the user hasn't added the hike, then make insertion query, else deletion query
     if (parseInt(req.body.adding, 2) == 1) {
         query = `insert into USERS_HIKES_COMPLETED 
                 values ('${req.body.username}', '${req.body.hike_name}',
@@ -26,7 +26,7 @@ router.post('/', function(req, res, next) {
     }
     console.log(query);
 
-    //adding the hike to completed list
+    //adding/removing the hike to/from completed list
     dbms.dbquery(query).then(function() {
         var update_profile_query = `update USER_PROFILES set TRAILS_COMPLETED=TRAILS_COMPLETED ${operand} 1, 
                                     DISTANCE_WALKED=DISTANCE_WALKED ${operand} ${req.body.distance}, 
@@ -34,6 +34,7 @@ router.post('/', function(req, res, next) {
                                     where USERNAME='${req.body.username}'`;
         dbms.dbquery(update_profile_query);
         user_trophies.updateTrophies(req.body.username);
+        res.send("yay");
     });
 });
 

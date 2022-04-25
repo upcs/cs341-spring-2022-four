@@ -14,7 +14,8 @@ router.post('/', async(req, res, next)=>{
 
 
   if(req.body.nam){
-    var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE HIKE = " + "'" + req.body.nam + "'"));
+    // var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE HIKE = " + "'" + req.body.nam + "'"));
+    var hi1 = JSON.stringify(await dbq.dbquery(`SELECT * FROM TRAIL_INFO WHERE UPPER(HIKE) LIKE UPPER('%${req.body.nam}%')`));
   }
   // else if(req.body.dif){
   //   console.log(req.body.dif);
@@ -34,14 +35,14 @@ router.post('/', async(req, res, next)=>{
     console.log("upper: " + req.body.elevU + " ft");
     console.log("lower: " + req.body.elevL + " ft");
     console.log("difficulty: " + req.body.dif);
-    var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE DISTANCE BETWEEN " + "'"  + req.body.mileL + "'" + " AND "+ "'" + req.body.mileR + "'" + " AND ELEVATION_CHANGE BETWEEN " + "'" + req.body.elevL + "'" + " AND " + "'" + req.body.elevU + "'" + " AND DIFFICULTY = " + "'" + req.body.dif + "'" + " LIMIT 8"));
+    var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE (DISTANCE BETWEEN " + "'"  + req.body.mileL + "'" + " AND "+ "'" + req.body.mileR + "')" + " AND (ELEVATION_CHANGE BETWEEN " + "'" + req.body.elevL + "'" + " AND " + "'" + req.body.elevU + "')" + " AND DIFFICULTY = " + "'" + req.body.dif + "'" + " LIMIT 8"));
   }
   else if(req.body.mileR, req.body.mileL, req.body.elevU, req.body.elevL){
     console.log(req.body.mileR + " miles");
     console.log(req.body.mileL + " miles lower");
     console.log("upper: " + req.body.elevU + " ft");
     console.log("lower: " + req.body.elevL + " ft");
-    var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE DISTANCE BETWEEN " + "'"  + req.body.mileL + "'" + " AND "+ "'" + req.body.mileR + "'" + " AND ELEVATION_CHANGE BETWEEN " + "'" + req.body.elevL + "'" + " AND " + "'" + req.body.elevU + "'" + " LIMIT 8"));
+    var hi1 = JSON.stringify(await dbq.dbquery("SELECT * FROM TRAIL_INFO WHERE (DISTANCE BETWEEN " + "'"  + req.body.mileL + "'" + " AND "+ "'" + req.body.mileR + "')" + " AND (ELEVATION_CHANGE BETWEEN " + "'" + req.body.elevL + "'" + " AND " + "'" + req.body.elevU + "')" + " LIMIT 8"));
   }
   // else if(req.body.mileR, req.body.mileL, req.body.elevU, req.body.elevL){
   //   console.log(req.body.mileR + " miles");

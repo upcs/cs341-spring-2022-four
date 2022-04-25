@@ -13,7 +13,7 @@ var request = require('supertest'); // use the super test for server testing
 var app = require('../app'); // get the app
 
 // timeout to prevent too long for a test running
-// jest.setTimeout(5000);
+jest.setTimeout(5000);
 
 // testing whether the response of getting valid 
 describe('Test the root path', () => {
@@ -26,15 +26,3 @@ describe('Test the root path', () => {
         });
     });
 });
-
-// // testing whether the response of getting valid 
-// describe('Test the profile posting path', () => {
-//     // note: "it" just fancy for "test"
-//     it('POST method response - 200 expected for success', done => {
-//         // test the get method responds with success response 
-//         request(app).post('/user_add').then(response => {
-//             expect(response.statusCode).toBe(200);
-//             done();
-//         });
-//     });
-// });

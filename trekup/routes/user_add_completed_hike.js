@@ -2,6 +2,7 @@
 
 var express = require('express');
 var router = express.Router();
+var user_trophies = require("./user_trophies");
 
 // var dbms = require('./user_info_dbms_promise');
 var dbms = require('./dbms_promise');
@@ -11,8 +12,8 @@ router.post('/', function(req, res, next) {
     console.log("entered adding post");
     //if the user hasn't added the hike, then they can add it
     var add_query = `insert into USERS_HIKES_COMPLETED 
-                 values ('${req.body.username}', '${req.body.hike_name}',
-                 '${req.body.rating}', '${req.body.distance}', '${req.body.elevation}')`;
+                     values ('${req.body.username}', '${req.body.hike_name}',
+                     '${req.body.distance}', '${req.body.elevation}')`;
     console.log(add_query);
 
     //adding the hike to completed list
@@ -22,6 +23,7 @@ router.post('/', function(req, res, next) {
                                     ELEVATION_GAINED=ELEVATION_GAINED + ${req.body.elevation} 
                                     where USERNAME='${req.body.username}'`;
         dbms.dbquery(update_profile_query);
+        user_trophies.updateTrophies(req.body.username);
     });
 });
 

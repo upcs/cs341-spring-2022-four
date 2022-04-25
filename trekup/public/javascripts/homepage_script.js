@@ -5,9 +5,11 @@
  * the 8 search hikes when the search bar is clicked on
 */
 
+//res.render('index', {title:'your_page_title'});
+
 $(document).ready(function(){
   $("#mastHead").click(function(){
-    window.location.href="Index.html";
+    window.location.href="index.html";
   });
 
   $(".flip-card").click(function(){

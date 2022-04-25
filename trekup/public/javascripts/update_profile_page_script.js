@@ -6,7 +6,7 @@ File to check who's logged in and update information if possible
 // Header Functionality
 $(document).ready(function(){
   $("#mastHead").click(function(){
-    window.location.href="Index.html";
+    window.location.href="index.html";
   });
   $("#profPic").click(function(){
     let loggedIn = true;
@@ -21,7 +21,7 @@ $(document).ready(function(){
   // Submit button to modify the user's information
   $("#submit").click(function(){
     // variables inputed by the user
-    
+
     var currUser = sessionStorage.getItem('current_user');
     var currPass = $('#curpass').val();
     var newPass = $('#newpass').val();
@@ -37,7 +37,7 @@ $(document).ready(function(){
       newUser: newUser,
       newName: newName
       }
-    
+
       if (newPass == confirmPass) {
         data["newPass"] = newPass;
 

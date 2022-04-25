@@ -9,10 +9,10 @@
 
 $(document).ready(function(){
   $("#mastHead").click(function(){
-    window.location.href="Index.html";
+    window.location.href="index.html";
   });
   $("#profPic").click(function(){
-    let loggedIn = sessionStorage.getItem('current_user');
+    let loggedIn = localStorage.getItem('current_user');
 
     // window.location.href = 'profile.html';
     if(loggedIn){

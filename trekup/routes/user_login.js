@@ -2,6 +2,7 @@
 
 var express = require('express');
 var router = express.Router();
+var user_trophies = require("./user_trophies");
 
 // var dbms = require('./user_info_dbms_promise');
 var dbms = require('./dbms_promise');
@@ -11,6 +12,7 @@ var bcrypt = require('bcrypt');
 
 /* POST for login. */
 router.post('/', function(req, res, next) {
+    console.log("making login post");
     var get_salt_query = `select SALT from USER_PROFILES where USERNAME='${req.body.username}'`;
     var salt_result = dbms.dbquery(get_salt_query);
 
@@ -29,6 +31,9 @@ router.post('/', function(req, res, next) {
                 where USERNAME='${req.body.username}'
                 and PASSWORD_HASHED='${password_hashed}'`;
         
+        // update trophies
+        user_trophies.updateTrophies(req.body.username);
+
         return dbms.dbquery(login_query);
     }).then(function(results) {
         //checking if username and password inputted link to an existing account

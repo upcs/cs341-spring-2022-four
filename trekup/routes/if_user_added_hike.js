@@ -23,6 +23,8 @@ router.post('/', function(req, res, next) {
         if (results.length > 0) {
             console.log("found that user has completed hike");
             res.send("user already added hike");
+        } else {
+            res.send("user hasn't added hike");
         }
     });
 });

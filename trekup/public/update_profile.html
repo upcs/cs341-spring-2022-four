@@ -7,33 +7,44 @@ HTML file for update profile page.
     <head>
         <!-- Add an external link to CSS File -->
         <link rel="stylesheet" href="./stylesheets/update_profile.css">
-        <link rel="stylesheet" href="./stylesheets/nav_bar_style.css">
+        <link rel="stylesheet" href="./stylesheets/default.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	    <!-- Add an external link to JS file -->
             <script src="./javascripts/update_profile_page_script.js"></script>
     </head>
 
     <body>
-
-        
-            <!--Header Region of the page -->
-            <div id="header">
-                <!-- make a top nav bar -->
-                <ul id="navBar">
-                    <li id="homepage">
-                        <!--Table housing the mastHead text-->
-                        <table id="mastHead">
-                            <tr>
-                                <td id="trekHeader">Trek</td>
-                                <td id="upHeader">Up</td>
-                            </tr>
-                        </table>
-                    </li>
-                    <li id="prof">
-                        <img id="profPic" src="./images/profile.png"></img>
-                    </li>
-                </ul>
-            </div>   
+        <!-- header divider -->
+        <div class='header-div'>
+            <!-- mast head -->
+            <div class='title-div'>
+                <a href='index.html'>
+                    <table class="mast-head">
+                        <tr>
+                            <td class="trek-header">Trek</td>
+                            <td class="up-header">Up</td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+            <!-- divider containing navigation menu -->
+            <div class='nav-div'> </div>
+            <!-- divider containing account tab -->
+            <div class='account-div'>
+                <img id="profPic" src="./images/profile.png" onclick=""></img>
+                <!-- <div class='menu' onclick='openMenu(this)'>
+                    <div class='bar1'></div>
+                    <div class='bar2'></div>
+                    <div class='bar3'></div>
+                    <div id='dropdwn' class='dropdwn-content'>
+                        <div id='div_one'><a class='nav' href='login_page.html'>Account</a></div>
+                        <div id='div_two'><a class='nav' href='index.html'>Write a Review</a></div>
+                        <div id='div_three'><a class='nav' href='index.html'>Write a Review</a></div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- end of header divider -->  
 
 
         <div id="contentbox">

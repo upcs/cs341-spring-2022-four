@@ -47,12 +47,11 @@ $(document).ready(function(){
  * has completed and update the users statistics*/
 addHikeHandler = function(hikeName) {
     $("#user_add_link").hide();
-    $.post('/user_update_completed_hike', {
+    $.post('/user_add_completed_hike', {
         username: localStorage.getItem("current_user"),
         hike_name: hikeName,
         distance: $("#distance").text(),
-        elevation: $("#elevation_change").text(),
-        adding: 1
+        elevation: $("#elevation_change").text() 
     }).done(function() {
         $("#user_remove_link").show();
     });
@@ -63,12 +62,11 @@ addHikeHandler = function(hikeName) {
  * user has completed and update the users statistics*/
 removeHikeHandler = function(hikeName) {
     $("#user_remove_link").hide();
-    $.post('user_update_completed_hike', {
+    $.post('user_remove_from_completed_hike', {
         username: localStorage.getItem("current_user"),
         hike_name: hikeName,
         distance: $("#distance").text(),
-        elevation: $("#elevation_change").text(),
-        adding: 0
+        elevation: $("#elevation_change").text() 
     }).done(function() {
         $("#user_add_link").show();
     });

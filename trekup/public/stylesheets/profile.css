@@ -2,190 +2,239 @@
 Author: Logan Machida
 Stylesheet for the static profile page.
 */
-body{
-  	/*set a gradient background*/
-	background-image:linear-gradient(to bottom, #648B7F, #648B7F);
-	/*cover the whole page*/
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-attachment:fixed;
-}
 
+body {
+    /*set a gradient background*/
+    background-image: linear-gradient(to bottom, #648B7F, #648B7F);
+    /*cover the whole page*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 
 /* Two sections of the page, top = header, bottom = content */
+
+
 /* Spans the width of the top of the page */
-#header{
-    width:100%;
-    height:20%;
-}
-/* Spans the middle of the page*/
-#userinfo{
-    width:100%;
-    height:40%;
-}
-/* Spans the width of the bottom of the page */
-#content{
-    width:100%;
-    height:60%;
+
+#header {
+    width: 100%;
+    height: 20%;
 }
 
+
+/* Spans the middle of the page*/
+
+#userinfo {
+    width: 100%;
+    height: 40%;
+}
+
+
+/* Spans the width of the bottom of the page */
+
+#content {
+    width: 100%;
+    height: 60%;
+}
 
 
 /* Box containing user statistics*/
-#databox{ 
-    width:60%;
-    height:100%;
-    border:1px solid #000;
-    border: 1px solid black;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+#databox {
+    width: 60%;
+    height: 100%;
+    border: 1px solid #588c7e;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     background-color: white;
     object-fit: scale-down;
-    margin-top:5%;
+    margin-top: 5%;
 }
-#userbox{
-    width:15%;
-    height:100%;
-    border:1px solid #000;
-    border: 1px solid black;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+#userbox {
+    width: 15%;
+    height: 100%;
+    border: 1px solid #588c7e;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     background-color: white;
     object-fit: scale-down;
     margin-top: 2%;
     margin-left: 10px;
-    float:right;
+    float: right;
 }
+
+
 /* For our name and username */
-#username{
-    margin-top: 1%;
-    /*margin-left: 90%;*/
-}
-#updatebutton, #logoutbutton{
+
+#username {
     margin-top: 1%;
     /*margin-left: 90%;*/
 }
 
+#updatebutton,
+#logoutbutton {
+    margin-top: 1%;
+    /*margin-left: 90%;*/
+}
 
 
 /* elements for our content section */
+
+
 /* region that contains completed hikes */
-#completed{
+
+#completed {
     margin-top: 2%;
-    height:100%;
-    width:60%;
-    float:left;
+    height: 100%;
+    width: 60%;
+    float: left;
 }
+
+
 /* region that contains our trophies and username */
-#achievements{
+
+#achievements {
     margin-top: 2%;
-    height:100%;
-    width:20%;
-    float:left;
+    height: 100%;
+    width: 20%;
+    float: left;
     /*padding:5px;*/
 }
+
+
 /* Box that contains all the completed hikes */
-#completedbox{
+
+#completedbox {
     width: 100%;
-    height:550px;
-    border:1px solid #000;
-    border: 1px solid black;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: peachpuff;
+    height: 550px;
+    border: 1px solid #588c7e;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: white;
     overflow-y: auto;
 }
+
+
 /* Box that contains all the achievements */
-#achievementsbox{
+
+#achievementsbox {
     margin-left: 10px;
     width: 100%;
-    height:550px;
-    border:1px solid #000;
-    border: 1px solid black;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    background-color: peachpuff;
+    height: 550px;
+    border: 1px solid #588c7e;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: white;
     overflow-y: auto;
 }
+
+
 /* Box that contains a singular hike */
-.hikebox{
+
+.hikebox {
     margin-left: 20px;
-    width:98%;
-    height:25%;
+    width: 98%;
+    height: 25%;
     margin-bottom: 10px;
     margin-left: 10px;
-    margin-right:10px;
-    border: 1px solid black;
+    margin-right: 10px;
+    border: 1px solid #588c7e;
     border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     background-color: white;
 }
+
+
 /* Box that contains a singular trophy */
-#trophybox{
-    width:90%;
-    height:35%;
+
+#trophybox {
+    width: 90%;
+    height: 35%;
     margin-bottom: 10px;
     margin-left: 10px;
-    margin-right:10px;
-    border: 1px solid black;
+    margin-right: 10px;
+    border: 1px solid #588c7e;
     border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     background-color: white;
 }
+
+
 /* Picture of a hike */
-#hikepic{
+
+#hikepic {
     border: 1% solid #ddd;
     border-radius: 2%;
-    max-height:80%;
+    max-height: 80%;
     object-fit: scale-down;
-    width:20%;
-    height:80%;
-    float:right;
-    padding:5px;
+    width: 20%;
+    height: 80%;
+    float: right;
+    padding: 5px;
     margin-top: 1%;
     margin-right: 1%;
 }
+
+
 /*Picture of a closed trash can*/
+
 .removehike {
     display: none;
-    background:url("../images/trashClosed.jpg") no-repeat;
-    background-size:contain;
-    float:right;
-    padding:0px;
-    margin:0px;
-    margin-top:1%;
-    width:7%;
-    height:40%;
-    max-height:80%;
+    background: url("../images/trashClosed.jpg") no-repeat;
+    background-size: contain;
+    float: right;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 1%;
+    width: 7%;
+    height: 40%;
+    max-height: 80%;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(70%);
-  
 }
+
+
 /*Picture of trash can changes to open trash can on hover*/
+
 .removehike:hover {
-    background:url("../images/trashOpen.jpg") no-repeat;
-    background-size:contain;
+    background: url("../images/trashOpen.jpg") no-repeat;
+    background-size: contain;
 }
+
+
 /* Picture of a trophy */
+
 #trophy {
     width: 30%;
     height: 40%;
-    margin-left:30%;
+    margin-left: 30%;
     object-fit: scale-down;
 }
 
 
-
 /* Stuff implemented on multiple pages */
+
+
 /* Stars used to rate hikes */
+
+.checked {
+    color: #588c7e;
+}
+
 .rating.user.star {
-    background-color: yellow;
+    background-color: #588c7e;
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    border: 2px solid green;
+    border: 2px solid #588c7e;
     vertical-align: baseline;
 }
+
+
 /* Stars are either empty or filled */
-.star.blank, .user.star.blank {
+
+.star.blank,
+.user.star.blank {
     background-color: rgba(255, 255, 255, 0.459);
     size: 5%;
 }

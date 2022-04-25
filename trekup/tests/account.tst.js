@@ -19,25 +19,25 @@ var js = require('../public/javascripts/login_page_script.js');
 // test('account information: username', () => {
 //     document.body.innerHTML = '<div> \
 //     <input type="text" id="email"> </div>';
-//     document.getElementById('email').value = 'bob';
+//     $.document.getElementById('email').value = 'bob';
 //     expect(f.getUsername()).toBe('bob');
 // });
 
 
 
-// // /* BUTTON FUNCTIONALITY TESTS */
-// test('login button test', () => {
-//     // find the username in the HTML document
-//     document.body.innerHTML = '<div> \
-//     <input type="text" id="email"> </div>';
+/* BUTTON FUNCTIONALITY TESTS */
+test('login button test', () => {
+    // find the username in the HTML document
+    document.body.innerHTML = '<div> \
+    <input type="text" id="email"> </div>';
 
-//     // get the value of the username
-//     document.getElementById('email').value = 'f.nguyen123'
+    // get the value of the username
+    document.getElementById('email').value = 'f.nguyen123'
 
-//     // verify correct username
-//     // expect(js.)
-//     // wait until the function is fully set up
-// });
+    // verify correct username
+    // expect(js.)
+    // wait until the function is fully set up
+});
 
 
 /* USERNAME TEST */

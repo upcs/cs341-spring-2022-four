@@ -9,8 +9,13 @@
  * 
  * SOURCE: https: //www.npmjs.com/package/start-server-and-test-with-options  
  */
-var $ = require('jquery');
+
+'use strict';
+// var $ = require('jquery');
+var fs = require('fs');
 var f = require('../public/javascripts/login_page_script');
+// read index file to string
+var html = fs.readFileSync('public/Index.html', 'utf8');
 
 // test getting username
 it('test username', () => {

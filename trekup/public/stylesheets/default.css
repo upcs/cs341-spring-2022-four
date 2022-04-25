@@ -1,0 +1,440 @@
+/* default.css */
+
+
+/* user for element debugging */
+
+
+/* default setting for html and body */
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.25vw;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 1px solid transparent;
+    outline: 0;
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+
+/* main dividers */
+
+
+/*************** header *****************/
+
+.header-div {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 5;
+    background-color: #588c7e;
+}
+
+
+/* styling for the title */
+
+.title {
+    font-size: 3vw;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 2vw;
+    padding-left: 2.5%;
+    position: absolute;
+}
+
+.title-div {
+    width: 25%;
+    display: inline-block;
+}
+
+.mast-head:hover {
+    cursor: pointer;
+    background-color: #87a49b;
+}
+
+
+/* mast head table */
+
+td {
+    color: white;
+    font-size: 200%;
+    font-weight: bold;
+    line-height: inherit;
+}
+
+
+/* trek text */
+
+.trek-header {
+    position: relative;
+    top: 6px;
+    left: 4px;
+}
+
+
+/* up text */
+
+.up-header {
+    position: relative;
+    bottom: 2px;
+    right: 2px;
+}
+
+
+/* navigation bar divider */
+
+.nav-div {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 2%;
+}
+
+
+/* three line bar styling */
+
+.account-div {
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+}
+
+#profPic {
+    float: right;
+    margin-right: 0.7%;
+    width: 40px;
+    height: 40px;
+}
+
+#profPic:hover {
+    background-color: #648B7F;
+    cursor: pointer;
+}
+
+
+/*  https://stackoverflow.com/questions/44207293/adding-a-drop-down-menu-to-three-line-menu-icon  */
+
+
+/* 
+.menu {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 3vw;
+    height: 0.5vw;
+    background-color: white;
+    margin: 0.5vw 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.dropdwn-content {
+    display: none;
+}
+
+#div_one {
+    text-align: center;
+    border-style: ridge;
+    background-color: white;
+}
+
+#div_two {
+    text-align: center;
+    border-style: ridge;
+    background-color: white;
+}
+
+#div_three {
+    text-align: center;
+    border-style: ridge;
+    background-color: white;
+} */
+
+
+/*************** page *****************/
+
+.page-div {
+    padding-top: 5%;
+    background-color: white;
+    height: auto;
+    width: 100%;
+}
+
+.img {
+    height: 15vw;
+    width: 20vw;
+    display: inline-block;
+    border: 10px solid white;
+}
+
+.flip-card {
+    background-color: transparent;
+    /* width:150px; */
+    /* height:150px; */
+    width: 30%;
+    height: 100%;
+    /* perspective:1000px; */
+}
+
+
+/* this isn't needed anymore since I found a lower solution but I don't want to change it back */
+
+.flip-card-search {
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    /* margin-left:30%; */
+    /* margin-right:5%; */
+    perspective: 1000px;
+}
+
+.searchHikes td {
+    padding: 17px;
+}
+
+#firstCol {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.flip-card-search:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+/* Style the front side (fallback if image is missing) */
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+
+/* Style the back side */
+
+.flip-card-back {
+    background-color: #111111;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-text {
+    font-size: 30%;
+}
+
+#flip1 {
+    width: 100%;
+    height: 100%;
+}
+
+#flip1outer {
+    width: 30%;
+    height: 70%;
+    /* margin-bottom:30%; */
+    /* margin-left:300%; */
+    margin-bottom: 40%;
+    margin-left: 84%;
+}
+
+#flip2 {
+    width: 100%;
+    height: 100%;
+}
+
+#flip2outer {
+    width: 30%;
+    height: 85%;
+    /* margin-left:150%; */
+    margin-bottom: 33%;
+    margin-left: 45%;
+}
+
+#flip3 {
+    width: 100%;
+    height: 100%;
+}
+
+#flip3outer {
+    width: 30%;
+    height: 85%;
+    /* margin-left:350%; */
+    margin-bottom: 33%;
+    margin-left: 25%;
+}
+
+#flip4 {
+    width: 100%;
+    height: 100%;
+}
+
+#flip4outer {
+    width: 30%;
+    height: 85%;
+    margin-bottom: 25%;
+    margin-top: 6%;
+    /* 8 */
+    /* margin-left:300%; */
+    margin-left: 85%;
+}
+
+
+/* New compass implementation */
+
+.compassRecommend {
+    position: relative;
+    margin: auto;
+    margin-top: 85px;
+    background: url('../images/compass.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    width: 70%;
+    height: 70%;
+}
+
+.compassTable {
+    width: 100%;
+    height: 100%;
+}
+
+.ctRow {
+    width: 100%;
+    height: 33%;
+}
+
+.ctCol {
+    width: 50%;
+    height: 100%;
+}
+
+
+/* feature text styling */
+
+.event-div {
+    width: 25%;
+    height: 80%;
+}
+
+.event-text {
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: left;
+    height: 50;
+}
+
+
+/*************** footer *****************/
+
+.foot-div {
+    height: auto;
+    width: 100%;
+    background-color: #b0b0b0;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgb(34, 32, 32);
+    overflow: auto;
+}
+
+.navbar a {
+    float: left;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 23.4%;
+    /* Four links of equal widths */
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: black;
+}
+
+.acc_menu {
+    /* vertical navigation bar */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+.header-title {
+    text-decoration: underline;
+}

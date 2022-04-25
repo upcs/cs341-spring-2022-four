@@ -22,7 +22,7 @@ $(document).ready(function(){
   $("#submit").click(function(){
     // variables inputed by the user
 
-    var currUser = sessionStorage.getItem('current_user');
+    var currUser = localStorage.getItem('current_user');
     var currPass = $('#curpass').val();
     var newPass = $('#newpass').val();
     var confirmPass = $('#confirmpass').val();
